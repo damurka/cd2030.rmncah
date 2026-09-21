@@ -1,0 +1,3425 @@
+{
+  "languages": ["key", "en", "fr", "pt"],
+  "translation": [
+    // Global & Navigation
+    {
+      "key": "opt_global_change_language",
+      "en": "Change Language",
+      "fr": "Changer de langue",
+      "pt": "Mudar idioma"
+    },
+    {
+      "key": "title_global_intro",
+      "en": "Introduction",
+      "fr": "Introduction",
+      "pt": "Introdução"
+    },
+    {
+      "key": "title_global_intro_main",
+      "en": "Introduction: Countdown to 2030",
+      "fr": "Introduction : Compte à rebours vers 2030",
+      "pt": "Introdução: Contagem regressiva para 2030"
+    },
+    {
+      "key": "title_nav_load_data",
+      "en": "Load Data",
+      "fr": "Charger les données",
+      "pt": "Carregar dados"
+    },
+    {
+      "key": "title_nav_quality",
+      "en": "Data Quality Assessment",
+      "fr": "Évaluation de la Qualité des Données",
+      "pt": "Avaliação da Qualidade dos Dados"
+    },
+    {
+      "key": "title_nav_national_analysis",
+      "en": "National Analysis",
+      "fr": "Analyse nationale",
+      "pt": "Análise nacional"
+    },
+    {
+      "key": "title_nav_subnational_analysis",
+      "en": "Sub-National Analysis",
+      "fr": "Analyse infranationale",
+      "pt": "Análise subnacional"
+    },
+    {
+      "key": "title_nav_subnational_coverage",
+      "en": "Sub-National Coverage",
+      "fr": "Couverture infranationale",
+      "pt": "Cobertura subnacional"
+    },
+    {
+      "key": "title_nav_global_coverage",
+      "en": "Coverage Target",
+      "fr": "Objectif de couverture",
+      "pt": "Meta de cobertura"
+    },
+    {
+      "key": "title_nav_equity",
+      "en": "Equity Assessment",
+      "fr": "Évaluation de l'équité",
+      "pt": "Avaliação de equidade"
+    },
+    {
+      "key": "title_nav_countdown",
+      "en": "Countdown Analysis",
+      "fr": "Analyse Countdown",
+      "pt": "Análise da contagem regressiva"
+    },
+    {
+      "key": "btn_global_cancel",
+      "en": "Cancel",
+      "fr": "Annuler",
+      "pt": "Cancelar"
+    },
+    {
+      "key": "btn_global_ok",
+      "en": "OK",
+      "fr": "OK",
+      "pt": "OK"
+    },
+    {
+      "key": "err_global_general",
+      "en": "Error",
+      "fr": "Erreur",
+      "pt": "Erro"
+    },
+    {
+      "key": "msg_global_success",
+      "en": "Success",
+      "fr": "Succès",
+      "pt": "Sucesso"
+    },
+    {
+      "key": "msg_downloading",
+      "en": "Downloading...",
+      "fr": "Téléchargement en cours...",
+      "pt": "Baixando..."
+    },
+    {
+      "key": "msg_global_none",
+      "en": "None",
+      "fr": "Aucun",
+      "pt": "Nenhum"
+    },
+    {
+      "key": "btn_global_help",
+      "en": "Get Help",
+      "fr": "Obtenir de l'aide",
+      "pt": "Obter Ajuda"
+    },
+    {
+      "key": "btn_global_download",
+      "en": "Download",
+      "fr": "Télécharger",
+      "pt": "Baixar"
+    },
+    {
+      "key": "btn_global_download_plot",
+      "en": "Download Plot",
+      "fr": "Télécharger le graphique",
+      "pt": "Baixar Gráfico"
+    },
+    {
+      "key": "btn_global_download_data",
+      "en": "Download Data",
+      "fr": "Télécharger les données",
+      "pt": "Baixar Dados"
+    },
+    {
+      "key": "title_global_options",
+      "en": "Options",
+      "fr": "Options",
+      "pt": "Opções"
+    },
+    {
+      "key": "title_global_year",
+      "en": "Year",
+      "fr": "Année",
+      "pt": "Ano"
+    },
+    {
+      "key": "title_global_indicator",
+      "en": "Indicator",
+      "fr": "Indicateur",
+      "pt": "Indicador"
+    },
+    {
+      "key": "title_global_admin_level",
+      "en": "Admin Level",
+      "fr": "Niveau administratif",
+      "pt": "Nível Administrativo"
+    },
+    {
+      "key": "tt_global_admin_level",
+      "en": "Select admin level to aggregate the data across charts and tables.",
+      "fr": "Sélectionnez le niveau administratif pour agréger les données dans les graphiques et les tableaux.",
+      "pt": "Selecione o nível administrativo para agregar os dados em gráficos e tabelas."
+    },
+    {
+      "key": "msg_global_select_region",
+      "en": "Select Region",
+      "fr": "Sélectionnez une région",
+      "pt": "Selecionar Região"
+    },
+    {
+      "key": "err_global_invalid_status",
+      "en": "Invalid status. Choose from 'info', 'success', 'error', or 'warning'.",
+      "fr": "Statut invalide. Choisissez parmi 'info', 'success', 'error' ou 'warning'.",
+      "pt": "Status inválido. Escolha entre 'info', 'success', 'error' ou 'warning'."
+    },
+    {
+      "key": "title_global_select_years",
+      "en": "Select Years",
+      "fr": "Sélectionner les années",
+      "pt": "Selecionar Anos"
+    },
+    {
+      "key": "title_global_palette",
+      "en": "Palette",
+      "fr": "Palette",
+      "pt": "Paleta"
+    },
+    {
+      "key": "opt_national",
+      "en": "National",
+      "fr": "National",
+      "pt": "Nacional"
+    },
+    {
+      "key": "opt_adminlevel_1",
+      "en": "Admin 1",
+      "fr": "Niveau administratif 1",
+      "pt": "Nível Administrativo 1"
+    },
+    {
+      "key": "opt_district",
+      "en": "Admin 2",
+      "fr": "Niveau administratif 2",
+      "pt": "Nível Administrativo 2"
+    },
+    {
+      "key": "opt_global_select_all",
+      "en": "Select All",
+      "fr": "Tout sélectionner",
+      "pt": "Selecionar Todos"
+    },
+    
+    // Upload Module
+    {
+      "key": "title_upload_main",
+      "en": "Upload Data",
+      "fr": "Téléverser les données",
+      "pt": "Carregar Dados"
+    },
+    {
+      "key": "btn_upload_standard",
+      "en": "Upload",
+      "fr": "Téléverser",
+      "pt": "Carregar"
+    },
+    {
+      "key": "btn_upload_hfd",
+      "en": "Upload HFD data",
+      "fr": "Téléverser les données HFD",
+      "pt": "Carregar dados HFD"
+    },
+    {
+      "key": "lbl_upload_browse",
+      "en": "Browse or Drop...",
+      "fr": "Parcourir ou déposer...",
+      "pt": "Procurar ou Soltar..."
+    },
+    {
+      "key": "err_upload_unsupported",
+      "en": "Upload failed: Unsupported file format.",
+      "fr": "Échec du téléversement : format de fichier non pris en charge.",
+      "pt": "Falha no carregamento: Formato de arquivo não suportado."
+    },
+    {
+      "key": "msg_upload_cache_loading",
+      "en": "Loading from cache",
+      "fr": "Chargement depuis le cache",
+      "pt": "Carregando do cache"
+    },
+    {
+      "key": "msg_upload_cache_loaded",
+      "en": "Upload successful: File loaded from cache",
+      "fr": "Téléversement réussi : Fichier chargé depuis le cache",
+      "pt": "Carregamento bem-sucedido: Arquivo carregado do cache"
+    },
+    {
+      "key": "msg_upload_success_file",
+      "en": "Upload successful: File {file_name} is ready.",
+      "fr": "Téléversement réussi : le fichier {file_name} est prêt.",
+      "pt": "Carregamento bem-sucedido: O arquivo {file_name} está pronto."
+    },
+    {
+      "key": "err_upload_failed_general",
+      "en": "Upload failed: {clean_message}",
+      "fr": "Échec du téléversement : {clean_message}",
+      "pt": "Falha no carregamento: {clean_message}"
+    },
+    {
+      "key": "btn_upload_download_master",
+      "en": "Download Master Dataset",
+      "fr": "Télécharger le jeu de données principal",
+      "pt": "Baixar Conjunto de Dados Principal"
+    },
+    {
+      "key": "msg_upload_awaiting",
+      "en": "Awaiting file upload...",
+      "fr": "En attente du téléchargement du fichier...",
+      "pt": "Aguardando o carregamento do arquivo..."
+    },
+    {
+      "key": "msg_upload_files_uploaded",
+      "en": "Files uploaded.",
+      "fr": "Fichiers téléversés.",
+      "pt": "Arquivos carregados."
+    },
+    {
+      "key": "msg_upload_survey_mapped",
+      "en": "Survey mapping data is uploaded",
+      "fr": "Les données de cartographie de l’enquête sont téléversées",
+      "pt": "Os dados de mapeamento da pesquisa foram carregados"
+    },
+    {
+      "key": "err_upload_survey_not_set",
+      "en": "Survey folder not set",
+      "fr": "Dossier des enquêtes non défini",
+      "pt": "Pasta da pesquisa não definida"
+    },
+    {
+      "key": "title_upload_national_rates",
+      "en": "National Rates for Denominator Calculation (Based on the most recent survey)",
+      "fr": "Taux nationaux pour le calcul du dénominateur (d’après la dernière enquête)",
+      "pt": "Taxas nacionais para cálculo do denominador (com base na pesquisa mais recente)"
+    },
+    {
+      "key": "title_upload_nmr",
+      "en": "Neonatal Mortality (proportion)",
+      "fr": "Mortalité néonatale (proportion)",
+      "pt": "Mortalidade neonatal (proporção)"
+    },
+    {
+      "key": "title_upload_pnmr",
+      "en": "Post-Neonatal Mortality (proportion)",
+      "fr": "Mortalité post-néonatale (proportion)",
+      "pt": "Mortalidade pós-neonatal (proporção)"
+    },
+    {
+      "key": "title_upload_twin_rate",
+      "en": "Twin Births (proportion)",
+      "fr": "Naissances gémellaires (proportion)",
+      "pt": "Nascimentos gemelares (proporção)"
+    },
+    {
+      "key": "title_upload_preg_loss",
+      "en": "Pregnancy Loss (proportion)",
+      "fr": "Perte de grossesse (proportion)",
+      "pt": "Perda gestacional (proporção)"
+    },
+    {
+      "key": "title_upload_stillbirth",
+      "en": "Stillbirth Rate (proportion)",
+      "fr": "Taux de mortinatalité (proportion)",
+      "pt": "Taxa de natimortalidade (proporção)"
+    },
+    {
+      "key": "title_upload_anc1_survey",
+      "en": "ANC1 Coverage (%)",
+      "fr": "Couverture ANC1 (%)",
+      "pt": "Cobertura ANC1 (%)"
+    },
+    {
+      "key": "title_upload_anc4_survey",
+      "en": "ANC4 Coverage (%)",
+      "fr": "Couverture ANC4 (%)",
+      "pt": "Cobertura ANC4 (%)"
+    },
+    {
+      "key": "title_upload_csection_survey",
+      "en": "C-Section Rate (%)",
+      "fr": "Taux de césarienne (%)",
+      "pt": "Taxa de cesarianas (%)"
+    },
+    {
+      "key": "title_upload_lbw_survey",
+      "en": "Low Birth Weight (%)",
+      "fr": "Faible poids de naissance (%)",
+      "pt": "Baixo peso ao nascer (%)"
+    },
+    {
+      "key": "title_upload_penta1_survey",
+      "en": "Penta1 Coverage (%)",
+      "fr": "Couverture Penta1 (%)",
+      "pt": "Cobertura Penta1 (%)"
+    },
+    {
+      "key": "title_upload_penta3_survey",
+      "en": "Penta3 Coverage (%)",
+      "fr": "Couverture Penta3 (%)",
+      "pt": "Cobertura Penta3 (%)"
+    },
+    {
+      "key": "title_upload_measles1_survey",
+      "en": "Measles 1 Coverage (%)",
+      "fr": "Couverture Rougeole 1 (%)",
+      "pt": "Cobertura Sarampo 1 (%)"
+    },
+    {
+      "key": "title_upload_bcg_survey",
+      "en": "BCG Coverage (%)",
+      "fr": "Couverture BCG (%)",
+      "pt": "Cobertura BCG (%)"
+    },
+    {
+      "key": "title_upload_opv1_survey",
+      "en": "OPV1 Coverage (%)",
+      "fr": "Couverture OPV1 (%)",
+      "pt": "Cobertura OPV1 (%)"
+    },
+    {
+      "key": "title_upload_opv3_survey",
+      "en": "OPV3 Coverage (%)",
+      "fr": "Couverture OPV3 (%)",
+      "pt": "Cobertura OPV3 (%)"
+    },
+    {
+      "key": "title_upload_ideliv_survey",
+      "en": "Institutional Delivery Coverage (%)",
+      "fr": "Couverture des accouchements en établissement (%)",
+      "pt": "Cobertura de partos institucionais (%)"
+    },
+    {
+      "key": "title_upload_un_estimates",
+      "en": "Upload UN Estimates data",
+      "fr": "Téléverser les estimations des Nations Unies",
+      "pt": "Carregar dados das estimativas da ONU"
+    },
+    {
+      "key": "title_upload_wuenic",
+      "en": "Upload WUENIC estimates",
+      "fr": "Téléverser les estimations WUENIC",
+      "pt": "Carregar estimativas WUENIC"
+    },
+    {
+      "key": "title_upload_survey_folder",
+      "en": "Upload Survey Folder",
+      "fr": "Téléverser le dossier d'enquête",
+      "pt": "Carregar Pasta de Pesquisa"
+    },
+    {
+      "key": "title_upload_subnat_mapping",
+      "en": "Subnational Manual Data Mapping",
+      "fr": "Cartographie manuelle des données infranationales",
+      "pt": "Mapeamento Manual de Dados Subnacionais"
+    },
+    {
+      "key": "btn_upload_map_survey",
+      "en": "Map Survey Data",
+      "fr": "Associer les données d'enquête",
+      "pt": "Mapear Dados da Pesquisa"
+    },
+    {
+      "key": "btn_upload_map_mapping",
+      "en": "Map Mapping Data",
+      "fr": "Associer les données de cartographie",
+      "pt": "Mapear Dados de Mapeamento"
+    },
+    {
+      "key": "btn_upload_save_mapping",
+      "en": "Save Mapping",
+      "fr": "Enregistrer la cartographie",
+      "pt": "Salvar Mapeamento"
+    },
+    {
+      "key": "err_upload_survey_mapping_missing",
+      "en": "Survey mapping has not been done",
+      "fr": "La cartographie de l'enquête n'a pas été effectuée",
+      "pt": "O mapeamento da pesquisa não foi realizado"
+    },
+    {
+      "key": "err_upload_map_mapping_missing",
+      "en": "Map mapping has not been done",
+      "fr": "La cartographie de la carte n'a pas été effectuée",
+      "pt": "O mapeamento de dados geográficos não foi realizado"
+    },
+    {
+      "key": "msg_upload_map_mapping_uploaded",
+      "en": "Map mapping data is uploaded",
+      "fr": "La cartographie de la carte n'a pas été effectuée",
+      "pt": "Os dados de mapeamento foram carregados"
+    },
+    {
+      "key": "title_upload_survey_start_year",
+      "en": "Survey Data Start Year",
+      "fr": "Année de début des données de l'enquête",
+      "pt": "Ano de Início dos Dados da Pesquisa"
+    },
+    {
+      "key": "title_upload_recent_survey_year",
+      "en": "Recent Survey Year",
+      "fr": "Année d'enquête récente",
+      "pt": "Ano recente da pesquisa"
+    },
+    {
+      "key": "msg_upload_manual_mapping",
+      "en": "Manual Mapping of Survey Data",
+      "fr": "Cartographie manuelle des données d’enquête",
+      "pt": "Mapeamento manual dos dados da pesquisa"
+    },
+    {
+      "key": "msg_upload_cache_national",
+      "en": "Loaded national survey data from cache.",
+      "fr": "Données d’enquête nationale chargées depuis le cache.",
+      "pt": "Dados da pesquisa nacional carregados do cache."
+    },
+    {
+      "key": "msg_upload_cache_regional",
+      "en": "Loaded regional survey data from cache.",
+      "fr": "Données d’enquête régionale chargées depuis le cache.",
+      "pt": "Dados da pesquisa regional carregados do cache."
+    },
+    {
+      "key": "msg_upload_cache_wealth",
+      "en": "Loaded wealth index quintile survey data from cache.",
+      "fr": "Données de quintiles de l’indice de richesse chargées depuis le cache.",
+      "pt": "Dados da pesquisa de quintis do índice de riqueza carregados do cache."
+    },
+    {
+      "key": "msg_upload_cache_area",
+      "en": "Loaded area survey data from cache.",
+      "fr": "Données d’enquête par zone chargées depuis le cache.",
+      "pt": "Dados da pesquisa por área carregados do cache."
+    },
+    {
+      "key": "msg_upload_cache_education",
+      "en": "Loaded maternal education survey data from cache.",
+      "fr": "Données d’éducation maternelle chargées depuis le cache.",
+      "pt": "Dados da pesquisa sobre educação materna carregados do cache."
+    },
+    {
+      "key": "err_upload_missing_files",
+      "en": "Missing required files: {files}",
+      "fr": "Fichiers requis manquants : {files}",
+      "pt": "Arquivos obrigatórios ausentes: {files}"
+    },
+    {
+      "key": "msg_upload_log_national",
+      "en": "Loaded national survey data: {filename}.",
+      "fr": "Données d’enquête nationale chargées : {filename}.",
+      "pt": "Dados da pesquisa nacional carregados: {filename}."
+    },
+    {
+      "key": "msg_upload_log_regional",
+      "en": "Loaded regional survey data: {filename}.",
+      "fr": "Données d’enquête régionale chargées : {filename}.",
+      "pt": "Dados da pesquisa regional carregados: {filename}."
+    },
+    {
+      "key": "msg_upload_log_area",
+      "en": "Loaded area survey data: {filename}.",
+      "fr": "Données d’enquête par zone chargées : {filename}.",
+      "pt": "Dados da pesquisa por área carregados: {filename}."
+    },
+    {
+      "key": "msg_upload_log_education",
+      "en": "Loaded maternal education survey data: {filename}.",
+      "fr": "Données d’éducation maternelle chargées : {filename}.",
+      "pt": "Dados da pesquisa sobre educação materna carregados: {filename}."
+    },
+    {
+      "key": "msg_upload_log_wealth",
+      "en": "Loaded wealth index quintile survey data: {filename}.",
+      "fr": "Données de quintiles de l’indice de richesse chargées : {filename}.",
+      "pt": "Dados da pesquisa de quintis do índice de riqueza carregados: {filename}."
+    },
+    {
+      "key": "err_upload_unknown_pattern",
+      "en": "File '{filename}' does not match any known pattern.",
+      "fr": "Le fichier « {filename} » ne correspond à aucun modèle connu.",
+      "pt": "O arquivo '{filename}' não corresponde a nenhum padrão conhecido."
+    },
+    {
+      "key": "err_upload_processing",
+      "en": "Error processing file {filename}: {error}",
+      "fr": "Erreur lors du traitement du fichier {filename} : {error}",
+      "pt": "Erro ao processar o arquivo {filename}: {error}"
+    },
+    
+    // Reporting Rate
+    {
+      "key": "title_rr_main",
+      "en": "Reporting Rate",
+      "fr": "Taux de notification",
+      "pt": "Taxa de notificação"
+    },
+    {
+      "key": "title_rr_subnational",
+      "en": "Sub-National Reporting Rate",
+      "fr": "Taux de notification infranational",
+      "pt": "Taxa de Notificação Subnacional"
+    },
+    {
+      "key": "title_rr_region",
+      "en": "District Reporting Rate in {region_name}",
+      "fr": "Taux de notification des districts dans {region_name}",
+      "pt": "Taxa de Notificação dos Distritos em {region_name}"
+    },
+    {
+      "key": "title_rr_low_reporting",
+      "en": "Sub-National Units with Low Reporting",
+      "fr": "Unités infranationales à faible notification",
+      "pt": "Unidades Subnacionais com Baixa Notificação"
+    },
+    {
+      "key": "title_rr_average",
+      "en": "Average RR by year",
+      "fr": "TR moyen par année",
+      "pt": "TR médio por ano"
+    },
+    {
+      "key": "title_rr_district_low",
+      "en": "Districts Low Reporting Rating",
+      "fr": "Districts à faible taux de notification",
+      "pt": "Distritos com baixa taxa de notificação"
+    },
+    {
+      "key": "title_rr_threshold",
+      "en": "Performance Threshold",
+      "fr": "Seuil de performance",
+      "pt": "Limite de Desempenho"
+    },
+    {
+      "key": "opt_heat_map",
+      "en": "Heat Map",
+      "fr": "Carte thermique",
+      "pt": "Mapa de Calor"
+    },
+    {
+      "key": "opt_bar",
+      "en": "Bar Graph",
+      "fr": "Diagramme en barres",
+      "pt": "Gráfico de Barras"
+    },
+    {
+      "key": "title_rr_national",
+      "en": "National Reporting Rate",
+      "fr": "Taux de notification national",
+      "pt": "Taxa Nacional de Notificação"
+    },
+    {
+      "key": "tt_rr_indicator",
+      "en": "Select indicator to assess proportion of expected reports submitted.",
+      "fr": "Sélectionnez un indicateur pour évaluer la proportion de rapports attendus soumis.",
+      "pt": "Selecione o indicador para avaliar a proporção de relatórios esperados enviados."
+    },
+    {
+      "key": "plt_title_rr_heatmap",
+      "en": "{admin_level} reporting rate for {indicator} by year",
+      "fr": "Taux de notification de {indicator} par année au {admin_level}",
+      "pt": "Taxa de notificação de {indicator} por ano no {admin_level}"
+    },
+    {
+      "key": "plt_title_rr_heatmap_region",
+      "en": "{admin_level} reporting rate for {indicator} by year in {region_name}",
+      "fr": "Taux de notification de {indicator} par année au niveau {admin_level} dans {region_name}",
+      "pt": "Taxa de notificação de {indicator} por ano no nível {admin_level} em {region_name}"
+    },
+    {
+      "key": "lbl_leg_rr_heatmap",
+      "en": "{indicator} reporting rate",
+      "fr": "Taux de notification de {indicator}",
+      "pt": "Taxa de notificação de {indicator}"
+    },
+    {
+      "key": "plt_title_rr_national",
+      "en": "Percent of districts with low reporting rate (< {reporting_rate}%) by service",
+      "fr": "Pourcentage des districts avec un faible taux de notification (< {reporting_rate} %) par service",
+      "pt": "Percentual de distritos com baixa taxa de notificação (< {reporting_rate}%) por serviço"
+    },
+    {
+      "key": "plt_caption_rr_national",
+      "en": "Low reporting rate (< {reporting_rate}%)",
+      "fr": "Faible taux de notification (< {reporting_rate} %)",
+      "pt": "Baixa taxa de notificação (< {reporting_rate}%)"
+    },
+    {
+      "key": "tab_rr_average",
+      "en": "Table 1 - average reporting rates for all indicators, by year",
+      "fr": "Tableau 1 - taux moyens de notification pour tous les indicateurs, par année",
+      "pt": "Tabela 1 - taxas médias de notificação para todos os indicadores, por ano"
+    },
+    {
+      "key": "tab_rr_district",
+      "en": "Table 2 - Percentage of districts with reporting rates >= {input$threshold}, by year",
+      "fr": "Tableau 2 - Pourcentage de districts avec TR >= {input$threshold}, par année",
+      "pt": "Tabela 2 - Percentual de distritos com taxas de notificação >= {input$threshold}, por ano"
+    },
+    {
+      "key": "tab_rr_district_year",
+      "en": "Table 3 - Districts with Reporting Rate < {input$threshold} for {input$indicator} in {input$year}",
+      "fr": "Tableau 3 - Districts avec TR < {input$threshold} pour {input$indicator} en {input$year}",
+      "pt": "Tabela 3 - Distritos com taxa de notificação < {input$threshold} para {input$indicator} em {input$year}"
+    },
+    {
+      "key": "lbl_sheet_rr_district",
+      "en": "RR >= {input$threshold} (districts)",
+      "fr": "TR >= {input$threshold} (districts)",
+      "pt": "RR >= {input$threshold} (distritos)"
+    },
+    
+    // Outlier Detection
+    {
+      "key": "title_outlier_main",
+      "en": "Outlier Detection",
+      "fr": "Détection des valeurs aberrantes",
+      "pt": "Detecção de valores discrepantes"
+    },
+    {
+      "key": "title_outlier_indicators",
+      "en": "Indicators with Outliers",
+      "fr": "Indicateurs avec des valeurs aberrantes",
+      "pt": "Indicadores com valores discrepantes"
+    },
+    {
+      "key": "title_outlier_indicator_bar",
+      "en": "Indicator Bar Graph",
+      "fr": "Graphique en barres des indicateurs",
+      "pt": "Gráfico de barras do indicador"
+    },
+    {
+      "key": "title_outlier_region_bar",
+      "en": "Region Bar Graph",
+      "fr": "Graphique en barres des régions",
+      "pt": "Gráfico de barras por região"
+    },
+    {
+      "key": "title_outlier_district",
+      "en": "Sub-National Units with Extreme Outliers",
+      "fr": "Unités infranationales avec des valeurs extrêmes",
+      "pt": "Unidades subnacionais com valores discrepantes extremos"
+    },
+    {
+      "key": "title_outlier_district_trends",
+      "en": "Sub-National Trends",
+      "fr": "Tendances infranationales",
+      "pt": "Tendências Subnacionais"
+    },
+    {
+      "key": "title_outlier_extreme",
+      "en": "Outliers",
+      "fr": "Valeurs aberrantes",
+      "pt": "Valores discrepantes"
+    },
+    {
+      "key": "title_outlier_district_extreme",
+      "en": "Districts with Extreme Outliers",
+      "fr": "Districts avec des valeurs aberrantes extrêmes",
+      "pt": "Distritos com valores discrepantes extremos"
+    },
+    {
+      "key": "title_outlier_district_extreme_year",
+      "en": "Districts with extreme outliers for {input$indicator} in {input$year}",
+      "fr": "Districts avec des valeurs aberrantes extrêmes pour {input$indicator} en {input$year}",
+      "pt": "Distritos com valores discrepantes extremos para {input$indicator} em {input$year}"
+    },
+    {
+      "key": "tt_outlier_indicator",
+      "en": "Select indicator to identify extreme or inconsistent values over time.",
+      "fr": "Sélectionnez un indicateur pour identifier les valeurs extrêmes ou incohérentes dans le temps.",
+      "pt": "Selecione o indicador para identificar valores extremos ou inconsistentes ao longo do tempo."
+    },
+    {
+      "key": "plt_title_outlier_region",
+      "en": "Percent non-outliers by year and {admin_level}",
+      "fr": "Pourcentage de valeurs non aberrantes par année et par {admin_level}",
+      "pt": "Percentual de valores não atípicos por ano e por {admin_level}"
+    },
+    {
+      "key": "plt_title_outlier_indicator",
+      "en": "Percent non-outliers by year and indicator",
+      "fr": "Pourcentage de valeurs non aberrantes par année et par indicateur",
+      "pt": "Percentual de valores não atípicos por ano e por indicador"
+    },
+    {
+      "key": "plt_title_outlier_heatmap_all",
+      "en": "Average percent non-outliers by {admin_level}",
+      "fr": "Pourcentage moyen de valeurs non aberrantes par {admin_level}",
+      "pt": "Percentual médio de valores não atípicos por {admin_level}"
+    },
+    {
+      "key": "plt_title_outlier_heatmap_one",
+      "en": "Percent non-outliers for {indicator} by year and {admin_level}",
+      "fr": "Pourcentage de valeurs non aberrantes pour {indicator} par année et par {admin_level}",
+      "pt": "Percentual de valores não atípicos para {indicator} por ano e por {admin_level}"
+    },
+    {
+      "key": "lbl_leg_outlier",
+      "en": "Percent non-outliers (%)",
+      "fr": "Pourcentage de valeurs non aberrantes (%)",
+      "pt": "Percentual de valores não atípicos (%)"
+    },
+    {
+      "key": "plt_title_outlier_trend_year",
+      "en": "{indicator_name} trend for {region_name} in {year_val}",
+      "fr": "Tendance de {indicator_name} pour {region_name} en {year_val}",
+      "pt": "Tendência de {indicator_name} para {region_name} em {year_val}"
+    },
+    {
+      "key": "lbl_leg_outlier_trend",
+      "en": "Series",
+      "fr": "Séries",
+      "pt": "Séries"
+    },
+    {
+      "key": "lbl_axis_x_outlier_trend",
+      "en": "Months",
+      "fr": "Mois",
+      "pt": "Meses"
+    },
+    {
+      "key": "lbl_outlier_series_reported",
+      "en": "Reported value",
+      "fr": "Valeur rapportée",
+      "pt": "Valor reportado"
+    },
+    {
+      "key": "lbl_outlier_series_median",
+      "en": "Median",
+      "fr": "Médiane",
+      "pt": "Mediana"
+    },
+    {
+      "key": "lbl_outlier_series_bounds",
+      "en": "Outlier bounds (±5 MAD)",
+      "fr": "Bornes d’anomalie (±5 MAD)",
+      "pt": "Limites de outlier (±5 MAD)"
+    },
+    {
+      "key": "lbl_outlier_series_outliers",
+      "en": "Outliers",
+      "fr": "Valeurs aberrantes",
+      "pt": "Outliers"
+    },
+    {
+      "key": "tab_outlier_extreme",
+      "en": "Table 2a: Percentage of monthly values that are not extreme outliers, by year",
+      "fr": "Tableau 2a : Pourcentage de valeurs mensuelles qui ne sont pas des valeurs aberrantes extrêmes, par année",
+      "pt": "Tabela 2a: Percentual de valores mensais que não são discrepantes extremos, por ano"
+    },
+    {
+      "key": "tab_outlier_district",
+      "en": "Table 2b: Percentage of districts with no extreme outliers, by year",
+      "fr": "Tableau 2b : Pourcentage de districts sans valeurs aberrantes extrêmes, par année",
+      "pt": "Tabela 2b: Percentual de distritos sem discrepantes extremos, por ano"
+    },
+    {
+      "key": "lbl_sheet_outlier_district",
+      "en": "Outliers (districts)",
+      "fr": "Valeurs aberrantes (districts)",
+      "pt": "Valores discrepantes (distritos)"
+    },
+    
+    // Data Completeness
+    {
+      "key": "title_complete_main",
+      "en": "Data Missingness",
+      "fr": "Données Manquantes",
+      "pt": "Dados Ausentes"
+    },
+    {
+      "key": "title_complete_indicators",
+      "en": "Complete Indicators",
+      "fr": "Indicateurs complets",
+      "pt": "Indicadores Completos"
+    },
+    {
+      "key": "title_complete_missing_indicators",
+      "en": "Indicators with Missing Data",
+      "fr": "Indicateurs avec des données manquantes",
+      "pt": "Indicadores com Dados Faltantes"
+    },
+    {
+      "key": "title_complete_missing_region",
+      "en": "Missing Indicators by Region",
+      "fr": "Indicateurs manquants par région",
+      "pt": "Indicadores Faltantes por Região"
+    },
+    {
+      "key": "title_complete_district_missing_1",
+      "en": "Districts with incomplete data",
+      "fr": "Districts avec des données incomplètes",
+      "pt": "Distritos com dados incompletos"
+    },
+    {
+      "key": "title_complete_district_missing_ind",
+      "en": "Districts with incomplete data for {input$indicator} in {input$year}",
+      "fr": "Districts avec des données incomplètes pour {input$indicator} en {input$year}",
+      "pt": "Distritos com dados incompletos para {input$indicator} em {input$year}"
+    },
+    {
+      "key": "title_complete_district_missing",
+      "en": "Sub-National Units with Missing Data",
+      "fr": "Unités infranationales avec des données manquantes",
+      "pt": "Unidades Subnacionais com Dados Faltantes"
+    },
+    {
+      "key": "title_complete_missing",
+      "en": "Missings",
+      "fr": "Données manquantes",
+      "pt": "Dados Faltantes"
+    },
+    {
+      "key": "tt_complete_indicator_missing",
+      "en": "Select indicator to check missing values or incomplete entries.",
+      "fr": "Sélectionnez un indicateur pour vérifier les valeurs manquantes ou les entrées incomplètes.",
+      "pt": "Selecione o indicador para verificar valores ausentes ou entradas incompletas."
+    },
+    {
+      "key": "plt_title_complete_heatmap_all",
+      "en": "Average reporting missingness (%) by {admin_level}",
+      "fr": "Taux moyen de données manquantes (%) par {admin_level}",
+      "pt": "Percentual médio de dados ausentes (%) por {admin_level}"
+    },
+    {
+      "key": "plt_title_complete_heatmap_all_reg",
+      "en": "Average reporting missingness (%) by {admin_level} in {region}",
+      "fr": "Taux moyen de données manquantes (%) par {admin_level} dans {region}",
+      "pt": "Percentual médio de dados ausentes (%) por {admin_level} em {region}"
+    },
+    {
+      "key": "plt_title_complete_heatmap_one",
+      "en": "Proportion of missing reports (%) for {indicator} by year and {admin_level}",
+      "fr": "Proportion des rapports manquants (%) pour {indicator} par année et {admin_level}",
+      "pt": "Proporção de relatórios ausentes (%) para {indicator} por ano e {admin_level}"
+    },
+    {
+      "key": "plt_title_complete_heatmap_one_reg",
+      "en": "Proportion of missing reports (%) for {indicator} by year and {admin_level} in {region}",
+      "fr": "Proportion des rapports manquants (%) pour {indicator} par année et {admin_level} dans {region}",
+      "pt": "Proporção de relatórios ausentes (%) para {indicator} por ano e {admin_level} em {region}"
+    },
+    {
+      "key": "plt_title_complete_trend",
+      "en": "Trend in reporting completeness (%) for {indicator} by {admin_level}",
+      "fr": "Tendance de la complétude des rapports (%) pour {indicator} par {admin_level}",
+      "pt": "Tendência da completude dos relatórios (%) para {indicator} por {admin_level}"
+    },
+    {
+      "key": "lbl_axis_y_complete_trend",
+      "en": "Completeness (%)",
+      "fr": "Complétude (%)",
+      "pt": "Completude (%)"
+    },
+    {
+      "key": "lbl_leg_complete_heatmap",
+      "en": "Missingness (%)",
+      "fr": "Données manquantes (%)",
+      "pt": "Dados ausentes (%)"
+    },
+    {
+      "key": "plt_title_complete_district_plot",
+      "en": "Percent of districts with complete data for {indicator}",
+      "fr": "Pourcentage de districts avec des données complètes pour {indicator}",
+      "pt": "Percentual de distritos com dados completos para {indicator}"
+    },
+    {
+      "key": "tab_complete_monthly",
+      "en": "Table 4a: Percentage of monthly values with complete data, by year",
+      "fr": "Tableau 4a : Pourcentage des valeurs mensuelles avec des données complètes, par année",
+      "pt": "Tabela 4a: Percentual de valores mensais com dados completos, por ano"
+    },
+    {
+      "key": "tab_complete_district",
+      "en": "Table 4a: Percentage of Districts with complete data, by year",
+      "fr": "Tableau 4a : Pourcentage de districts avec des données complètes, par année",
+      "pt": "Tabela 4a: Percentual de distritos com dados completos, por ano"
+    },
+    {
+      "key": "lbl_sheet_complete_district",
+      "en": "Missings (districts)",
+      "fr": "Données manquantes (districts)",
+      "pt": "Dados faltantes (distritos)"
+    },
+    
+    // Internal Consistenc
+    {
+      "key": "title_consist_main",
+      "en": "Internal Consistency",
+      "fr": "Cohérence interne",
+      "pt": "Consistência interna"
+    },
+    {
+      "key": "title_consist_checks",
+      "en": "Consistency Checks",
+      "fr": "Vérifications de cohérence",
+      "pt": "Verificações de Consistência"
+    },
+    {
+      "key": "title_consist_ratio_plots",
+      "en": "Ratio Plots",
+      "fr": "Graphiques des ratios",
+      "pt": "Gráficos de razões"
+    },
+    {
+      "key": "lbl_axis_x_consist",
+      "en": "X axis",
+      "fr": "Axe X",
+      "pt": "Eixo X"
+    },
+    {
+      "key": "lbl_axis_y_consist",
+      "en": "Y axis",
+      "fr": "Axe Y",
+      "pt": "Eixo Y"
+    },
+    {
+      "key": "opt_consist_anc1_penta1",
+      "en": "ANC1 and Penta1",
+      "fr": "CPN1 et Penta1",
+      "pt": "CPN1 e Penta1"
+    },
+    {
+      "key": "opt_consist_penta1_penta3",
+      "en": "Penta1 and Penta3",
+      "fr": "Penta1 et Penta3",
+      "pt": "Penta1 e Penta3"
+    },
+    {
+      "key": "opt_consist_opv1_opv3",
+      "en": "OPV1 and OPV3",
+      "fr": "OPV1 et OPV3",
+      "pt": "OPV1 e OPV3"
+    },
+    {
+      "key": "opt_consist_custom",
+      "en": "Custom Check",
+      "fr": "Vérification personnalisée",
+      "pt": "Verificação Personalizada"
+    },
+    {
+      "key": "plt_title_consist_checks",
+      "en": "Relationship between reported numbers of {vacc1} and {vacc2} by year",
+      "fr": "Relation entre les nombres déclarés de {vacc1} et {vacc2} par année",
+      "pt": "Relação entre os números reportados de {vacc1} e {vacc2} por ano"
+    },
+    {
+      "key": "plt_title_consist_ratios",
+      "en": "Ratios of the number of children vaccinated (ANC1/Penta1, Penta1/Penta3) compared with expected ratios",
+      "fr": "Rapports du nombre d’enfants vaccinés (CPN1/Penta1, Penta1/Penta3) comparés aux rapports attendus",
+      "pt": "Razões do número de crianças vacinadas (CPN1/Penta1, Penta1/Penta3) comparadas às razões esperadas"
+    },
+    {
+      "key": "lbl_consist_ratio_anc1_penta1",
+      "en": "Ratio ANC1 / Penta1",
+      "fr": "Rapport CPN1 / Penta1",
+      "pt": "Razão CPN1 / Penta1"
+    },
+    {
+      "key": "lbl_consist_ratio_penta1_penta3",
+      "en": "Ratio Penta1 / Penta3",
+      "fr": "Rapport Penta1 / Penta3",
+      "pt": "Razão Penta1 / Penta3"
+    },
+    {
+      "key": "lbl_leg_consist_district",
+      "en": "District",
+      "fr": "District",
+      "pt": "Distrito"
+    },
+    {
+      "key": "lbl_leg_consist_linear_fit",
+      "en": "Linear fit",
+      "fr": "Ajustement linéaire",
+      "pt": "Ajuste linear"
+    },
+    {
+      "key": "lbl_leg_consist_diagonal",
+      "en": "Diagonal",
+      "fr": "Diagonale",
+      "pt": "Diagonal"
+    },
+    
+    // Overall Score
+    {
+      "key": "title_score_main",
+      "en": "Overall Data Quality Score",
+      "fr": "Score Global de Qualité des Données",
+      "pt": "Pontuação Geral da Qualidade dos Dados"
+    },
+    {
+      "key": "title_score_monthly_complete",
+      "en": "1. Completeness of monthly facility reporting (mean of ANC, delivery, immunization)",
+      "fr": "1. Complétude des rapports mensuels des formations sanitaires (moyenne de CPN, accouchement, vaccination)",
+      "pt": "1. Completude dos relatórios mensais das unidades de saúde (média de CPN, parto, vacinação)"
+    },
+    {
+      "key": "title_score_extreme_outliers",
+      "en": "2. Extreme outliers (mean of ANC, delivery, immunization)",
+      "fr": "2. Valeurs aberrantes extrêmes (moyenne de CPN, accouchement, vaccination)",
+      "pt": "2. Valores discrepantes extremos (média de CPN, parto, vacinação)"
+    },
+    {
+      "key": "title_score_consist_annual",
+      "en": "3. Consistency of annual reporting",
+      "fr": "3. Cohérence des rapports annuels",
+      "pt": "3. Consistência dos relatórios anuais"
+    },
+    {
+      "key": "lbl_score_1a",
+      "en": "% of expected monthly facility reports (national)",
+      "fr": "% de rapports mensuels attendus des formations sanitaires (national)",
+      "pt": "% de relatórios mensais esperados das unidades de saúde (nacional)"
+    },
+    {
+      "key": "lbl_score_1b_prefix",
+      "en": "% of districts with completeness of facility reporting >= ",
+      "fr": "% de districts avec une complétude des rapports >= ",
+      "pt": "% de distritos com completude dos relatórios >= "
+    },
+    {
+      "key": "lbl_score_1c_vaccine",
+      "en": "% of districts with no missing values (mean for common vaccines)",
+      "fr": "% de districts sans valeurs manquantes (moyenne pour les vaccins courants)",
+      "pt": "% de distritos sem valores em falta (média para vacinas comuns)"
+    },
+    {
+      "key": "lbl_score_1c_rmncah",
+      "en": "% of districts with no missing values for the 4 forms",
+      "fr": "% de districts sans valeurs manquantes pour les 4 formulaires",
+      "pt": "% de distritos sem valores em falta para os 4 formulários"
+    },
+    {
+      "key": "lbl_score_2a",
+      "en": "% of monthly values that are not extreme outliers (national)",
+      "fr": "% de valeurs mensuelles qui ne sont pas des valeurs aberrantes extrêmes (national)",
+      "pt": "% de valores mensais que não são valores discrepantes extremos (nacional)"
+    },
+    {
+      "key": "lbl_score_2b",
+      "en": "% of districts with no extreme outliers in the year",
+      "fr": "% de districts sans valeurs aberrantes extrêmes dans l'année",
+      "pt": "% de distritos sem valores discrepantes extremos no ano"
+    },
+    {
+      "key": "lbl_score_range_anc1_penta1",
+      "en": "% district with ANC1/Penta1 in expected range",
+      "fr": "% de districts avec CPN1/Penta1 dans la plage attendue",
+      "pt": "% de distritos com CPN1/Penta1 no intervalo esperado"
+    },
+    {
+      "key": "lbl_score_range_penta1_penta3",
+      "en": "% district with Penta1/Penta3 in expected range",
+      "fr": "% de districts avec Penta1/Penta3 dans la plage attendue",
+      "pt": "% de distritos com Penta1/Penta3 no intervalo esperado"
+    },
+    {
+      "key": "lbl_score_annual_score",
+      "en": "Annual data quality score",
+      "fr": "Score annuel de qualité des données",
+      "pt": "Pontuação anual da qualidade dos dados"
+    },
+    {
+      "key": "lbl_score_metric_header",
+      "en": "Data Quality Metrics",
+      "fr": "Indicateurs de Qualité des Données",
+      "pt": "Indicadores de Qualidade de Dados"
+    },
+    
+    // Adjustments
+    {
+      "key": "btn_adjust_remove_years",
+      "en": "Remove Years",
+      "fr": "Supprimer les années",
+      "pt": "Remover anos"
+    },
+    {
+      "key": "title_adjust_remove_years",
+      "en": "Remove Years with Erratic Data",
+      "fr": "Supprimer les années avec des données erratiques",
+      "pt": "Remover anos com dados erráticos"
+    },
+    {
+      "key": "msg_adjust_removal_info",
+      "en": "This module allows you to remove years with erratic data from the dataset. Erratic data may result from low reporting completeness, extreme outliers, or inconsistent trends, which can compromise analysis integrity.",
+      "fr": "Ce module vous permet de supprimer les années présentant des données erratiques. Les données erratiques peuvent résulter d’une complétude faible des rapports, de valeurs aberrantes extrêmes ou de tendances incohérentes, ce qui peut compromettre l’intégrité de l’analyse.",
+      "pt": "Este módulo permite remover anos com dados erráticos do conjunto de dados. Dados erráticos podem resultar de baixa completude de relatórios, valores discrepantes extremos ou tendências inconsistentes, comprometendo a integridade da análise."
+    },
+    {
+      "key": "title_adjust_select_years",
+      "en": "Select Years to Remove:",
+      "fr": "Sélectionner les années à supprimer :",
+      "pt": "Selecionar anos para remover:"
+    },
+    {
+      "key": "btn_adjust_confirm_remove",
+      "en": "Confirm Removal",
+      "fr": "Confirmer la suppression",
+      "pt": "Confirmar Remoção"
+    },
+    {
+      "key": "msg_adjust_removed_year",
+      "en": "Data for the following years has been removed: {years}",
+      "fr": "Les données des années suivantes ont été supprimées : {years}",
+      "pt": "Dados para os seguintes anos foram removidos: {years}"
+    },
+    {
+      "key": "msg_adjust_no_years_removed",
+      "en": "No years have been removed yet.",
+      "fr": "Aucune année n'a encore été supprimée.",
+      "pt": "Nenhum ano foi removido ainda."
+    },
+    {
+      "key": "msg_adjust_dataset_not_adjusted",
+      "en": "Dataset not adjusted",
+      "fr": "Ensemble de données non ajusté",
+      "pt": "Conjunto de dados não ajustado"
+    },
+    {
+      "key": "title_adjust_main",
+      "en": "Data Adjustment",
+      "fr": "Ajustement des données",
+      "pt": "Ajuste de dados"
+    },
+    {
+      "key": "title_adjust_factors",
+      "en": "K-Factors (Adjustment Factors)",
+      "fr": "Facteurs K (Facteurs d'ajustement)",
+      "pt": "Fatores K (Fatores de Ajuste)"
+    },
+    {
+      "key": "title_adjust_anc_factor",
+      "en": "ANC K-Factor",
+      "fr": "Facteur K ANC",
+      "pt": "Fator K ANC"
+    },
+    {
+      "key": "title_adjust_delivery_factor",
+      "en": "Delivery K-Factor",
+      "fr": "Facteur K Accouchement",
+      "pt": "Fator K Parto"
+    },
+    {
+      "key": "title_adjust_vaccines_factor",
+      "en": "Vaccines K-Factor",
+      "fr": "Facteur K Vaccins",
+      "pt": "Fator K Vacinas"
+    },
+    {
+      "key": "title_adjust_opd_factor",
+      "en": "OPD K-Factor",
+      "fr": "Facteur K CPN",
+      "pt": "Fator K OPD"
+    },
+    {
+      "key": "msg_adjust_info",
+      "en": "Adjusting the data applies custom corrections, such as removing specific years and scaling selected indicators. This process modifies the current dataset to align with predefined criteria for completeness and consistency.",
+      "fr": "L'ajustement des données applique des corrections personnalisées, telles que la suppression d'années spécifiques et la mise à l'échelle de certains indicateurs. Ce processus modifie l'ensemble de données actuel pour l'aligner sur des critères prédéfinis de complétude et de cohérence.",
+      "pt": "Ajustar os dados aplica correções personalizadas, como remover anos específicos e redimensionar indicadores selecionados. Este processo modifica o conjunto de dados atual para alinhá-lo com critérios predefinidos de completude e consistência."
+    },
+    {
+      "key": "btn_adjust_execute",
+      "en": "Adjust Data",
+      "fr": "Ajuster les données",
+      "pt": "Ajustar Dados"
+    },
+    {
+      "key": "btn_adjust_download",
+      "en": "Download Adjusted Dataset",
+      "fr": "Télécharger l'ensemble de données ajusté",
+      "pt": "Baixar Conjunto de Dados Ajustado"
+    },
+    {
+      "key": "msg_adjust_success",
+      "en": "Data Adjusted",
+      "fr": "Données ajustées",
+      "pt": "Dados Ajustados"
+    },
+    {
+      "key": "msg_adjust_in_progress",
+      "en": "Adjusting ...",
+      "fr": "Ajustement en cours...",
+      "pt": "Ajustando..."
+    },
+    {
+      "key": "title_adjust_changes",
+      "en": "Data Adjustment Changes",
+      "fr": "Changements d'ajustement",
+      "pt": "Alterações no ajuste de dados"
+    },
+    {
+      "key": "title_adjust_visualize",
+      "en": "Visualize effects of changes",
+      "fr": "Visualiser les effets des changements",
+      "pt": "Visualizar efeitos das mudanças"
+    },
+    {
+      "key": "plt_title_adjust_comparison",
+      "en": "Comparison of number of {indicator} before and after adjustments for completness and outliers",
+      "fr": "Comparaison du nombre de {indicator} avant et après ajustements pour complétude et valeurs aberrantes",
+      "pt": "Comparação do número de {indicator} antes e depois dos ajustes de completude e valores discrepantes"
+    },
+    {
+      "key": "lbl_adjust_n_before",
+      "en": "N of {indicator} before adjustment",
+      "fr": "Nombre de {indicator} avant ajustement",
+      "pt": "Nº de {indicator} antes do ajuste"
+    },
+    {
+      "key": "lbl_adjust_n_after",
+      "en": "N of {indicator} after adjustment",
+      "fr": "Nombre de {indicator} après ajustement",
+      "pt": "Nº de {indicator} após ajuste"
+    },
+    
+    // Denominator Selection
+    {
+      "key": "title_denom_assessment",
+      "en": "Denominator Assessment",
+      "fr": "Évaluation du dénominateur",
+      "pt": "Avaliação do denominador"
+    },
+    {
+      "key": "title_denom_pop_comparison",
+      "en": "Population Comparison",
+      "fr": "Comparaison de la population",
+      "pt": "Comparação populacional"
+    },
+    {
+      "key": "title_denom_pop_select",
+      "en": "Select Best Population",
+      "fr": "Sélectionner la meilleure population",
+      "pt": "Selecionar a melhor população"
+    },
+    {
+      "key": "tt_denom_pop_select",
+      "en": "Select the population source that provides the most reliable denominator for analyses and charts.",
+      "fr": "Sélectionnez la source de population qui fournit le dénominateur le plus fiable pour les analyses et les graphiques.",
+      "pt": "Selecione a fonte populacional que fornece o denominador mais confiável para análises e gráficos."
+    },
+    {
+      "key": "title_denom_selection",
+      "en": "Denominator Selection",
+      "fr": "Sélection du dénominateur",
+      "pt": "Seleção do denominador"
+    },
+    {
+      "key": "title_denom_pop_trend",
+      "en": "Population Trend",
+      "fr": "Tendance de la population",
+      "pt": "Tendência populacional"
+    },
+    {
+      "key": "title_denom_select_best_vacc",
+      "en": "Select Best Vaccination Denominator",
+      "fr": "Sélectionner le meilleur dénominateur de vaccination",
+      "pt": "Selecionar o melhor denominador de vacinação"
+    },
+    {
+      "key": "tt_denom_select_best_vacc",
+      "en": "Select the population denominator to use when calculating vaccination coverage rates.",
+      "fr": "Sélectionnez le dénominateur de population à utiliser pour calculer les taux de couverture vaccinale.",
+      "pt": "Selecione o denominador populacional a ser usado para calcular as taxas de cobertura vacinal."
+    },
+    {
+      "key": "title_denom_select_best_mat",
+      "en": "Select Best Maternal Denominator",
+      "fr": "Sélectionner le meilleur dénominateur maternel",
+      "pt": "Selecionar o melhor denominador materno"
+    },
+    {
+      "key": "tt_denom_select_best_mat",
+      "en": "Select the population denominator to use when calculating maternal coverage rates.",
+      "fr": "Sélectionnez le dénominateur de population à utiliser pour calculer les taux de couverture maternelle.",
+      "pt": "Selecione o denominador populacional a ser usado para calcular as taxas de cobertura materna."
+    },
+    {
+      "key": "btn_download_subnational",
+      "en": "Download subnational data",
+      "fr": "Télécharger les données subnationales",
+      "pt": "Baixar dados subnacionais"
+    },
+    {
+      "key": "opt_denom_live_births_dhis2",
+      "en": "Live births (DHIS2)",
+      "fr": "Naissances vivantes (DHIS2)",
+      "pt": "Nascidos vivos (DHIS2)"
+    },
+    {
+      "key": "opt_denom_total_births_dhis2",
+      "en": "Total births (DHIS2)",
+      "fr": "Total des naissances (DHIS2)",
+      "pt": "Total de nascimentos (DHIS2)"
+    },
+    {
+      "key": "opt_denom_total_births_un",
+      "en": "Total births (UN)",
+      "fr": "Total des naissances (ONU)",
+      "pt": "Total de nascimentos (ONU)"
+    },
+    {
+      "key": "opt_denom_total_pop_dhis2",
+      "en": "Total population (DHIS2)",
+      "fr": "Population totale (DHIS2)",
+      "pt": "População total (DHIS2)"
+    },
+    {
+      "key": "opt_denom_total_pop_un",
+      "en": "Total population (UN)",
+      "fr": "Population totale (ONU)",
+      "pt": "População total (ONU)"
+    },
+    {
+      "key": "opt_denom_under1_dhis2",
+      "en": "Under 1 year (DHIS2)",
+      "fr": "Moins de 1 an (DHIS2)",
+      "pt": "Menores de 1 ano (DHIS2)"
+    },
+    {
+      "key": "opt_denom_under1_un",
+      "en": "Under 1 year (UN)",
+      "fr": "Moins de 1 an (ONU)",
+      "pt": "Menores de 1 ano (ONU)"
+    },
+    {
+      "key": "opt_population",
+      "en": "Population",
+      "fr": "Population",
+      "pt": "População"
+    },
+    {
+      "key": "opt_un",
+      "en": "UN",
+      "fr": "ONU",
+      "pt": "ONU"
+    },
+    {
+      "key": "opt_dhis2",
+      "en": "DHIS2",
+      "fr": "DHIS2",
+      "pt": "DHIS2"
+    },
+    {
+      "key": "opt_penta1derived",
+      "en": "Penta 1 population Growth",
+      "fr": "Croissance de la population Penta 1",
+      "pt": "Crescimento da população Penta 1"
+    },
+    {
+      "key": "opt_anc1derived",
+      "en": "ANC 1 Population Growth",
+      "fr": "Croissance de la population ANC 1",
+      "pt": "Crescimento da população ANC 1"
+    },
+    {
+      "key": "opt_median",
+      "en": "{indicator} Median",
+      "fr": "",
+      "pt": ""
+    },
+    {
+      "key": "opt_mad",
+      "en": "{indicator} MAD",
+      "fr": "",
+      "pt": ""
+    },
+    {
+      "key": "plt_title_denom_pop",
+      "en": "Total Population (in thousands), DHIS2 and UN projections",
+      "fr": "Population totale (en milliers), projections DHIS2 et ONU",
+      "pt": "População total (em milhares), projeções DHIS2 e ONU"
+    },
+    {
+      "key": "plt_title_denom_births",
+      "en": "Total Live Births (in thousands), DHIS2 and UN projections",
+      "fr": "Naissances vivantes totales (en milliers), projections DHIS2 et ONU",
+      "pt": "Total de nados vivos (em milhares), projeções DHIS2 e ONU"
+    },
+    {
+      "key": "plt_title_denom_under1",
+      "en": "Under 1 (in thousands), DHIS2 and UN projections",
+      "fr": "Moins de 1 an (en milliers), projections DHIS2 et ONU",
+      "pt": "Menores de 1 ano (em milhares), projeções DHIS2 e ONU"
+    },
+    {
+      "key": "plt_title_denom_nat_trend",
+      "en": "National Coverage Over Time by Denominator",
+      "fr": "Couverture nationale au fil du temps par dénominateur",
+      "pt": "Cobertura nacional ao longo do tempo por denominador"
+    },
+    {
+      "key": "plt_title_denom_subnat_trend",
+      "en": "{region_name} Coverage Over Time by Denominator",
+      "fr": "Couverture de {region_name} au fil du temps par dénominateur",
+      "pt": "Cobertura de {region_name} ao longo do tempo por denominador"
+    },
+    {
+      "key": "plt_title_denom_survey_comp",
+      "en": "{indicator} Coverage, DHIS2-based with different denominators, and survey coverage for {year}",
+      "fr": "Couverture {indicator}, basée sur le DHIS2 avec différents dénominateurs, et couverture d'enquête pour {year}",
+      "pt": "Cobertura de {indicator}, baseada no DHIS2 com diferentes denominadores, e cobertura de inquérito para {year}"
+    },
+    {
+      "key": "lbl_axis_y_coverage",
+      "en": "{indicator} Coverage (%)",
+      "fr": "Couverture {indicator} (%)",
+      "pt": "Cobertura de {indicator} (%)"
+    },
+    {
+      "key": "lbl_leg_denom_un_pop",
+      "en": "UN Population (in 1000)",
+      "fr": "Population ONU (en milliers)",
+      "pt": "População ONU (em milhares)"
+    },
+    {
+      "key": "lbl_leg_denom_dhis2_pop",
+      "en": "DHIS-2 Population Projection (in 1000)",
+      "fr": "Projection population DHIS-2 (en milliers)",
+      "pt": "Projeção População DHIS-2 (em milhares)"
+    },
+    {
+      "key": "lbl_leg_denom_un_births",
+      "en": "UN Live Births (in 1000)",
+      "fr": "Naissances vivantes ONU (en milliers)",
+      "pt": "Nados Vivos ONU (em milhares)"
+    },
+    {
+      "key": "lbl_leg_denom_dhis2_live_births",
+      "en": "DHIS-2 Live Births Projection (in 1000)",
+      "fr": "Projection naissances vivantes DHIS-2 (en milliers)",
+      "pt": "Projeção Nados Vivos DHIS-2 (em milhares)"
+    },
+    {
+      "key": "lbl_leg_denom_dhis2_tot_births",
+      "en": "DHIS-2 Total Births Projection (in 1000)",
+      "fr": "Projection naissances totales DHIS-2 (en milliers)",
+      "pt": "Projeção Total Nascimentos DHIS-2 (em milhares)"
+    },
+    {
+      "key": "lbl_leg_denom_un_under1",
+      "en": "UN Under 1 (in 1000)",
+      "fr": "ONU Moins de 1 an (en milliers)",
+      "pt": "ONU Menores de 1 ano (em milhares)"
+    },
+    {
+      "key": "lbl_leg_denom_dhis2_under1",
+      "en": "DHIS-2 Under 1 Projection (in 1000)",
+      "fr": "Projection DHIS-2 Moins de 1 an (en milliers)",
+      "pt": "Projeção DHIS-2 Menores de 1 ano (em milhares)"
+    },
+    {
+      "key": "lbl_denom_un_proj",
+      "en": "UN projection",
+      "fr": "Projection de l'ONU",
+      "pt": "Projeção da ONU"
+    },
+    {
+      "key": "lbl_denom_dhis2_proj",
+      "en": "DHIS2 projection",
+      "fr": "Projection DHIS2",
+      "pt": "Projeção DHIS2"
+    },
+    {
+      "key": "lbl_denom_anc1_derived",
+      "en": "ANC1-derived",
+      "fr": "Dérivé de CPN1",
+      "pt": "Derivado de CPN1"
+    },
+    {
+      "key": "lbl_denom_penta1_derived",
+      "en": "Penta1-derived",
+      "fr": "Dérivé de Penta1",
+      "pt": "Derivado de Penta1"
+    },
+    {
+      "key": "lbl_denom_facility_based",
+      "en": "Facility-based coverage (%)",
+      "fr": "Couverture en établissement (%)",
+      "pt": "Cobertura baseada em instalações (%)"
+    },
+    {
+      "key": "lbl_denom_survey_national",
+      "en": "Coverage survey, national",
+      "fr": "Enquête de couverture, nationale",
+      "pt": "Inquérito de cobertura, nacional"
+    },
+
+    {
+      "key": "title_subnational_derived",
+      "en": "Subnational Derived Coverage",
+      "fr": "Couverture dérivée infranationale",
+      "pt": "Cobertura derivada subnacional"
+    },
+    {
+      "key": "plt_title_cross_section_subnat",
+      "en": "Comparison of {indicator} Coverage Estimates by Region and Denominator in {year}",
+      "fr": "Comparaison des estimations de couverture {indicator} par région et dénominateur en {year}",
+      "pt": "Comparação das estimativas de cobertura {indicator} por região e denominador em {year}"
+    },
+    {
+      "key": "lbl_axis_y_region",
+      "en": "Region",
+      "fr": "Région",
+      "pt": "Região"
+    },
+    
+    // Coverage & Targets
+    {
+      "key": "title_coverage_national",
+      "en": "National Coverage",
+      "fr": "Couverture nationale",
+      "pt": "Cobertura nacional"
+    },
+    {
+      "key": "title_target_district_rate",
+      "en": "Sub-National with coverage >90%",
+      "fr": "Zones infranationales avec une couverture > 90",
+      "pt": "Cobertura Subnacional >90%"
+    },
+    {
+      "key": "title_target_admin2_rate",
+      "en": "Admin2 Meeting Coverage Target",
+      "fr": "Admin2 atteignant l'objectif de couverture",
+      "pt": "Admin2 que Atingem a Meta de Cobertura"
+    },
+    {
+      "key": "plt_title_target_national",
+      "en": "Percentage of {admin_level} meeting the {group} target ({rate} {sign} {coverage}%)",
+      "fr": "Pourcentage de {admin_level} atteignant la cible pour {group} ({rate} {sign} {coverage} %)",
+      "pt": "Percentagem de {admin_level} que atingem a meta para {group} ({rate} {sign} {coverage}%)"
+    },
+    {
+      "key": "plt_title_target_region",
+      "en": "Percentage of {admin_level} in {region} meeting the {group} target ({rate} {sign} {coverage}%)",
+      "fr": "Pourcentage de {admin_level} dans {region} atteignant la cible pour {group} ({rate} {sign} {coverage} %)",
+      "pt": "Percentagem de {admin_level} em {region} que atingem a meta para {group} ({rate} {sign} {coverage}%)"
+    },
+    {
+      "key": "lbl_axis_y_pct_subnat",
+      "en": "Percentage of Subnational Units (%)",
+      "fr": "Pourcentage d'unités infranationales (%)",
+      "pt": "Percentagem de Unidades Subnacionais (%)"
+    },
+    {
+      "key": "plt_title_coverage_nat_est",
+      "en": "National {indicator} Coverage Estimates",
+      "fr": "Estimations de la couverture nationale pour {indicator}",
+      "pt": "Estimativas de cobertura nacional para {indicator}"
+    },
+    {
+      "key": "plt_title_coverage_subnat_est",
+      "en": "{region} {indicator} Coverage Estimates",
+      "fr": "Estimations de la couverture pour {region} ({indicator})",
+      "pt": "Estimativas de cobertura para {region} ({indicator})"
+    },
+    {
+      "key": "plt_caption_coverage_denom",
+      "en": "Denominators derived from {denominator} estimates",
+      "fr": "Dénominateurs dérivés des estimations de {denominator}",
+      "pt": "Denominadores derivados das estimativas de {denominator}"
+    },
+    {
+      "key": "lbl_coverage_dhis2_est",
+      "en": "DHIS2 estimate",
+      "fr": "Estimation DHIS2",
+      "pt": "Estimativa DHIS2"
+    },
+    {
+      "key": "lbl_coverage_wuenic_est",
+      "en": "WUENIC estimate",
+      "fr": "Estimation WUENIC",
+      "pt": "Estimativa WUENIC"
+    },
+    {
+      "key": "lbl_coverage_survey_est",
+      "en": "Survey estimate",
+      "fr": "Estimation d'enquête",
+      "pt": "Estimativa de inquérito"
+    },
+    {
+      "key": "lbl_coverage_95ci",
+      "en": "95% CI",
+      "fr": "IC à 95 %",
+      "pt": "IC de 95%"
+    },
+    
+    // Equity
+    {
+      "key": "title_equity_type",
+      "en": "Equity Type",
+      "fr": "Type d'équité",
+      "pt": "Tipo de Equidade"
+    },
+    {
+      "key": "title_equity_analysis",
+      "en": "Equity Analysis",
+      "fr": "Analyse de l'équité",
+      "pt": "Análise de Equidade"
+    },
+    {
+      "key": "plt_title_equity_area",
+      "en": "Inequalities in {indicator} coverage by area of residence",
+      "fr": "Inégalités de couverture de {indicator} selon le milieu de résidence",
+      "pt": "Desigualdades na cobertura de {indicator} por área de residência"
+    },
+    {
+      "key": "plt_title_equity_education",
+      "en": "Inequalities in {indicator} coverage by maternal education",
+      "fr": "Inégalités de couverture de {indicator} selon le niveau d'instruction de la mère",
+      "pt": "Desigualdades na cobertura de {indicator} por educação materna"
+    },
+    {
+      "key": "plt_title_equity_wealth",
+      "en": "Inequalities in {indicator} coverage by wealth quintile",
+      "fr": "Inégalités de couverture de {indicator} selon le quintile de richesse",
+      "pt": "Desigualdades na cobertura de {indicator} por quintil de riqueza"
+    },
+    {
+      "key": "lbl_leg_equity_area",
+      "en": "Area of Residence",
+      "fr": "Lieu de résidence",
+      "pt": "Área de Residência"
+    },
+    {
+      "key": "lbl_equity_area_rural",
+      "en": "Rural",
+      "fr": "Rural",
+      "pt": "Rural"
+    },
+    {
+      "key": "lbl_equity_area_urban",
+      "en": "Urban",
+      "fr": "Urbain",
+      "pt": "Urbano"
+    },
+    {
+      "key": "lbl_leg_equity_education",
+      "en": "Maternal Education",
+      "fr": "Éducation maternelle",
+      "pt": "Educação Materna"
+    },
+    {
+      "key": "lbl_equity_edu_none",
+      "en": "No education",
+      "fr": "Aucune éducation",
+      "pt": "Sem educação"
+    },
+    {
+      "key": "lbl_equity_edu_primary",
+      "en": "Primary",
+      "fr": "Primaire",
+      "pt": "Primária"
+    },
+    {
+      "key": "lbl_equity_edu_secondary",
+      "en": "Secondary or higher",
+      "fr": "Secondaire ou plus",
+      "pt": "Secundária ou superior"
+    },
+    {
+      "key": "lbl_leg_equity_wealth",
+      "en": "Wealth Quintiles",
+      "fr": "Quintiles de richesse",
+      "pt": "Quintis de Riqueza"
+    },
+    {
+      "key": "opt_equity_area",
+      "en": "Area",
+      "fr": "Milieu de résidence",
+      "pt": "Área de Residência"
+    },
+    {
+      "key": "opt_equity_meduc",
+      "en": "Maternal Education",
+      "fr": "Éducation maternelle",
+      "pt": "Educação Materna"
+    },
+    {
+      "key": "opt_equity_wiq",
+      "en": "Wealth Quintile",
+      "fr": "Quintile de richesse",
+      "pt": "Quintil de Riqueza"
+    },
+    
+    // Mapping & Inequality
+    {
+      "key": "title_inequ_national",
+      "en": "National Inequality",
+      "fr": "Inégalités nationales",
+      "pt": "Desigualdade nacional"
+    },
+    {
+      "key": "title_inequ_subnational",
+      "en": "Sub-National Inequality",
+      "fr": "Inégalités infranationales",
+      "pt": "Desigualdade subnacional"
+    },
+    {
+      "key": "title_mapping_subnational",
+      "en": "Sub-National Mapping",
+      "fr": "Cartographie infranationale",
+      "pt": "Mapeamento subnacional"
+    },
+    {
+      "key": "lbl_inequ_subnat_district",
+      "en": "Subnational unit: district level",
+      "fr": "Unité infranationale : niveau du district",
+      "pt": "Unidade subnacional: nível distrital"
+    },
+    {
+      "key": "lbl_inequ_subnat_admin1",
+      "en": "Subnational unit: admin 1 level",
+      "fr": "Unité infranationale : niveau admin 1",
+      "pt": "Unidade subnacional: nível admin 1"
+    },
+    {
+      "key": "lbl_inequ_subnat_region",
+      "en": "Subnational unit: {region}",
+      "fr": "Unité infranationale : {region}",
+      "pt": "Unidade subnacional: {region}"
+    },
+    {
+      "key": "plt_caption_equity_dhis2",
+      "en": "Denominators derived from projected live births (DHIS2)",
+      "fr": "Dénominateurs dérivés des naissances vivantes projetées (DHIS2)",
+      "pt": "Denominadores derivados de nados-vivos projetados (DHIS2)"
+    },
+    {
+      "key": "plt_caption_equity_anc1",
+      "en": "Denominators derived from ANC1 estimates",
+      "fr": "Dénominateurs dérivés des estimations de CPN1",
+      "pt": "Denominadores derivados de estimativas de CPN1"
+    },
+    {
+      "key": "plt_caption_equity_penta1",
+      "en": "Denominators derived from Penta 1 estimates",
+      "fr": "Dénominateurs dérivés des estimations de Penta 1",
+      "pt": "Denominadores derivados de estimativas de Penta 1"
+    },
+    {
+      "key": "lbl_inequ_coverage_subnat",
+      "en": "Coverage at subnational unit",
+      "fr": "Couverture à l'unité infranationale",
+      "pt": "Cobertura na unidade subnacional"
+    },
+    {
+      "key": "lbl_inequ_coverage_region",
+      "en": "{region} Coverage",
+      "fr": "Couverture de {region}",
+      "pt": "Cobertura de {region}"
+    },
+    {
+      "key": "plt_title_map_dist",
+      "en": "Distribution of {indicator} by Regions",
+      "fr": "Répartition de {indicator} par Régions",
+      "pt": "Distribuição de {indicator} por Regiões"
+    },
+    {
+      "key": "plt_caption_map_dhis2",
+      "en": "Data Source: DHIS-2 analysis",
+      "fr": "Source de données : Analyse DHIS-2",
+      "pt": "Fonte de Dados: Análise DHIS-2"
+    },
+    
+    // Documentation
+    {
+      "key": "btn_doc_add_notes",
+      "en": "Add Notes",
+      "fr": "Ajouter des notes",
+      "pt": "Adicionar Notas"
+    },
+    {
+      "key": "title_doc_page",
+      "en": "Document Page:",
+      "fr": "Page à documenter :",
+      "pt": "Página do Documento:"
+    },
+    {
+      "key": "title_doc_select_obj",
+      "en": "Select Object",
+      "fr": "Sélectionner l'objet",
+      "pt": "Selecionar Objeto"
+    },
+    {
+      "key": "opt_doc_obj",
+      "en": "Select object to document:",
+      "fr": "Sélectionnez l’objet à documenter :",
+      "pt": "Selecione o objeto a documentar:"
+    },
+    {
+      "key": "title_doc_interp",
+      "en": "Interpretation Pointers:",
+      "fr": "Pistes d'interprétation :",
+      "pt": "Orientações para Interpretação:"
+    },
+    {
+      "key": "title_doc_enter_notes",
+      "en": "Enter your notes or observations:",
+      "fr": "Entrez vos notes ou observations :",
+      "pt": "Insira suas notas ou observações:"
+    },
+    {
+      "key": "msg_doc_add",
+      "en": "Add documentation for this object...",
+      "fr": "Ajouter une documentation pour cet objet...",
+      "pt": "Adicionar documentação para este objeto..."
+    },
+    {
+      "key": "title_doc_params",
+      "en": "Associated Parameters:",
+      "fr": "Paramètres associés :",
+      "pt": "Parâmetros Associados:"
+    },
+    {
+      "key": "btn_doc_save",
+      "en": "Save",
+      "fr": "Enregistrer",
+      "pt": "Salvar"
+    },
+    {
+      "key": "btn_doc_include_page",
+      "en": "Include this note in the report (Always included)",
+      "fr": "Inclure cette note dans le rapport (Toujours incluse)",
+      "pt": "Incluir esta nota no relatório (Sempre incluída)"
+    },
+    {
+      "key": "btn_doc_include_final",
+      "en": "Include this note in the final report",
+      "fr": "Inclure cette note dans le rapport final",
+      "pt": "Incluir esta nota no relatório final"
+    },
+    {
+      "key": "btn_doc_include_plot",
+      "en": "Include plot/table in the page report",
+      "fr": "Inclure graphique/tableau dans le rapport de page",
+      "pt": "Incluir gráfico/tabela no relatório da página"
+    },
+    {
+      "key": "err_doc_eval_params",
+      "en": "Error evaluating parameters. Please check your input.",
+      "fr": "Erreur lors de l’évaluation des paramètres. Veuillez vérifier votre saisie.",
+      "pt": "Erro ao avaliar os parâmetros. Por favor, verifique sua entrada."
+    },
+    {
+      "key": "msg_doc_saved",
+      "en": "Documentation saved successfully!",
+      "fr": "Documentation enregistrée avec succès !",
+      "pt": "Documentação salva com sucesso!"
+    },
+    {
+      "key": "err_doc_save_failed",
+      "en": "Failed to save documentation. Please try again.",
+      "fr": "Échec de l’enregistrement de la documentation. Veuillez réessayer.",
+      "pt": "Falha ao salvar a documentação. Por favor, tente novamente."
+    },
+    
+    // Reports
+    {
+      "key": "title_report_type",
+      "en": "Report Type:",
+      "fr": "Type de rapport :",
+      "pt": "Tipo de relatório:"
+    },
+    {
+      "key": "opt_report_synthesis",
+      "en": "Synthesis Report",
+      "fr": "Rapport de synthès",
+      "pt": "Relatório de síntese"
+    },
+    {
+      "key": "opt_report_admin_one_pager",
+      "en": "Admin Level One Pager",
+      "fr": "Page unique – Niveau administratif 1",
+      "pt": "Resumo do Nível Administrativo 1"
+    },
+    {
+      "key": "btn_report_download",
+      "en": "Download Report",
+      "fr": "Télécharger le rapport",
+      "pt": "Baixar relatório"
+    },
+    {
+      "key": "btn_report_generate",
+      "en": "Generate Report",
+      "fr": "Générer le rapport",
+      "pt": "Gerar Relatório"
+    },
+    {
+      "key": "title_report_format",
+      "en": "Select Format:",
+      "fr": "Sélectionner le format :",
+      "pt": "Selecionar Formato:"
+    },
+    {
+      "key": "msg_report_generating",
+      "en": "Your report is being generated. This might take a few moments.",
+      "fr": "Votre rapport est en cours de génération. Cela peut prendre quelques instants.",
+      "pt": "Seu relatório está sendo gerado. Isso pode levar alguns instantes."
+    },
+    {
+      "key": "msg_report_loading",
+      "en": "Loading...",
+      "fr": "Chargement...",
+      "pt": "Carregando..."
+    },
+    {
+      "key": "msg_report_download_ready",
+      "en": "Download Ready",
+      "fr": "Téléchargement prêt",
+      "pt": "Download pronto"
+    },
+    {
+      "key": "msg_report_generated",
+      "en": "The report has been successfully generated. Click below to download it.",
+      "fr": "Le rapport a été généré avec succès. Cliquez ci-dessous pour le télécharger.",
+      "pt": "O relatório foi gerado com sucesso. Clique abaixo para baixá-lo."
+    },
+    {
+      "key": "msg_report_dialog",
+      "en": "This dialog will remain open until you download the report or click 'Dismiss.'",
+      "fr": "Cette boîte de dialogue restera ouverte jusqu'à ce que vous téléchargiez le rapport ou cliquiez sur 'Fermer'.",
+      "pt": "Esta janela permanecerá aberta até que você baixe o relatório ou clique em 'Fechar'."
+    },
+    {
+      "key": "btn_report_dismiss",
+      "en": "Dismiss",
+      "fr": "Fermer",
+      "pt": "Fechar"
+    },
+    {
+      "key": "err_report_generation",
+      "en": "An error occurred while generating the report. Please try again.",
+      "fr": "Une erreur s'est produite lors de la génération du rapport. Veuillez réessayer.",
+      "pt": "Ocorreu um erro ao gerar o relatório. Por favor, tente novamente."
+    },
+    {
+      "key": "msg_report_generating_title",
+      "en": "Generating Report",
+      "fr": "Génération du rapport",
+      "pt": "Gerando Relatório"
+    },
+    {
+      "key": "err_report_no_data",
+      "en": "The necessary data for generating the report is not available. Please ensure that the data is uploaded and processed correctly.",
+      "fr": "Les données nécessaires à la génération du rapport ne sont pas disponibles. Veuillez vous assurer que les données sont correctement téléchargées et traitées.",
+      "pt": "Os dados necessários para gerar o relatório não estão disponíveis. Verifique se os dados foram carregados e processados corretamente."
+    },
+    
+    // Cache
+    {
+      "key": "btn_cache_set",
+      "en": "Set Cache Directory",
+      "fr": "Définir le répertoire de cache",
+      "pt": "Definir diretório de cache"
+    },
+    {
+      "key": "btn_cache_save",
+      "en": "Save Cache",
+      "fr": "Enregistrer le cache",
+      "pt": "Salvar cache"
+    },
+    {
+      "key": "msg_cache_dir_set",
+      "en": "Directory set successfully!",
+      "fr": "Répertoire défini avec succès !",
+      "pt": "Diretório definido com sucesso!"
+    },
+    {
+      "key": "err_cache_permission",
+      "en": "Error: {error_message}. Please check you have permission to selected folder",
+      "fr": "Erreur : {error_message}. Veuillez vérifier que vous avez l'autorisation d'accéder au dossier sélectionné",
+      "pt": "Erro: {error_message}. Verifique se você tem permissão para acessar a pasta selecionada"
+    },
+    {
+      "key": "msg_cache_saved",
+      "en": "Cache saved successfully!",
+      "fr": "Cache enregistré avec succès !",
+      "pt": "Cache salvo com sucesso!"
+    },
+    
+    // Palettes
+    {
+      "key": "opt_palette_greens",
+      "en": "Greens",
+      "fr": "Verts",
+      "pt": "Verdes"
+    },
+    {
+      "key": "opt_palette_blues",
+      "en": "Blues",
+      "fr": "Bleus",
+      "pt": "Azuis"
+    },
+    {
+      "key": "opt_palette_reds",
+      "en": "Reds",
+      "fr": "Rouges",
+      "pt": "Vermelhos"
+    },
+    
+    // Dynamic Indicators
+    {
+      "key": "opt_dropout",
+      "en": "Dropout",
+      "fr": "Abandon",
+      "pt": "Evasão"
+    },
+    {
+      "key": "opt_anc",
+      "en": "ANC",
+      "fr": "CPN",
+      "pt": "CPN"
+    },
+    {
+      "key": "opt_idelv",
+      "en": "Institutional Delivery",
+      "fr": "Accouchement en établissement de santé",
+      "pt": "Parto institucional"
+    },
+    {
+      "key": "opt_vacc",
+      "en": "Vaccination",
+      "fr": "Vaccination",
+      "pt": "Vacinação"
+    },
+    {
+      "key": "opt_anc1",
+      "en": "ANC 1",
+      "fr": "CPN 1",
+      "pt": "CPN 1"
+    },
+    {
+      "key": "opt_ideliv",
+      "en": "Institutional Deliveries",
+      "fr": "Accouchements en établissement de santé",
+      "pt": "Partos institucionais"
+    },
+    {
+      "key": "opt_instlivebirths",
+      "en": "Institutional Live Births",
+      "fr": "Naissances vivantes en établissement de santé",
+      "pt": "Nascidos vivos em estabelecimento de saúde"
+    },
+    {
+      "key": "opt_bcg",
+      "en": "BCG",
+      "fr": "BCG",
+      "pt": "BCG"
+    },
+    {
+      "key": "opt_ipv1",
+      "en": "IPV 1",
+      "fr": "VPI 1",
+      "pt": "VIP 1"
+    },
+    {
+      "key": "opt_ipv2",
+      "en": "IPV 2",
+      "fr": "VPI 2",
+      "pt": "VIP 2"
+    },
+    {
+      "key": "opt_measles1",
+      "en": "Measles 1",
+      "fr": "Rougeole 1",
+      "pt": "Sarampo 1"
+    },
+    {
+      "key": "opt_measles2",
+      "en": "Measles 2",
+      "fr": "Rougeole 2",
+      "pt": "Sarampo 2"
+    },
+    {
+      "key": "opt_opv1",
+      "en": "OPV 1",
+      "fr": "VPO 1",
+      "pt": "VOP 1"
+    },
+    {
+      "key": "opt_opv2",
+      "en": "OPV 2",
+      "fr": "VPO 2",
+      "pt": "VOP 2"
+    },
+    {
+      "key": "opt_opv3",
+      "en": "OPV 3",
+      "fr": "VPO 3",
+      "pt": "VOP 3"
+    },
+    {
+      "key": "opt_anc_1trimester",
+      "en": "ANC 1st Trimester",
+      "fr": "CPN 1er trimestre",
+      "pt": "Pré-natal 1º Trimestre"
+    },
+    {
+      "key": "opt_anc4",
+      "en": "ANC 4 Visits",
+      "fr": "4 CPN",
+      "pt": "4 Consultas de Pré-natal"
+    },
+    {
+      "key": "opt_csection",
+      "en": "Caesarean Sections",
+      "fr": "Césariennes",
+      "pt": "Cesarianas"
+    },
+    {
+      "key": "opt_hiv_test",
+      "en": "HIV Test",
+      "fr": "Test VIH",
+      "pt": "Teste de HIV"
+    },
+    {
+      "key": "opt_ifa90",
+      "en": "IFA 90+ Days",
+      "fr": "SFA 90+ jours",
+      "pt": "IFA 90+ dias"
+    },
+    {
+      "key": "opt_ipd_total",
+      "en": "IPD Total (Inpatient)",
+      "fr": "Total IPD (Hospitalisations)",
+      "pt": "Total IPD (Internações)"
+    },
+    {
+      "key": "opt_ipd_under5",
+      "en": "IPD Under 5 Years",
+      "fr": "IPD Moins de 5 ans",
+      "pt": "IPD Menores de 5 anos"
+    },
+    {
+      "key": "opt_ipt2",
+      "en": "IPT 2nd Dose",
+      "fr": "TPI 2ème dose",
+      "pt": "IPT 2ª Dose"
+    },
+    {
+      "key": "opt_ipt3",
+      "en": "IPT 3rd Dose",
+      "fr": "TPI 3ème dose",
+      "pt": "IPT 3ª Dose"
+    },
+    {
+      "key": "opt_low_bweight",
+      "en": "Low Birth Weight",
+      "fr": "Faible poids de naissance",
+      "pt": "Baixo peso ao nascer"
+    },
+    {
+      "key": "opt_maternal_deaths",
+      "en": "Maternal Deaths",
+      "fr": "Décès maternels",
+      "pt": "Mortes maternas"
+    },
+    {
+      "key": "opt_neonatal_deaths",
+      "en": "Neonatal Deaths",
+      "fr": "Décès néonatals",
+      "pt": "Mortes neonatais"
+    },
+    {
+      "key": "opt_opd_total",
+      "en": "OPD Total (Outpatient)",
+      "fr": "Total OPD (Consultations externes)",
+      "pt": "Total OPD (Consultas ambulatoriais)"
+    },
+    {
+      "key": "opt_opd_under5",
+      "en": "OPD Under 5 Years",
+      "fr": "OPD Moins de 5 ans",
+      "pt": "OPD Menores de 5 anos"
+    },
+    {
+      "key": "opt_pnc48h",
+      "en": "PNC within 48 hours",
+      "fr": "Consultation postnatale dans les 48h",
+      "pt": "Consulta pós-natal nas primeiras 48h"
+    },
+    {
+      "key": "opt_sba",
+      "en": "Skilled Birth Attendance",
+      "fr": "Accouchements assistés par du personnel qualifié",
+      "pt": "Partos assistidos por profissionais qualificados"
+    },
+    {
+      "key": "opt_stillbirth_f",
+      "en": "Fresh Stillbirths",
+      "fr": "Morts-nés frais",
+      "pt": "Natimortos recentes"
+    },
+    {
+      "key": "opt_stillbirth_m",
+      "en": "Macerated Stillbirths",
+      "fr": "Morts-nés macérés",
+      "pt": "Natimortos macerados"
+    },
+    {
+      "key": "opt_syphilis_test",
+      "en": "Syphilis Test",
+      "fr": "Test Syphilis",
+      "pt": "Teste de Sífilis"
+    },
+    {
+      "key": "opt_total_stillbirth",
+      "en": "Total Stillbirths",
+      "fr": "Mortinaissances totales",
+      "pt": "Total de natimortos"
+    },
+    {
+      "key": "opt_penta1",
+      "en": "Pentavalent 1",
+      "fr": "Pentavalent 1",
+      "pt": "Pentavalente 1"
+    },
+    {
+      "key": "opt_penta2",
+      "en": "Pentavalent 2",
+      "fr": "Pentavalent 2",
+      "pt": "Pentavalente 2"
+    },
+    {
+      "key": "opt_penta3",
+      "en": "Pentavalent 3",
+      "fr": "Pentavalent 3",
+      "pt": "Pentavalente 3"
+    },
+    {
+      "key": "opt_pcv1",
+      "en": "PCV 1",
+      "fr": "PCV 1",
+      "pt": "PCV 1"
+    },
+    {
+      "key": "opt_pcv2",
+      "en": "PCV 2",
+      "fr": "PCV 2",
+      "pt": "PCV 2"
+    },
+    {
+      "key": "opt_pcv3",
+      "en": "PCV 3",
+      "fr": "PCV 3",
+      "pt": "PCV 3"
+    },
+    {
+      "key": "opt_rota1",
+      "en": "Rotavirus 1",
+      "fr": "Rotavirus 1",
+      "pt": "Rotavírus 1"
+    },
+    {
+      "key": "opt_rota2",
+      "en": "Rotavirus 2",
+      "fr": "Rotavirus 2",
+      "pt": "Rotavírus 2"
+    },
+    {
+      "key": "opt_dropout_penta13",
+      "en": "Penta 1 to Penta 3 Dropout",
+      "fr": "Abandon entre Penta 1 et Penta 3",
+      "pt": "Evasão de Penta 1 para Penta 3"
+    },
+    {
+      "key": "opt_dropout_penta1mcv1",
+      "en": "Penta 1 to Measles 1 Dropout",
+      "fr": "Abandon entre Penta 1 et Rougeole 1",
+      "pt": "Evasão de Penta 1 para Sarampo 1"
+    },
+    {
+      "key": "opt_dropout_penta3mcv1",
+      "en": "Penta 3 to Measles 1 Dropout",
+      "fr": "Abandon entre Penta 3 et Rougeole 1",
+      "pt": "Evasão de Penta 3 para Sarampo 1"
+    },
+    {
+      "key": "opt_dropout_measles12",
+      "en": "Measles 1 to Measles 2 Dropout",
+      "fr": "Abandon entre Rougeole 1 et Rougeole 2",
+      "pt": "Evasão de Sarampo 1 para Sarampo 2"
+    },
+    {
+      "key": "opt_zerodose",
+      "en": "Zero-dose",
+      "fr": "Zéro dose",
+      "pt": "Dose zero"
+    },
+    {
+      "key": "opt_undervax",
+      "en": "Under-vaccinated",
+      "fr": "Sous-vaccinés",
+      "pt": "Subvacinados"
+    },
+    {
+      "key": "opt_births",
+      "en": "Births",
+      "fr": "Naissances",
+      "pt": "Nascimentos"
+    },
+    {
+      "key": "opt_under1",
+      "en": "Under 1",
+      "fr": "Moins de 1 an",
+      "pt": "Menores de 1 ano"
+    },
+    {
+      "key": "opt_vaccine",
+      "en": "Vaccine",
+      "fr": "Vaccin",
+      "pt": "Vacina"
+    },
+    {
+      "key": "opt_rate",
+      "en": "Rate",
+      "fr": "Taux",
+      "pt": "Taxa"
+    },
+    {
+      "key": "opt_coverage",
+      "en": "Coverage",
+      "fr": "Couverture",
+      "pt": "Cobertura"
+    },
+    
+    // Mortality
+    {
+      "key": "title_mortality",
+      "en": "Mortality",
+      "fr": "Mortalité",
+      "pt": "Mortalidade"
+    },
+    {
+      "key": "title_mortality_institutional",
+      "en": "Institutional Mortality",
+      "fr": "Mortalité institutionnelle",
+      "pt": "Mortalidade institucional"
+    },
+    {
+      "key": "title_mortality_mapping",
+      "en": "Mortality Mapping",
+      "fr": "Cartographie de la mortalité",
+      "pt": "Mapeamento da mortalidade"
+    },
+    {
+      "key": "title_mortality_completeness",
+      "en": "Mortality Completeness",
+      "fr": "Complétude des données de mortalité",
+      "pt": "Completude dos dados de mortalidade"
+    },
+    {
+      "key": "opt_mmr_inst",
+      "en": "Maternal Mortality",
+      "fr": "Mortalité maternelle",
+      "pt": "Mortalidade Materna"
+    },
+    {
+      "key": "opt_ratio_md_sb",
+      "en": "SBR to Maternal Death Ratio",
+      "fr": "Ratio mortinatalité/décès maternels",
+      "pt": "Razão entre nascimentos mortos e mortes maternas"
+    },
+    {
+      "key": "opt_sbr_inst",
+      "en": "Still Birth Rate",
+      "fr": "Taux de mortinatalité",
+      "pt": "Taxa de Natimortalidade"
+    },
+    {
+      "key": "opt_nn_inst",
+      "en": "Neonatal Deaths",
+      "fr": "Décès néonatals",
+      "pt": "Óbitos Neonatais"
+    },
+    {
+      "key": "opt_mmr_ratio",
+      "en": "Institutional MMR",
+      "fr": "Taux de mortalité maternelle institutionnelle",
+      "pt": "Razão de Mortalidade Materna Institucional"
+    },
+    {
+      "key": "opt_sbr_ratio",
+      "en": "Institutional SBR",
+      "fr": "Taux de mortinaissance institutionnelle",
+      "pt": "Taxa Institucional de Natimortalidade"
+    },
+    
+    // Service utilization
+    {
+      "key": "title_service_utilization",
+      "en": "Service Utilization",
+      "fr": "Utilisation des services",
+      "pt": "Utilização dos Serviços"
+    },
+    {
+      "key": "title_utilization_dqa",
+      "en": "Service Utilization DQA",
+      "fr": "Indicateurs de DQA des services",
+      "pt": "Indicadores de DQA dos serviços"
+    },
+    {
+      "key": "lbl_opd_rr",
+      "en": "% expected monthly facility reports (National)",
+      "fr": "% de rapports mensuels attendus des établissements (National)",
+      "pt": "% de relatórios mensais esperados das instalações (Nacional)"
+    },
+    {
+      "key": "lbl_mis_opd_under5",
+      "en": "% non-missing OPD monthly values",
+      "fr": "% de valeurs mensuelles OPD non manquantes",
+      "pt": "% de valores mensais OPD não ausentes"
+    },
+    {
+      "key": "lbl_mis_ipd_under5",
+      "en": "% non-missing IPD monthly values",
+      "fr": "% de valeurs mensuelles IPD non manquantes",
+      "pt": "% de valores mensais IPD não ausentes"
+    },
+    {
+      "key": "lbl_districts_no_missing_opd",
+      "en": "% districts with no missing OPD values",
+      "fr": "% de districts sans valeurs OPD manquantes",
+      "pt": "% de distritos sem valores OPD ausentes"
+    },
+    {
+      "key": "lbl_districts_no_missing_ipd",
+      "en": "% districts with no missing IPD values",
+      "fr": "% de districts sans valeurs IPD manquantes",
+      "pt": "% de distritos sem valores IPD ausentes"
+    },
+    {
+      "key": "lbl_opd_under5_outlier5std",
+      "en": "% OPD monthly values not extreme outliers",
+      "fr": "% de valeurs mensuelles OPD qui ne sont pas des valeurs extrêmes",
+      "pt": "% de valores mensais OPD que não são valores extremos"
+    },
+    {
+      "key": "lbl_district_no_outlier_opd",
+      "en": "% districts with no OPD extreme outliers",
+      "fr": "% de districts sans valeurs extrêmes OPD",
+      "pt": "% de distritos sem valores extremos OPD"
+    },
+    {
+      "key": "lbl_ratio_opd_u5_ipd_u5",
+      "en": "Ratio OPD/IPD under 5",
+      "fr": "Ratio de consultations externes/hospitalisations (moins de 5 ans)",
+      "pt": "Rácio de consultas externas/internamentos (menores de 5 anos)"
+    },
+    {
+      "key": "lbl_perc_opd_under5",
+      "en": "% OPD under 5",
+      "fr": "% consultations externes (moins de 5 ans)",
+      "pt": "% consultas externas (menores de 5 anos)"
+    },
+    {
+      "key": "lbl_perc_ipd_under5",
+      "en": "% IPD under 5",
+      "fr": "% hospitalisations (moins de 5 ans)",
+      "pt": "% internamentos (menores de 5 anos)"
+    },
+    {
+      "key": "title_score_service_dqa",
+      "en": "3. Service DQA indicators",
+      "fr": "3. Indicateurs de DQA des services",
+      "pt": "3. Indicadores de DQA dos serviços"
+    },
+    {
+      "key": "title_national_utilization",
+      "en": "National Utilization",
+      "fr": "Utilisation des services nationales",
+      "pt": "Utilização Nacional dos Serviços"
+    },
+    {
+      "key": "title_subnational_utilization",
+      "en": "Sub-National Utilization",
+      "fr": "Utilisation des services infranationales",
+      "pt": "Utilização Subnacional dos Serviços"
+    },
+    {
+      "key": "opt_opd_capita_title",
+      "en": "Sub-National OPD Distribution",
+      "fr": "Distribution infranationale des consultations externes",
+      "pt": "Distribuição subnacional de consultas externas"
+    },
+    {
+      "key": "opt_ipd_capita_title",
+      "en": "Sub-National IPD Distribution",
+      "fr": "Distribution infranationale des hospitalisations",
+      "pt": "Distribuição subnacional de internamentos"
+    },
+    {
+      "key": "opt_opd_capita_x_axis",
+      "en": "OPD per capita under 5, by adminlevel1",
+      "fr": "Consultations externes par habitant (moins de 5 ans), par région",
+      "pt": "Consultas externas per capita (menores de 5 anos), por região"
+    },
+    {
+      "key": "opt_ipd_capita_x_axis",
+      "en": "IPD per 100 children under 5, by adminlevel1",
+      "fr": "Hospitalisations pour 100 enfants (moins de 5 ans), par région",
+      "pt": "Internamentos por 100 crianças (menores de 5 anos), por região"
+    },
+    {
+      "key": "opt_opd_capita_legend",
+      "en": "OPD Under 5",
+      "fr": "Consultations externes (moins de 5 ans)",
+      "pt": "Consultas externas (menores de 5 anos)"
+    },
+    {
+      "key": "opt_ipd_capita_legend",
+      "en": "IPD Under 5",
+      "fr": "Hospitalisations (moins de 5 ans)",
+      "pt": "Internamentos (menores de 5 anos)"
+    },
+    {
+      "key": "opt_opd",
+      "en": "OPD Visits",
+      "fr": "Consultations externes",
+      "pt": "Consultas ambulatoriais"
+    },
+    {
+      "key": "opt_ipd",
+      "en": "IPD Admissions",
+      "fr": "Admissions hospitalières",
+      "pt": "Internações IPD"
+    },
+    {
+      "key": "opt_under5",
+      "en": "Under 5",
+      "fr": "Enfants de moins de 5 ans",
+      "pt": "Menores de 5 anos"
+    },
+    {
+      "key": "opt_cfr",
+      "en": "Case Fatality Rate",
+      "fr": "Taux de létalité",
+      "pt": "Taxa de Letalidade"
+    },
+        {
+      "key": "opt_deaths",
+      "en": "Deaths",
+      "fr": "Décès",
+      "pt": "Óbitos"
+    },
+    {
+      "key": "opt_opd_map",
+      "en": "OPD Map",
+      "fr": "Carte des consultations externes",
+      "pt": "Mapa de consultas ambulatoriais"
+    },
+    {
+      "key": "opt_ipd_map",
+      "en": "IPD Map",
+      "fr": "Carte des hospitalisations",
+      "pt": "Mapa de internações hospitalares"
+    },
+    {
+      "key": "title_mch_curative",
+      "en": "MCH Preventive vs Curative Index",
+      "fr": "Indice préventif SMI vs Indice curatif",
+      "pt": "Índice preventivo de SMI vs Índice curativo"
+    },
+    {
+      "key": "lbl_mch_curative_title",
+      "en": "MCH preventive index compared to curative service index, under 5",
+      "fr": "Indice préventif SMI comparé à l'indice de services curatifs, moins de 5 ans",
+      "pt": "Índice preventivo de SMI comparado ao índice de serviços curativos, menores de 5 anos"
+    },
+    {
+      "key": "lbl_mch_prev_index_x",
+      "en": "MCH Preventive services index",
+      "fr": "Indice des services préventifs SMI",
+      "pt": "Índice de serviços preventivos de SMI"
+    },
+    {
+      "key": "lbl_curative_index_y",
+      "en": "Curative service use index",
+      "fr": "Indice d'utilisation des services curatifs",
+      "pt": "Índice de utilização de serviços curativos"
+    },
+    {
+      "key": "lbl_quad_low_prev_high_cur",
+      "en": "Low preventive\nHigh curative",
+      "fr": "Préventif faible\nCuratif élevé",
+      "pt": "Preventivo baixo\nCurativo alto"
+    },
+    {
+      "key": "lbl_quad_high_prev_high_cur",
+      "en": "High preventive\nHigh curative",
+      "fr": "Préventif élevé\nCuratif élevé",
+      "pt": "Preventivo alto\nCurativo alto"
+    },
+    {
+      "key": "lbl_quad_low_prev_low_cur",
+      "en": "Low preventive\nLow curative",
+      "fr": "Préventif faible\nCuratif faible",
+      "pt": "Preventivo baixo\nCurativo baixo"
+    },
+    {
+      "key": "lbl_quad_high_prev_low_cur",
+      "en": "High preventive\nLow curative",
+      "fr": "Préventif élevé\nCuratif faible",
+      "pt": "Preventivo alto\nCurativo baixo"
+    },
+    
+    // Health System Performance
+    {
+      "key": "title_national_health_system",
+      "en": "National Health System",
+      "fr": "Système de santé national",
+      "pt": "Sistema Nacional de Saúde"
+    },
+    {
+      "key": "opt_health_system_density",
+      "en": "Health system Indicators",
+      "fr": "Indicateurs du système de santé",
+      "pt": "Indicadores do Sistema de Saúde"
+    },
+    {
+      "key": "title_subnational_health_system",
+      "en": "Sub-National Health System",
+      "fr": "Système de santé infranational",
+      "pt": "Sistema Subnacional de Saúde"
+    },
+    {
+      "key": "opt_ratio_fac_pop",
+      "en": "Health Facility Density",
+      "fr": "Densité des établissements de santé",
+      "pt": "Densidade de Unidades de Saúde"
+    },
+    {
+      "key": "opt_ratio_hos_pop",
+      "en": "Hospital Density/10,000 population",
+      "fr": "Densité des hôpitaux pour 10 000 habitants",
+      "pt": "Densidade Hospitalar por 10.000 habitantes"
+    },
+    {
+      "key": "opt_ratio_hstaff_pop",
+      "en": "Workforce Density",
+      "fr": "Densité du personnel de santé",
+      "pt": "Densidade da Força de Trabalho"
+    },
+    {
+      "key": "opt_ratio_bed_pop",
+      "en": "Bed Density",
+      "fr": "Densité des lits d’hôpital",
+      "pt": "Densidade de Leitos"
+    },
+    {
+      "key": "title_health_system_comparison",
+      "en": "PHC Performance",
+      "fr": "Performance des SSP",
+      "pt": "Desempenho da APS"
+    },
+    {
+      "key": "opt_health_system_performance",
+      "en": "Health System Performance",
+      "fr": "Performance du système de santé",
+      "pt": "Desempenho do Sistema de Saúde"
+    },
+    {
+      "key": "opt_ratio_ipd_u5_bed",
+      "en": "Under 5 IPD/Bed",
+      "fr": "Hospitalisations des <5 ans/Lit",
+      "pt": "Internações <5 anos por Leito"
+    },
+    {
+      "key": "opt_ratio_ipd_u5_hos",
+      "en": "IPD Under 5/Hospitals",
+      "fr": "Hospitalisations <5 ans/Hôpitaux",
+      "pt": "Internações <5 anos/Hospitais"
+    },
+    {
+      "key": "opt_ratio_opd_u5_hstaff",
+      "en": "OPD Under 5/Workforce",
+      "fr": "Consultations externes <5 ans/Personnel",
+      "pt": "OPD <5 anos/Profissionais de Saúde"
+    },
+    
+    {
+      "key": "title_private_sector",
+      "en": "Public/Private Share",
+      "fr": "Part publique/privée",
+      "pt": "Participação pública/privada"
+    },
+    {
+      "key": "title_upload_private",
+      "en": "Upload Sector Folder",
+      "fr": "Téléverser le dossier du secteur",
+      "pt": "Carregar pasta do setor"
+    },
+    {
+      "key": "opt_private_national",
+      "en": "National",
+      "fr": "National",
+      "pt": "Nacional"
+    },
+    {
+      "key": "opt_private_area",
+      "en": "Urban/Rural",
+      "fr": "Urbain/Rural",
+      "pt": "Urbano/Rural"
+    },
+
+    {
+      "key": "lbl_private",
+      "en": "Private",
+      "fr": "Privé",
+      "pt": "Privado"
+    },
+    {
+      "key": "lbl_ngo",
+      "en": "NGO",
+      "fr": "ONG",
+      "pt": "ONG"
+    },
+    {
+      "key": "lbl_public",
+      "en": "Public",
+      "fr": "Public",
+      "pt": "Público"
+    },
+    {
+      "key": "title_private_sector_graph",
+      "en": "Ownership of health facilities, 2024 (DHIS2)",
+      "fr": "Propriété des établissements de santé, 2024 (DHIS2)",
+      "pt": "Propriedade das instalações de saúde, 2024 (DHIS2)"
+    },
+    {
+      "key": "xlab_private_sector",
+      "en": "",
+      "fr": "",
+      "pt": ""
+    },
+    {
+      "key": "ylab_private_sector",
+      "en": "Percent of facilities",
+      "fr": "Pourcentage d'établissements",
+      "pt": "Porcentagem de instalações"
+    },
+    {
+      "key": "title_scatter_ratio_fac_pop",
+      "en": "Facility density vs PHC Indices",
+      "fr": "Densité des installations vs Indices SSP",
+      "pt": "Densidade de instalações vs Índices de APS"
+    },
+    {
+      "key": "title_scatter_ratio_hstaff_pop",
+      "en": "Health workforce density vs PHC Indices",
+      "fr": "Densité du personnel de santé vs Indices SSP",
+      "pt": "Densidade da força de trabalho em saúde vs Índices de APS"
+    },
+    {
+      "key": "xlab_ratio_fac_pop",
+      "en": "Facility density",
+      "fr": "Densité des installations",
+      "pt": "Densidade de instalações"
+    },
+    {
+      "key": "xlab_ratio_hstaff_pop",
+      "en": "Health workforce density",
+      "fr": "Densité du personnel de santé",
+      "pt": "Densidade da força de trabalho em saúde"
+    },
+    {
+      "key": "ylab_phc_scatter",
+      "en": "Index Value",
+      "fr": "Valeur de l'indice",
+      "pt": "Valor do índice"
+    },
+    {
+      "key": "lbl_mch_index",
+      "en": "MCH Index",
+      "fr": "Indice SMI",
+      "pt": "Índice SMI"
+    },
+    {
+      "key": "lbl_curative_index",
+      "en": "Curative Index",
+      "fr": "Indice Curatif",
+      "pt": "Índice Curativo"
+    },
+    {
+      "key": "title_cov_ideliv_hstaff",
+      "en": "Institutional delivery coverage rate (%) by health workforce density by admin level 1",
+      "fr": "Taux de couverture des accouchements en établissement (%) par densité du personnel de santé",
+      "pt": "Taxa de cobertura de partos institucionais (%) por densidade da força de trabalho em saúde por nível administrativo 1"
+    },
+    {
+      "key": "title_ratio_opd_u5_hstaff",
+      "en": "Under-5 OPD Visits by health workforce density by admin level 1",
+      "fr": "Visites OPD des moins de 5 ans par densité du personnel de santé",
+      "pt": "Consultas ambulatoriais em menores de 5 anos por densidade da força de trabalho em saúde por nível administrativo 1"
+    },
+    {
+      "key": "title_ratio_ipd_u5_hos",
+      "en": "Under-5 IPD Admission by hospital density by admin level 1",
+      "fr": "Admissions IPD des moins de 5 ans par densité hospitalière",
+      "pt": "Internações em menores de 5 anos por densidade hospitalar por nível administrativo 1"
+    },
+    {
+      "key": "title_ratio_ipd_u5_bed",
+      "en": "Under-5 IPD Admission by hospital beds density by admin level 1",
+      "fr": "Admissions IPD des moins de 5 ans par densité de lits d'hôpital",
+      "pt": "Internações em menores de 5 anos por densidade de leitos hospitalares por nível administrativo 1"
+    },
+    {
+      "key": "xlab_cov_ideliv_hstaff",
+      "en": "Institutional delivery coverage rate (%)",
+      "fr": "Taux de couverture des accouchements en établissement (%)",
+      "pt": "Taxa de cobertura de partos institucionais (%)"
+    },
+    {
+      "key": "xlab_ratio_opd_u5_hstaff",
+      "en": "Number of under-5 OPD visits per child per year",
+      "fr": "Nombre de visites OPD des moins de 5 ans par enfant par an",
+      "pt": "Número de consultas ambulatoriais em menores de 5 anos por criança por ano"
+    },
+    {
+      "key": "xlab_ratio_ipd_u5_hos",
+      "en": "Number of under-5 IPD Admissions per child per year",
+      "fr": "Nombre d'admissions IPD des moins de 5 ans par enfant par an",
+      "pt": "Número de internações em menores de 5 anos por criança por ano"
+    },
+    {
+      "key": "xlab_ratio_ipd_u5_bed",
+      "en": "Number of Under-5 IPD Admission per 100 children per year",
+      "fr": "Nombre d'admissions IPD des moins de 5 ans pour 100 enfants par an",
+      "pt": "Número de internações em menores de 5 anos por 100 crianças por ano"
+    },
+    {
+      "key": "ylab_cov_ideliv_hstaff",
+      "en": "Number of core health workforce per 10,000 population",
+      "fr": "Nombre de personnels de santé de base pour 10 000 habitants",
+      "pt": "Número de profissionais de saúde essenciais por 10.000 habitantes"
+    },
+    {
+      "key": "ylab_ratio_opd_u5_hstaff",
+      "en": "Number of core health workforce per 10,000 population",
+      "fr": "Nombre de personnels de santé de base pour 10 000 habitants",
+      "pt": "Número de profissionais de saúde essenciais por 10.000 habitantes"
+    },
+    {
+      "key": "ylab_ratio_ipd_u5_hos",
+      "en": "Number of Hospitals per 100,000 population",
+      "fr": "Nombre d'hôpitaux pour 100 000 habitants",
+      "pt": "Número de hospitais por 100.000 habitantes"
+    },
+    {
+      "key": "ylab_ratio_ipd_u5_bed",
+      "en": "Number of hospital beds per 10,000 population",
+      "fr": "Nombre de lits d'hôpital pour 10 000 habitants",
+      "pt": "Número de leitos hospitalares por 10.000 habitantes"
+    },
+    {
+      "key": "lbl_admin1_units",
+      "en": "Admin1 units",
+      "fr": "Unités Admin1",
+      "pt": "Unidades Admin1"
+    },
+    {
+      "key": "lbl_linear_fit",
+      "en": "Linear fit",
+      "fr": "Ajustement linéaire",
+      "pt": "Ajuste linear"
+    },
+    {
+      "key": "lbl_denom_derived",
+      "en": "Denominator derived from",
+      "fr": "Dénominateur dérivé des données",
+      "pt": "Denominador derivado de"
+    },
+
+    {
+      "key": "title_metric_ratio_fac_pop",
+      "en": "Facility Density per 10,000 population",
+      "fr": "Densité des installations pour 10 000 habitants",
+      "pt": "Densidade de instalações por 10.000 habitantes"
+    },
+    {
+      "key": "title_metric_ratio_hos_pop",
+      "en": "Hospital Density per 100,000 population",
+      "fr": "Densité hospitalière pour 100 000 habitants",
+      "pt": "Densidade hospitalar por 100.000 habitantes"
+    },
+    {
+      "key": "title_metric_ratio_hstaff_pop",
+      "en": "Health workforce density per 10,000 population",
+      "fr": "Densité du personnel de santé pour 10 000 habitants",
+      "pt": "Densidade da força de trabalho em saúde por 10.000 habitantes"
+    },
+    {
+      "key": "title_metric_ratio_bed_pop",
+      "en": "Inpatient Bed Density per 10,000 population",
+      "fr": "Densité de lits d'hospitalisation pour 10 000 habitants",
+      "pt": "Densidade de leitos de internação por 10.000 habitantes"
+    },
+    {
+      "key": "xlab_metric_ratio_fac_pop",
+      "en": "Facility density",
+      "fr": "Densité des installations",
+      "pt": "Densidade de instalações"
+    },
+    {
+      "key": "xlab_metric_ratio_hos_pop",
+      "en": "Hospital density",
+      "fr": "Densité hospitalière",
+      "pt": "Densidade hospitalar"
+    },
+    {
+      "key": "xlab_metric_ratio_hstaff_pop",
+      "en": "Health workforce density",
+      "fr": "Densité du personnel de santé",
+      "pt": "Densidade da força de trabalho em saúde"
+    },
+    {
+      "key": "xlab_metric_ratio_bed_pop",
+      "en": "Bed density",
+      "fr": "Densité de lits",
+      "pt": "Densidade de leitos"
+    },
+    {
+      "key": "lbl_below_benchmark",
+      "en": "Below benchmark",
+      "fr": "En dessous de la cible",
+      "pt": "Abaixo da meta"
+    },
+    {
+      "key": "lbl_meets_benchmark",
+      "en": "Meets benchmark",
+      "fr": "Atteint la cible",
+      "pt": "Atinge a meta"
+    },
+
+    {
+      "key": "lbl_value",
+      "en": "Value",
+      "fr": "Valeur",
+      "pt": "Valor"
+    },
+    {
+      "key": "lbl_unit",
+      "en": "Unit",
+      "fr": "Unité",
+      "pt": "Unidade"
+    },
+    {
+      "key": "sec_infrastructure",
+      "en": "Health infrastructure",
+      "fr": "Infrastructures de santé",
+      "pt": "Infraestrutura de saúde"
+    },
+    {
+      "key": "sec_workforce",
+      "en": "Health workforce",
+      "fr": "Personnel de santé",
+      "pt": "Força de trabalho em saúde"
+    },
+    {
+      "key": "sec_private_sector",
+      "en": "Role of private sector",
+      "fr": "Rôle du secteur privé",
+      "pt": "Papel do setor privado"
+    },
+    {
+      "key": "ind_fac_density",
+      "en": "Health facility density",
+      "fr": "Densité des établissements de santé",
+      "pt": "Densidade de unidades de saúde"
+    },
+    {
+      "key": "ind_hosp_share",
+      "en": "Share of facilities that are hospitals",
+      "fr": "Part des établissements qui sont des hôpitaux",
+      "pt": "Proporção de unidades que são hospitais"
+    },
+    {
+      "key": "ind_hosp_density",
+      "en": "Hospital density",
+      "fr": "Densité hospitalière",
+      "pt": "Densidade hospitalar"
+    },
+    {
+      "key": "ind_bed_density",
+      "en": "Inpatient bed density",
+      "fr": "Densité des lits d'hospitalisation",
+      "pt": "Densidade de leitos de internação"
+    },
+    {
+      "key": "ind_hwf_density",
+      "en": "Health workforce density",
+      "fr": "Densité du personnel de santé",
+      "pt": "Densidade da força de trabalho em saúde"
+    },
+    {
+      "key": "ind_skill_mix",
+      "en": "Skills mix ratio nurse-midwives per physician",
+      "fr": "Ratio de la combinaison de compétences infirmières-sages-femmes par médecin",
+      "pt": "Rácio de combinação de competências enfermeiros-parteiras por médico"
+    },
+    {
+      "key": "ind_private_share",
+      "en": "Share of Private facilities",
+      "fr": "Part des établissements privés",
+      "pt": "Proporção de instalações privadas"
+    },
+    {
+      "key": "ind_ngo_share",
+      "en": "Share of NGO facilities",
+      "fr": "Part des établissements des ONG",
+      "pt": "Proporção de instalações de ONGs"
+    },
+    {
+      "key": "unit_per_10k",
+      "en": "per 10,000",
+      "fr": "pour 10 000",
+      "pt": "por 10.000"
+    },
+    {
+      "key": "unit_per_100k",
+      "en": "per 100,000",
+      "fr": "pour 100 000",
+      "pt": "por 100.000"
+    },
+    {
+      "key": "opt_cov_ideliv_hstaff",
+      "en": "Deliveries & Workforce",
+      "fr": "Accouchements & Personnel",
+      "pt": "Partos & Força de trabalho"
+    },
+    {
+      "key": "title_national_coverage",
+      "en": "National Coverage & Continuum",
+      "fr": "Couverture nationale et continuum",
+      "pt": "Cobertura Nacional e Contínuo"
+    },
+    {
+      "key": "opt_profile",
+      "en": "Continuum Profile",
+      "fr": "Profil du continuum",
+      "pt": "Perfil do Contínuo"
+    },
+    {
+      "key": "title_cov_profile",
+      "en": "National continuum-of-care profile",
+      "fr": "Profil national du continuum de soins",
+      "pt": "Perfil nacional do contínuo de cuidados"
+    },
+    {
+      "key": "subtitle_cov_profile",
+      "en": "Latest facility, latest survey, and WUENIC where relevant",
+      "fr": "Données récentes des établissements, dernières enquêtes, et WUENIC le cas échéant",
+      "pt": "Dados mais recentes de instalações, últimas pesquisas e WUENIC, quando relevante"
+    },
+    {
+      "key": "lbl_src_facility",
+      "en": "Facility",
+      "fr": "Établissement",
+      "pt": "Instalação"
+    },
+    {
+      "key": "lbl_src_survey",
+      "en": "Survey",
+      "fr": "Enquête",
+      "pt": "Pesquisa"
+    },
+    {
+      "key": "lbl_src_wuenic",
+      "en": "WUENIC",
+      "fr": "WUENIC",
+      "pt": "WUENIC"
+    },
+    {
+      "key": "opt_heatmap",
+      "en": "Continuum Heatmap",
+      "fr": "Carte thermique du continuum",
+      "pt": "Mapa de calor do contínuo"
+    },
+    {
+      "key": "title_cov_heatmap",
+      "en": "Subnational continuum heatmap",
+      "fr": "Carte thermique du continuum infranational",
+      "pt": "Mapa de calor do contínuo subnacional"
+    },
+    {
+      "key": "title_subnational_mortality_institutional",
+      "en": "Institutional Mortality DQA",
+      "fr": "DQA de la mortalité institutionnelle",
+      "pt": "DQA da Mortalidade Institucional"
+    },
+    {
+      "key": "opt_fresh_total_sb",
+      "en": "Fresh Stillbirths",
+      "fr": "Mortinaissances fraîches",
+      "pt": "Mortinatos recentes"
+    },
+    {
+      "key": "opt_ratio_md_nd",
+      "en": "Neonatal / Maternal Deaths",
+      "fr": "Décès néonatals / maternels",
+      "pt": "Óbitos neonatais / maternos"
+    },
+    {
+      "key": "title_fresh_total_sb",
+      "en": "Institutional fresh stillbirths as % of total stillbirths",
+      "fr": "Mortinaissances fraîches en établissement en % du total des mortinaissances",
+      "pt": "Mortinatos recentes institucionais como % do total de mortinatos"
+    },
+    {
+      "key": "title_ratio_md_sb",
+      "en": "Institutional stillbirth-to-maternal death ratio",
+      "fr": "Ratio mortinaissances/décès maternels en établissement",
+      "pt": "Razão de mortinatos por óbitos maternos institucionais"
+    },
+    {
+      "key": "title_ratio_md_nd",
+      "en": "Institutional neonatal death-to-maternal death ratio",
+      "fr": "Ratio décès néonatals/décès maternels en établissement",
+      "pt": "Razão de óbitos neonatais por óbitos maternos institucionais"
+    },
+    {
+      "key": "ylab_fresh_total_sb",
+      "en": "Fresh stillbirths (%)",
+      "fr": "Mortinaissances fraîches (%)",
+      "pt": "Mortinatos recentes (%)"
+    },
+    {
+      "key": "ylab_ratio_md_sb",
+      "en": "Stillbirths per maternal death",
+      "fr": "Mortinaissances par décès maternel",
+      "pt": "Mortinatos por óbito materno"
+    },
+    {
+      "key": "ylab_ratio_md_nd",
+      "en": "Neonatal deaths per maternal death",
+      "fr": "Décès néonatals par décès maternel",
+      "pt": "Óbitos neonatais por óbito materno"
+    },
+    {
+      "key": "note_fresh_total_sb",
+      "en": "Note: Plausible range (30-55) is the range of values considered realistic and expected.",
+      "fr": "Remarque : La plage plausible (30-55) correspond aux valeurs considérées comme réalistes et attendues.",
+      "pt": "Nota: O intervalo plausível (30-55) é o intervalo de valores considerado realista e esperado."
+    },
+    {
+      "key": "note_ratio_md_sb",
+      "en": "Note: Plausible range (6-15) is the range of values considered realistic and expected.",
+      "fr": "Remarque : La plage plausible (6-15) correspond aux valeurs considérées comme réalistes et attendues.",
+      "pt": "Nota: O intervalo plausível (6-15) é o intervalo de valores considerado realista e esperado."
+    },
+    {
+      "key": "note_ratio_md_nd",
+      "en": "Note: Institutional neonatal deaths are deaths among live-born infants before discharge from the health facility.\nPlausible range (5-10) is the range of values considered realistic and expected.",
+      "fr": "Remarque : Les décès néonatals en établissement sont les décès de nourrissons nés vivants avant leur sortie de l'établissement de santé.\nLa plage plausible (5-10) correspond aux valeurs considérées comme réalistes et attendues.",
+      "pt": "Nota: Óbitos neonatais institucionais são óbitos de nascidos vivos antes da alta na unidade de saúde.\nO intervalo plausível (5-10) é o intervalo de valores considerado realista e esperado."
+    },
+    {
+      "key": "lbl_median",
+      "en": "Median",
+      "fr": "Médiane",
+      "pt": "Mediana"
+    },
+    {
+      "key": "lbl_plausible",
+      "en": "Expected range",
+      "fr": "Plage attendue",
+      "pt": "Intervalo esperado"
+    },
+
+    {
+      "key": "lbl_hh_ratio_fac_pop",
+      "en": "High facility density\nHigh service index",
+      "fr": "Densité élevée des installations\nIndice de service élevé",
+      "pt": "Alta densidade de instalações\nAlto índice de serviço"
+    },
+    {
+      "key": "lbl_lh_ratio_fac_pop",
+      "en": "Low facility density\nHigh service index",
+      "fr": "Faible densité des installations\nIndice de service élevé",
+      "pt": "Baixa densidade de instalações\nAlto índice de serviço"
+    },
+    {
+      "key": "lbl_hl_ratio_fac_pop",
+      "en": "High facility density\nLow service index",
+      "fr": "Densité élevée des installations\nIndice de service faible",
+      "pt": "Alta densidade de instalações\nBaixo índice de serviço"
+    },
+    {
+      "key": "lbl_ll_ratio_fac_pop",
+      "en": "Low facility density\nLow service index",
+      "fr": "Faible densité des installations\nIndice de service faible",
+      "pt": "Baixa densidade de instalações\nBaixo índice de serviço"
+    },
+    {
+      "key": "lbl_hh_ratio_hstaff_pop",
+      "en": "High workforce density\nHigh service index",
+      "fr": "Densité élevée du personnel\nIndice de service élevé",
+      "pt": "Alta densidade da força de trabalho\nAlto índice de serviço"
+    },
+    {
+      "key": "lbl_lh_ratio_hstaff_pop",
+      "en": "Low workforce density\nHigh service index",
+      "fr": "Faible densité du personnel\nIndice de service élevé",
+      "pt": "Baixa densidade da força de trabalho\nAlto índice de serviço"
+    },
+    {
+      "key": "lbl_hl_ratio_hstaff_pop",
+      "en": "High workforce density\nLow service index",
+      "fr": "Densité élevée du personnel\nIndice de service faible",
+      "pt": "Alta densidade da força de trabalho\nBaixo índice de serviço"
+    },
+    {
+      "key": "lbl_ll_ratio_hstaff_pop",
+      "en": "Low workforce density\nLow service index",
+      "fr": "Faible densité du personnel\nIndice de service faible",
+      "pt": "Baixa densidade da força de trabalho\nBaixo índice de serviço"
+    },
+    {
+      "key": "title_fpet",
+      "en": "FPET FP Projection",
+      "fr": "Projection de la PF par FPET",
+      "pt": "Projeção de PF com FPET"
+    },
+
+    {
+      "key": "opt_fpet",
+      "en": "FP Projection",
+      "fr": "Projection de la PF",
+      "pt": "Projeção de PF"
+    },
+
+    {
+      "key": "title_graph_fpet",
+      "en": "Family planning among currently married women 15-49 years",
+      "fr": "Planification familiale chez les femmes actuellement mariées (15-49 ans)",
+      "pt": "Planejamento familiar entre mulheres atualmente casadas de 15 a 49 anos"
+    },
+    {
+      "key": "ylab_fpet",
+      "en": "Percent of currently married women 15-49",
+      "fr": "Pourcentage de femmes actuellement mariées (15-49 ans)",
+      "pt": "Percentual de mulheres atualmente casadas (15-49 anos)"
+    },
+    {
+      "key": "caption_fpet",
+      "en": "Lines show the median estimates. Shaded bands represent the 95% credible interval.\nSource: FPET Track20 modeling",
+      "fr": "Les lignes indiquent les estimations médianes. Les bandes ombrées représentent l'intervalle de crédibilité à 95 %.\nSource : Modélisation FPET Track20",
+      "pt": "As linhas mostram as estimativas medianas. As faixas sombreadas representam o intervalo de credibilidade de 95%.\nFonte: Modelagem FPET Track20"
+    },
+    {
+      "key": "lbl_fpet_mcpr",
+      "en": "Prevalence of Modern Methods (mCPR)",
+      "fr": "Prévalence des méthodes modernes (mCPR)",
+      "pt": "Prevalência de Métodos Modernos (mCPR)"
+    },
+    {
+      "key": "lbl_fpet_demand",
+      "en": "Demand Satisfied with a Modern Method",
+      "fr": "Demande satisfaite par une méthode moderne",
+      "pt": "Demanda satisfeita com método moderno"
+    },
+    {
+      "key": "title_continuum",
+      "en": "Continuum of Care",
+      "fr": "Continuum des soins",
+      "es": "Continuo de atención",
+      "pt": "Contínuo de cuidados"
+    },
+    {
+      "key": "title_routine_data",
+      "en": "Routine Data",
+      "fr": "Données de routine",
+      "es": "Datos de rutina",
+      "pt": "Dados de rotina"
+    },
+    {
+      "key": "title_survey_data",
+      "en": "Survey Data",
+      "fr": "Données d'enquête",
+      "es": "Datos de encuestas",
+      "pt": "Dados de inquérito"
+    },
+    {
+      "key": "title_bayesian_analysis",
+      "en": "Bayesian Analysis",
+      "fr": "Analyse bayésienne",
+      "es": "Análisis bayesiano",
+      "pt": "Análise bayesiana"
+    },
+    {
+      "key": "plot_title_bayes_coverage",
+      "en": "Bayesian Coverage Model Estimates",
+      "fr": "Estimations du modèle de couverture bayésien",
+      "es": "Estimaciones del modelo de cobertura bayesiano",
+      "pt": "Estimativas do modelo de cobertura bayesiano"
+    },
+
+    {
+      "key": "plot_legend_source",
+      "en": "Source: Survey Data & DHIS2 Routine Data",
+      "fr": "Source : Données d'enquête et données de routine DHIS2",
+      "es": "Fuente: Datos de encuestas y datos de rutina DHIS2",
+      "pt": "Fonte: Dados de inquérito e dados de rotina DHIS2"
+    },
+    {
+      "key": "lbl_target_benchmark",
+      "en": "Target benchmark",
+      "fr": "Cible de référence",
+      "es": "Meta de referencia",
+      "pt": "Alvo de referência"
+    },
+    {
+      "key": "lbl_national_average",
+      "en": "National average",
+      "fr": "Moyenne nationale",
+      "es": "Promedio nacional",
+      "pt": "Média nacional"
+    },
+    {
+      "key": "opt_maternal_continuum",
+      "en": "Maternal Continuum",
+      "fr": "Continuum maternel",
+      "es": "Continuo materno",
+      "pt": "Contínuo materno"
+    },
+    {
+      "key": "opt_child_continuum",
+      "en": "Child Continuum",
+      "fr": "Continuum infantile",
+      "es": "Continuo infantil",
+      "pt": "Contínuo infantil"
+    },
+    {
+      "key": "title_target_admin1_rate",
+      "en": "Target Rate by Region",
+      "fr": "Taux cible par région",
+      "es": "Tasa objetivo por región",
+      "pt": "Taxa alvo por região"
+    },
+    {
+      "key": "opt_area",
+      "en": "Area",
+      "fr": "Zone",
+      "es": "Área",
+      "pt": "Área"
+    },
+    {
+      "key": "title_denom_select_best",
+      "en": "Selected Denominator",
+      "fr": "Dénominateur sélectionné",
+      "pt": "Denominador selecionado"
+    },
+    {
+      "key": "title_download_options",
+      "en": "Downloading Report",
+      "fr": "Téléchargement du rapport",
+      "pt": "Baixando o relatório"
+    }
+  ]
+}
