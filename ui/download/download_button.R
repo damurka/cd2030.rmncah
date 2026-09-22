@@ -34,9 +34,13 @@ downloadButtonServer <- function(
   moduleServer(id, function(input, output, session) {
     ns <- session$ns
 
-    checked <- reactive({
+    # Debounced: during startup the cache's fields can settle over several quick updates, and each one
+    # invalidates this. Rendering the button on every tick sends the client "recalculating" faster than it can
+    # finish the previous cycle (a Shiny output expects idle -> running -> idle, in order); settling first keeps
+    # that in order.
+    checked <- shiny::debounce(reactive({
       tryCatch(data(), error = function(e) NULL)
-    })
+    }), millis = 300)
 
     icon_tag <- reactive({
       if (inherits(icon, "shiny.tag")) {
