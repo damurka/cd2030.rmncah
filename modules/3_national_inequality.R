@@ -11,7 +11,7 @@ nationalInequalityUI <- function(id, i18n) {
     countdownOptions(
       title = i18n$t("title_global_options"),
       column(6, denominatorInputUI(ns("denominator"), i18n)),
-      column(3, selectizeInput(ns("years"), label = i18n$t("title_global_select_years"), choice = NULL, multiple = TRUE)),
+      column(3, cdChipMulti(ns("years"), "title_global_select_years", i18n = i18n)),
       column(3, i18nSelectizeInput(ns("palette"), 
                                    label = i18n$t("title_global_palette"), 
                                    choices = c("opt_palette_greens" = "Greens", "opt_palette_blues" = "Blues", "opt_palette_reds" = "Reds")))
@@ -32,11 +32,10 @@ nationalInequalityServer <- function(id, cache, i18n) {
       selected_tab <- inequalityServer("inequality", cache, i18n, reactive('adminlevel_1'))
       subnationalMappingServer("map", cache, i18n, reactive(input$palette), selected_tab)
 
-      observe({
-        req(cache()$data_years)
-        survey_years <- c("All years" = "", cache()$data_years)
-        updateSelectizeInput(session, "years", choices = survey_years, selected = years())
-      })
+      yearsSelectSync(input, session, "years",
+        years = reactive({ req(cache()); cache()$data_years }),
+        selected = reactive({ req(cache()); cache()$mapping_years })
+      )
 
       observeEvent(input$years, {
         req(cache())

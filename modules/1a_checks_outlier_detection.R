@@ -89,11 +89,6 @@ outlierDetectionServer <- function(id, cache, i18n) {
         cache()$list_outlier_units
       })
 
-      observe({
-        req(cache()$data_years)
-        updateSelectizeInput(session, "year", choices = cache()$data_years)
-      })
-
       plotDownloadsRowServer(
         id = "outlier_heatmap",
         i18n = i18n,

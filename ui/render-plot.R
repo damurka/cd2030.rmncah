@@ -1,4 +1,6 @@
-renderCustomPlot <- function(expr) {
+# `height` is a function returning the plot's height in pixels; the plot output must be created with height = "auto"
+# (see plotCustomOutput()) so the chart can grow with the number of categories it draws.
+renderCustomPlot <- function(expr, height = function() 400) {
   # Helper function to generate an error plot
   generate_error_plot <- function(message, color = 'red') {
     graphics::plot.new()
@@ -53,9 +55,9 @@ renderCustomPlot <- function(expr) {
       # if (inherits(e, 'shiny.silent.error')) return()
       generate_error_plot(paste('Error:', clean_error_message(e)))
     })
-  })
+  }, height = height)
 }
 
 plotCustomOutput <- function(id) {
-  withSpinner(plotOutput(id))
+  withSpinner(plotOutput(id, height = "auto"))
 }

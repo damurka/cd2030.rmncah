@@ -11,7 +11,7 @@ denominatorSelectionUI <- function(id, i18n) {
     i18n = i18n,
     countdownOptions = countdownOptions(
       title = i18n$t("title_global_options"),
-      column(3, denominatorInputUI(ns("maternal_denominator"), i18n, allow_input = TRUE)),
+      column(3, denominatorInputUI(ns("maternal_denominator"), i18n, allow_input = TRUE, is_maternal = TRUE)),
       column(3, denominatorInputUI(ns("vaxx_denominator"), i18n, allow_input = TRUE)),
       column(6, adminLevelInputUI(ns("admin_level"), i18n, include_national = TRUE))
     ),

@@ -39,6 +39,7 @@ pacman::p_load(
   rlang,
   # sf,
   shiny.i18n,
+  shiny.react,
   stringr,
   waiter,
   webshot,
@@ -54,7 +55,10 @@ source("ui/download/download_coverage.R")
 source("ui/download/table_download.R")
 source("ui/download/plot_download.R")
 source("ui/download_report.R")
+source("ui/react/cd-react.R")
+source("ui/react/chart-options.R")
 source("ui/input/admin-level-input.R")
+source("ui/input/years-select.R")
 source("ui/input/denominator-input.R")
 source("ui/input/i18nSelectizeInput.R")
 source("ui/input/indicator-select.R")
@@ -117,6 +121,7 @@ print(selected_file)
 
 i18n <- init_i18n(translation_json_path = "translation/translation.json")
 i18n$set_translation_language(language)
+cd_use_i18n(i18n)
 
 theme_bs3 <- bs_theme(version = 3, bootswatch = "flatly")
 
@@ -338,7 +343,10 @@ ui <- dashboardPage(
       )
     ),
     tags$head(
-      tags$link(rel = "stylesheet", type = "text/css", href = "styles.css"),
+      # ?v= busts caches that keep an old copy across app updates -- seen in practice in embedded browser
+      # views, which can hold a stale styles.css after a redeploy even though the page markup is current.
+      tags$link(rel = "stylesheet", type = "text/css",
+                href = paste0("styles.css?v=", as.integer(file.mtime("www/styles.css")))),
       tags$link(rel = "stylesheet", type = "text/css", href = "bootstrap-icons.css"),
       tags$script(src = "jquery.slimscroll.min.js"),
       tags$script(src = "header-brand.js"),
@@ -400,18 +408,34 @@ server <- function(input, output, session) {
   hostess <- Hostess$new("loader", infinite = TRUE)
   hostess$start()
 
+  # React components render their own text, in all languages (see ui/react/cd-react.R), so a language change is
+  # one message to the browser rather than an update to each component.
+  show_language <- function(lang) {
+    update_lang(lang)
+    cdSetLanguage(session, lang)
+  }
+
   introductionServer("introduction", selected_language = reactive(input$selected_language))
   cache <- uploadDataServer("upload_data", i18n, selected_file)
+
+  # Every page server is created at startup, so its observers run whether or not the page is open.
+  # Work that only matters for one page should wait for it: pass `active = page_is("<tab name>")`
+  # (the tab names are the `tabName`s in the sidebar) and start that work with req(active()).
+  page_is <- function(tab) {
+    force(tab)
+    reactive(identical(input$tabs, tab))
+  }
+
   observeEvent(c(cache(), cache()$language), {
     req(cache())
 
-    update_lang(cache()$language)
+    show_language(cache()$language)
     updateHeader(cache()$country, i18n)
   })
 
   observeEvent(input$selected_language, {
     if (!isTruthy(cache())) {
-      update_lang(input$selected_language)
+      show_language(input$selected_language)
       updateSelectizeInput(session, input$selected_language)
     } else {
       cache()$set_language(input$selected_language)
@@ -439,7 +463,7 @@ server <- function(input, output, session) {
   subnationalTargetServer("subnational_target", cache, i18n)
   equityServer("equity_assessment", cache, i18n)
   mortalityServer('mortality_institutional', cache, i18n)
-  mortalityMappingServer('mortality_mapping', cache, i18n)
+  mortalityMappingServer('mortality_mapping', cache, i18n, active = page_is('mortality_mapping'))
   mortalityCompletenessServer('mortality_completeness', cache, i18n)
   utilizationDqaServer('utilization_dqa', cache, i18n)
   nationalServiceUtilizationServer('national_utilization', cache, i18n)

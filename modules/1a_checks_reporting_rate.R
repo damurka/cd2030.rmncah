@@ -13,7 +13,7 @@ reportingRateUI <- function(id, i18n) {
         tooltip = "tt_rr_indicator",
         indicators = c("opt_anc" = "anc_rr", "opt_idelv" = "idelv_rr", "opt_vacc" = "vacc_rr", "opt_opd" = "opd_rr")
       )),
-      column(3, numericInput(ns("threshold"), label = i18n$t("title_rr_threshold"), value = 90)),
+      column(3, cdChipNumber(ns("threshold"), "title_rr_threshold", i18n, value = 90, min = 0, max = 100, unit = "%", picks = c(70, 80, 90, 95), default = 90)),
       column(6, adminLevelInputUI(ns("admin_level"), i18n)),
     ),
     tabPanelsUI(ns("panel"), i18n, "title_rr_subnational", downloadCoverageUI, indicators = rr_indicators, showCustom = FALSE),
@@ -94,22 +94,19 @@ reportingRateServer <- function(id, cache, i18n) {
           filter(!!sym(indicator_val()) < threshold())
       })
 
-      observeEvent(data(),
-        {
-          req(data())
-          updateNumericInput(session, "threshold", value = threshold())
-        },
-        once = TRUE
-      )
+      # show the stored threshold once the data is there and the chip exists
+      threshold_mounted <- cdMounted(input, "threshold")
+      threshold_shown <- FALSE
+      observeEvent(list(data(), threshold_mounted()), {
+        req(data(), threshold_mounted())
+        if (threshold_shown) return()
+        threshold_shown <<- TRUE
+        updateCdChip("threshold", session, value = threshold())
+      })
 
       observeEvent(input$threshold, {
         req(cache())
         cache()$set_performance_threshold(as.integer(input$threshold))
-      })
-
-      observe({
-        req(cache()$data_years)
-        updateSelectizeInput(session, "year", choices = cache()$data_years)
       })
 
       output$district_rr_title <- renderUI({

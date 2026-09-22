@@ -3420,6 +3420,204 @@
       "en": "Downloading Report",
       "fr": "Téléchargement du rapport",
       "pt": "Baixando o relatório"
+    },
+    {
+      "key": "title_global_maternal",
+      "en": "Maternal",
+      "fr": "Maternel",
+      "pt": "Materno"
+    },
+    {
+      "key": "lbl_filter_scope_page",
+      "en": "All charts on this page",
+      "fr": "Tous les graphiques de cette page",
+      "pt": "Todos os gráficos desta página"
+    },
+    {
+      "key": "lbl_chip_denom_mat",
+      "en": "Maternal denominator",
+      "fr": "Dénominateur maternel",
+      "pt": "Denominador materno"
+    },
+    {
+      "key": "lbl_chip_denom_vacc",
+      "en": "Vaccination denominator",
+      "fr": "Dénominateur de vaccination",
+      "pt": "Denominador de vacinação"
+    },
+    {
+      "key": "lbl_chip_reset",
+      "en": "Reset",
+      "fr": "Réinitialiser",
+      "pt": "Redefinir"
+    },
+    {
+      "key": "lbl_chip_search",
+      "en": "Search",
+      "fr": "Rechercher",
+      "pt": "Pesquisar"
+    },
+    {
+      "key": "lbl_chip_no_match",
+      "en": "No matches",
+      "fr": "Aucun résultat",
+      "pt": "Nenhum resultado"
+    },
+    {
+      "key": "lbl_all_years",
+      "en": "All years",
+      "fr": "Toutes les années",
+      "pt": "Todos os anos"
+    },
+    {
+      "key": "lbl_chart_tool_labels",
+      "en": "Edit labels for this chart",
+      "fr": "Modifier les libellés de ce graphique",
+      "pt": "Editar rótulos deste gráfico"
+    },
+    {
+      "key": "lbl_chart_labels_title",
+      "en": "Labels · this chart only",
+      "fr": "Libellés · ce graphique uniquement",
+      "pt": "Rótulos · só este gráfico"
+    },
+    {
+      "key": "lbl_chart_labels_hint",
+      "en": "Change the words on this chart. An empty field keeps the chart's own text.",
+      "fr": "Modifiez les textes de ce graphique. Un champ vide conserve le texte d'origine.",
+      "pt": "Altere os textos deste gráfico. Um campo vazio mantém o texto original."
+    },
+    {
+      "key": "lbl_chart_reset",
+      "en": "Reset",
+      "fr": "Réinitialiser",
+      "pt": "Redefinir"
+    },
+    {
+      "key": "lbl_chart_reset_all",
+      "en": "Reset all labels",
+      "fr": "Réinitialiser tous les libellés",
+      "pt": "Redefinir todos os rótulos"
+    },
+    {
+      "key": "lbl_chart_labels_note",
+      "en": "Applies to this chart and its image download. Edited text is not translated.",
+      "fr": "S'applique à ce graphique et à son image téléchargée. Le texte modifié n'est pas traduit.",
+      "pt": "Aplica-se a este gráfico e à imagem descarregada. O texto editado não é traduzido."
+    },
+    {
+      "key": "lbl_chart_labels_unavailable",
+      "en": "The text of this chart cannot be edited.",
+      "fr": "Le texte de ce graphique ne peut pas être modifié.",
+      "pt": "O texto deste gráfico não pode ser editado."
+    },
+    {
+      "key": "lbl_chart_f_title",
+      "en": "Title",
+      "fr": "Titre",
+      "pt": "Título"
+    },
+    {
+      "key": "lbl_chart_f_caption",
+      "en": "Caption",
+      "fr": "Note",
+      "pt": "Nota"
+    },
+    {
+      "key": "lbl_chart_f_x",
+      "en": "Horizontal axis",
+      "fr": "Axe horizontal",
+      "pt": "Eixo horizontal"
+    },
+    {
+      "key": "lbl_chart_f_y",
+      "en": "Vertical axis",
+      "fr": "Axe vertical",
+      "pt": "Eixo vertical"
+    },
+    {
+      "key": "lbl_chart_f_legend",
+      "en": "Legend title",
+      "fr": "Titre de la légende",
+      "pt": "Título da legenda"
+    },
+    {
+      "key": "lbl_chart_tool_view",
+      "en": "View options for this chart",
+      "fr": "Options d'affichage de ce graphique",
+      "pt": "Opções de visualização deste gráfico"
+    },
+    {
+      "key": "lbl_chart_view_title",
+      "en": "This chart only",
+      "fr": "Ce graphique uniquement",
+      "pt": "Só este gráfico"
+    },
+    {
+      "key": "lbl_chart_view_hint",
+      "en": "Nothing else on the page changes.",
+      "fr": "Rien d'autre sur la page ne change.",
+      "pt": "Nada mais na página muda."
+    },
+    {
+      "key": "lbl_chart_orientation",
+      "en": "Orientation",
+      "fr": "Orientation",
+      "pt": "Orientação"
+    },
+    {
+      "key": "lbl_chart_auto",
+      "en": "Auto",
+      "fr": "Auto",
+      "pt": "Auto"
+    },
+    {
+      "key": "lbl_chart_swap",
+      "en": "Swap axes",
+      "fr": "Inverser les axes",
+      "pt": "Trocar eixos"
+    },
+    {
+      "key": "lbl_chart_keep",
+      "en": "Keep",
+      "fr": "Conserver",
+      "pt": "Manter"
+    },
+    {
+      "key": "lbl_chart_size",
+      "en": "Text size",
+      "fr": "Taille du texte",
+      "pt": "Tamanho do texto"
+    },
+    {
+      "key": "lbl_chart_legend",
+      "en": "Legend",
+      "fr": "Légende",
+      "pt": "Legenda"
+    },
+    {
+      "key": "lbl_chart_right",
+      "en": "Right",
+      "fr": "Droite",
+      "pt": "Direita"
+    },
+    {
+      "key": "lbl_chart_bottom",
+      "en": "Bottom",
+      "fr": "Bas",
+      "pt": "Em baixo"
+    },
+    {
+      "key": "lbl_chart_hidden",
+      "en": "Hidden",
+      "fr": "Masquée",
+      "pt": "Oculta"
+    },
+    {
+      "key": "lbl_chart_auto_down",
+      "en": "regions down",
+      "fr": "régions à la verticale",
+      "pt": "regiões na vertical"
     }
   ]
 }

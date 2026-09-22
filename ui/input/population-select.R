@@ -14,7 +14,10 @@ populationSelect <- function(id) {
     ns("population"),
     label = "title_denom_pop_select",
     tooltip = "tt_denom_pop_select",
-    choices = choices
+    choices = choices,
+    # starts empty: the value comes from the cache, and an empty value is ignored below, so mounting never
+    # overwrites the stored choice with the first option
+    selected = ""
   )
 }
 
@@ -22,12 +25,16 @@ populationSelectServer <- function(id, cache) {
   stopifnot(is.reactive(cache))
 
   moduleServer(id = id, module = function(input, output, session) {
-    observeEvent(cache(), {
-      req(cache())
+    mounted <- cdMounted(input, "population")
+
+    # cache -> chip, once the chip exists
+    observeEvent(list(cache(), mounted()), {
+      req(cache(), mounted())
       updateI18nSelectizeInput(session, "population", selected = cache()$derivation_population)
     })
 
-    observe({
+    # chip -> cache
+    observeEvent(input$population, {
       req(cache(), input$population)
       cache()$set_derivation_population(input$population)
     })

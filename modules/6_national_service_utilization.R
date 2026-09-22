@@ -12,7 +12,7 @@ nationalServiceUtilizationUI <- function(id, i18n) {
 
     countdownOptions = countdownOptions(
       title = i18n$t('title_global_options'),
-      column(3, selectizeInput(ns('years'), label = i18n$t("title_global_select_years"), choice = NULL, multiple = TRUE))
+      column(3, cdChipMulti(ns('years'), "title_global_select_years", i18n = i18n))
     ),
     
     utilizationUI(ns('national'), i18n, 'title_national_utilization'),
@@ -34,12 +34,10 @@ nationalServiceUtilizationServer <- function(id, cache, i18n) {
     module = function(input, output, session) {
       ns <- session$ns
       
-      observe({
-        req(cache())
-
-        survey_years <- c('All years' = '', cache()$data_years)
-        updateSelectizeInput(session, 'years', choices = survey_years, selected = cache()$utilization_mapping_years)
-      })
+      yearsSelectSync(input, session, "years",
+        years = reactive({ req(cache()); cache()$data_years }),
+        selected = reactive({ req(cache()); cache()$utilization_mapping_years })
+      )
       
       observeEvent(input$years, {
         req(cache())

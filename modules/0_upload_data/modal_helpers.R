@@ -22,11 +22,6 @@ mappingModalServer <- function(id, cache, survey_data, survey_map, title, show_c
           pull(adminlevel_1)
       })
 
-      observe({
-        req(cache())
-        print(cache()$regional_survey |> select(year, iso3, adminlevel_1))
-      })
-
       # Modal trigger on button click
       observeEvent(input$map, {
         req(gregion_levels(), survey_data())

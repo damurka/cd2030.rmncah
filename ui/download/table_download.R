@@ -3,7 +3,7 @@ tableDownloadsUI <- function(id, i18n, title_key, control_type = c("year", "indi
   control_type <- arg_match(control_type)
   
   left_control_ui <- if (control_type == "year") {
-    selectizeInput(ns("control_input"), label = i18n$t("title_global_year"), choices = NULL)
+    cdChipSelect(ns("control_input"), "title_global_year", options = list(), i18n = i18n)
   } else if (control_type == "indicator") {
     indicatorSelect(id = ns("control_input"), i18n = i18n)
   } else {
@@ -49,13 +49,19 @@ tableDownloadsServer <- function(
       
       selected_value <- if (control_type == "year") {
         
-        # Automatically update the year dropdown choices from cache
+        # The years come from the cache. They are pushed once the chip is on the page (a message to a chip that
+        # has not mounted is lost). Reading the current choice inside isolate() keeps this from re-running, and
+        # overwriting the user's pick, every time they choose a year.
+        chip_mounted <- cdMounted(input, "control_input")
         observe({
-          req(cache(), cache()$data_years)
-          updateSelectizeInput(session, "control_input", choices = cache()$data_years)
+          req(chip_mounted(), cache(), cache()$data_years)
+          years <- as.character(cache()$data_years)
+          keep <- isolate(input$control_input)
+          updateCdChip("control_input", session,
+                       options = cdPlainOptions(years),
+                       value = if (!is.null(keep) && keep %in% years) keep else years[[1]])
         })
         
-        # Return the standard input
         reactive({ input$control_input })
         
       } else if (control_type == "indicator") {
@@ -77,6 +83,7 @@ tableDownloadsServer <- function(
         }
         
         if (control_type == "year" && "year" %in% names(dt)) {
+          req(selected_value())
           dt <- dt %>% 
             filter(year == as.integer(selected_value()))
         }

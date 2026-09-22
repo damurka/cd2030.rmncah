@@ -19,8 +19,6 @@ surveyComparisonServer <- function(id, cache, admin_level, region, i18n) {
   moduleServer(
     id = id,
     module = function(input, output, session) {
-      denominatorInputServer("denominator", cache, i18n)
-
       tabPanelsServer(
         "panel",
         serverInput = function(id, current_indicator) {
