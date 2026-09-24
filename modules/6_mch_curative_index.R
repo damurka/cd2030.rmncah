@@ -1,35 +1,33 @@
-mchCurativeIndexUI <- function(id, i18n) {
+mch_curative_index_ui <- function(id, i18n) {
   ns <- NS(id)
 
-  countdownDashboard(
-    dashboardId = ns("service_utilization"),
-    dashboardTitle = i18n$t("title_mch_curative"),
-    i18n = i18n,
-
-    include_report = TRUE,
-    
-    box(
+  cd_page_ui(id, i18n,
+    cd_chart_card(
       title = i18n$t("title_mch_curative"),
+      chart_toolbar = cd_plot_toolbar_ui(ns("mch_curative")),
+      i18n = i18n,
       status = "success",
       width = 12,
-      withSpinner(plotDownloadsRowUI(ns("mch_curative")))
+      cd_plot_ui(ns("mch_curative"), toolbar_inline = TRUE)
     )
   )
 }
 
-mchCurativeIndexServer <- function(id, cache, i18n) {
+mch_curative_index_server <- function(id, cache, i18n, active = reactive(TRUE)) {
   stopifnot(is.reactive(cache))
+  stopifnot(is.reactive(active))
 
   moduleServer(
     id = id,
     module = function(input, output, session) {
 
+      # active(): see coverage_server() in modules/3_national_coverage/coverage.R for why.
       plot_data <- reactive({
-        req(cache())
+        req(cache(), active())
         cache()$generate_admin1_mch_curative_index()
       })
 
-      plotDownloadsRowServer(
+      cd_plot_server(
         id = "mch_curative",
         i18n = i18n,
         plot_data = plot_data,
@@ -47,19 +45,10 @@ mchCurativeIndexServer <- function(id, cache, i18n) {
           plot(d, labels = translated_labels)
         },
         excel_write_fun = function(wb, d) {
-          sheet_name_1 <- i18n$t("title_mch_curative")
-          addWorksheet(wb, sheet_name_1)
-          writeData(wb, sheet = sheet_name_1, x = d, startCol = 1, startRow = 1)
+          cd_add_sheet(wb, i18n$t("title_mch_curative"), d)
         }
       )
 
-      countdownHeaderServer(
-        "service_utilization",
-        cache = cache,
-        path = "10-service-utilisation",
-        # section = "sec-dqa-overall-score", # You might want to update this ID if the section changed
-        i18n = i18n
-      )
     }
   )
 }

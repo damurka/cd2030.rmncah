@@ -1,47 +1,38 @@
-utilizationDqaUI <- function(id, i18n) {
+utilization_dqa_ui <- function(id, i18n) {
   ns <- NS(id)
 
-  countdownDashboard(
-    dashboardId = ns("data_quality"),
-    dashboardTitle = i18n$t("title_utilization_dqa"),
-    i18n = i18n,
-    
-    countdownOptions(
-      title = i18n$t("title_global_options"),
-      column(3, adminLevelInputUI(ns("region"), i18n, show_admin_level = FALSE))
+  cd_page_ui(id, i18n,
+    filters = cd_filter_bar(
+      cd_admin_level_ui(ns("region"), i18n, show_admin_level = FALSE)
     ),
-    box(
+    cd_chart_card(
       title = i18n$t("title_utilization_dqa"),
+      chart_toolbar = tagList(cd_download_button_ui(ns("download_plot")), cd_download_button_ui(ns("download_data"))),
+      i18n = i18n,
       status = "success",
       width = 12,
-      div(
-        class = "cd-plot-wrap",
-        withSpinner(uiOutput(ns("utilization_dqa"))),
-        div(
-          class = "cd-toolbox",
-          downloadButtonUI(ns("download_plot")),
-          downloadButtonUI(ns("download_data"))
-        )
-      )
+      cd_spinner(uiOutput(ns("utilization_dqa")))
     )
   )
 }
 
-utilizationDqaServer <- function(id, cache, i18n) {
+utilization_dqa_server <- function(id, cache, i18n, active = reactive(TRUE)) {
   stopifnot(is.reactive(cache))
+  stopifnot(is.reactive(active))
 
   moduleServer(
     id = id,
     module = function(input, output, session) {
-      admin <- adminLevelInputServer("region", cache, i18n, allow_select_all = TRUE, show_district = FALSE, show_admin_level = FALSE)
-      
+      admin <- cd_admin_level_server("region", cache, i18n, allow_select_all = TRUE, show_district = FALSE, show_admin_level = FALSE)
+
       region <- reactive({
         req(admin())
         admin()$region
       })
 
+      # active(): see coverage_server() in modules/3_national_coverage/coverage.R for why.
       utilization_dqa <- reactive({
-        req(cache())
+        req(cache(), active())
 
         # UPDATED: Match the new 'header' and 'indicator' structure from the refactored function
         translated_labels <- list(
@@ -82,7 +73,7 @@ utilizationDqaServer <- function(id, cache, i18n) {
         HTML(as.character(out))
       })
 
-      downloadButtonServer(
+      cd_download_button_server(
         id = "download_data",
         filename = reactive("utilization_dqa"),
         extension = reactive("xlsx"),
@@ -90,17 +81,15 @@ utilizationDqaServer <- function(id, cache, i18n) {
         i18n = i18n,
         label = "btn_global_download_data",
         icon = "table",
-        button_class = "btn-plot",
+        button_class = "cd-tool-btn",
         content = function(file, d) {
           wb <- createWorkbook()
-          sheet_name_2 <- i18n$t("lbl_score_metric_header")
-          addWorksheet(wb, sheet_name_2)
-          writeData(wb, sheet = sheet_name_2, x = d, startCol = 1, startRow = 1)
+          cd_add_sheet(wb, i18n$t("lbl_score_metric_header"), d)
           saveWorkbook(wb, file, overwrite = TRUE)
         }
       )
 
-      downloadButtonServer(
+      cd_download_button_server(
         id = "download_plot",
         filename = reactive("utilization_dqa"),
         extension = reactive("png"),
@@ -113,16 +102,9 @@ utilizationDqaServer <- function(id, cache, i18n) {
         },
         data = utilization_dqa,
         label = "btn_global_download_plot",
-        button_class = "btn-plot"
+        button_class = "cd-tool-btn"
       )
 
-      countdownHeaderServer(
-        "data_quality",
-        cache = cache,
-        path = "10-service-utilisation",
-        # section = "sec-dqa-overall-score", # You might want to update this ID if the section changed
-        i18n = i18n
-      )
     }
   )
 }

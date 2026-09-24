@@ -2,23 +2,18 @@ source("modules/6_national_service_utilization/service_utilization.R")
 
 utilization_map_indicators <- c('opd_map', 'ipd_map')
 
-nationalServiceUtilizationUI <- function(id, i18n) {
+national_service_utilization_ui <- function(id, i18n) {
   ns <- NS(id)
 
-  countdownDashboard(
-    dashboardId = ns('service_utilization'),
-    dashboardTitle = i18n$t("title_national_utilization"),
-    i18n = i18n,
-
-    countdownOptions = countdownOptions(
-      title = i18n$t('title_global_options'),
-      column(3, cdChipMulti(ns('years'), "title_global_select_years", i18n = i18n))
-    ),
-    
-    utilizationUI(ns('national'), i18n, 'title_national_utilization'),
+  cd_page_ui(id, i18n,
+    utilization_ui(ns('national'), i18n, 'title_national_utilization'),
 
     tagList(
-      tabPanelsUI(ns("panel"), i18n, "title_national_utilization", downloadCoverageUI, 
+      cd_map_options(
+        cd_chip_multi(ns('years'), "title_global_select_years", i18n = i18n),
+        cd_palette_chip(ns("palette"), i18n, first = "Purples")
+      ),
+      cd_tabbed_charts_ui(ns("panel"), i18n, "title_national_utilization", cd_coverage_plot_ui, 
                 indicators = utilization_map_indicators, showCustom = FALSE),
       
     )
@@ -26,36 +21,38 @@ nationalServiceUtilizationUI <- function(id, i18n) {
   )
 }
 
-nationalServiceUtilizationServer <- function(id, cache, i18n) {
+national_service_utilization_server <- function(id, cache, i18n, active = reactive(TRUE)) {
   stopifnot(is.reactive(cache))
+  stopifnot(is.reactive(active))
 
   moduleServer(
     id = id,
     module = function(input, output, session) {
       ns <- session$ns
       
-      yearsSelectSync(input, session, "years",
+      cd_years_sync(input, session, "years",
         years = reactive({ req(cache()); cache()$data_years }),
         selected = reactive({ req(cache()); cache()$utilization_mapping_years })
       )
       
       observeEvent(input$years, {
         req(cache())
-        cache()$set_utilization_mapping_years(as.integer(input$years))
+        cache()$set_utilization_mapping_years(cd_years_input(input$years, cache()$data_years))
       })
       
-      utilizationServer('national', cache, i18n, 'national')
+      utilization_server('national', cache, i18n, 'national', active = active)
 
-      tabPanelsServer(
+      cd_tabbed_charts_server(
         "panel",
         serverInput = function(id, current_indicator) {
+          # active(): see coverage_server() in modules/3_national_coverage/coverage.R for why.
           ind_map <- reactive({
-            req(cache())
+            req(cache(), active(), input$palette)
             ind <- gsub('_map$', '', current_indicator)
-            cache()$prepare_mapping_service_utlization(ind)
+            cache()$prepare_mapping_service_utlization(ind, palette = input$palette)
           })
           
-          downloadCoverageServer(
+          cd_coverage_plot_server(
             id = id, # or just ind if inside the same module id
             filename = reactive(current_indicator),
             data_fn = ind_map,
@@ -63,15 +60,10 @@ nationalServiceUtilizationServer <- function(id, cache, i18n) {
             i18n = i18n
           )
         },
-        indicators = utilization_map_indicators
+        indicators = utilization_map_indicators,
+        showCustom = FALSE
       )
 
-      countdownHeaderServer(
-        'service_utilization',
-        cache = cache,
-        path = '10-service-utilisation',
-        i18n = i18n
-      )
     }
   )
 }

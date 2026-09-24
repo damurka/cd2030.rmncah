@@ -1,36 +1,28 @@
-healthSystemNationalUI <- function(id, i18n) {
+health_system_national_ui <- function(id, i18n) {
   ns <- NS(id)
 
-  countdownDashboard(
-    dashboardId = ns('health_sys_national'),
-    dashboardTitle = i18n$t('title_national_health_system'),
-    i18n = i18n,
-
-    box(
+  cd_page_ui(id, i18n,
+    cd_chart_card(
       title = i18n$t('opt_health_system_density'),
+      chart_toolbar = tagList(cd_download_button_ui(ns("download_plot")), cd_download_button_ui(ns("download_data"))),
+      i18n = i18n,
       width = 12,
-      div(
-        class = "cd-plot-wrap",
-        withSpinner(uiOutput(ns("overall_score"))),
-        div(
-          class = "cd-toolbox",
-          downloadButtonUI(ns("download_plot")),
-          downloadButtonUI(ns("download_data"))
-        )
-      )
+      cd_spinner(uiOutput(ns("overall_score")))
     )
   )
 }
 
-healthSystemNationalServer <- function(id, cache, i18n) {
+health_system_national_server <- function(id, cache, i18n, active = reactive(TRUE)) {
   stopifnot(is.reactive(cache))
+  stopifnot(is.reactive(active))
 
   moduleServer(
     id = id,
     module = function(input, output, session) {
 
+      # active(): see coverage_server() in modules/3_national_coverage/coverage.R for why.
       national_metrics <- reactive({
-        req(cache())
+        req(cache(), active())
         # cache()$generate_health_system_table()
         cache()$generate_health_system_table(
           labels = list(
@@ -73,7 +65,7 @@ healthSystemNationalServer <- function(id, cache, i18n) {
         HTML(as.character(out))
       })
 
-      downloadButtonServer(
+      cd_download_button_server(
         id = "download_data",
         filename = reactive("overall_score"),
         extension = reactive("xlsx"),
@@ -81,17 +73,15 @@ healthSystemNationalServer <- function(id, cache, i18n) {
         i18n = i18n,
         label = "btn_global_download_data",
         icon = "table",
-        button_class = "btn-plot",
+        button_class = "cd-tool-btn",
         content = function(file, d) {
           wb <- createWorkbook()
-          sheet_name_2 <- i18n$t("lbl_score_metric_header")
-          addWorksheet(wb, sheet_name_2)
-          writeData(wb, sheet = sheet_name_2, x = d, startCol = 1, startRow = 1)
+          cd_add_sheet(wb, i18n$t("lbl_score_metric_header"), d)
           saveWorkbook(wb, file, overwrite = TRUE)
         }
       )
 
-      downloadButtonServer(
+      cd_download_button_server(
         id = "download_plot",
         filename = reactive("overall_score"),
         extension = reactive("png"),
@@ -104,15 +94,9 @@ healthSystemNationalServer <- function(id, cache, i18n) {
         },
         data = national_metrics,
         label = "btn_global_download_plot",
-        button_class = "btn-plot"
+        button_class = "cd-tool-btn"
       )
 
-      countdownHeaderServer(
-        'health_sys_national',
-        cache = cache,
-        path = '11-health-system-performance',
-        i18n = i18n
-      )
     }
   )
 }

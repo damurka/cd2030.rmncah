@@ -1,41 +1,36 @@
 sys_comparison_indicators <- c('cov_ideliv_hstaff', 'ratio_opd_u5_hstaff', 'ratio_ipd_u5_hos', 'ratio_ipd_u5_bed')
 mch_comparison_indicators <- c('ratio_fac_pop', 'ratio_hstaff_pop')
 
-healthSystemComparisonUI <- function(id, i18n) {
+health_system_comparison_ui <- function(id, i18n) {
   ns <- NS(id)
 
-  countdownDashboard(
-    dashboardId = ns('health_system'),
-    dashboardTitle = i18n$t('title_health_system_comparison'),
-    i18n = i18n,
-
-    include_report = TRUE,
-    
-    # tabPanelsUI(ns("panel"), i18n, "title_health_system_comparison", downloadCoverageUI, 
+  cd_page_ui(id, i18n,
+    # cd_tabbed_charts_ui(ns("panel"), i18n, "title_health_system_comparison", cd_coverage_plot_ui, 
     #             indicators = sys_comparison_indicators, showCustom = FALSE),
 
-    tabPanelsUI(ns("panel1"), i18n, "title_health_system_comparison", downloadCoverageUI, 
+    cd_tabbed_charts_ui(ns("panel1"), i18n, "title_health_system_comparison", cd_coverage_plot_ui, 
                 indicators = mch_comparison_indicators, showCustom = FALSE)
   )
 }
 
-healthSystemComparisonServer <- function(id, cache, i18n) {
+health_system_comparison_server <- function(id, cache, i18n, active = reactive(TRUE)) {
   stopifnot(is.reactive(cache))
+  stopifnot(is.reactive(active))
 
   moduleServer(
     id = id,
     module = function(input, output, session) {
 
       comparison <- reactive({
-        req(cache(), cache()$check_inequality_params)
+        req(cache(), active(), cache()$check_inequality_params)
         cache()$health_system_comparison
       })
       
-      # tabPanelsServer(
+      # cd_tabbed_charts_server(
       #   "panel",
       #   serverInput = function(id, current_indicator) {
           
-      #     downloadCoverageServer(
+      #     cd_coverage_plot_server(
       #       id = id, 
       #       filename = reactive(paste0(current_indicator, "_", cache()$maternal_denominator)),
       #       data_fn = comparison,
@@ -65,7 +60,7 @@ healthSystemComparisonServer <- function(id, cache, i18n) {
       #   indicators = sys_comparison_indicators
       # )
 
-      tabPanelsServer(
+      cd_tabbed_charts_server(
         "panel1",
         serverInput = function(id, current_indicator) {
 
@@ -74,7 +69,7 @@ healthSystemComparisonServer <- function(id, cache, i18n) {
             cache()$generate_phc_scatter_data(indicator = current_indicator)
           })
           
-          downloadCoverageServer(
+          cd_coverage_plot_server(
             id = id, # or just ind if inside the same module id
             filename = reactive(current_indicator),
             data_fn = mch_curative_comparison,
@@ -96,15 +91,10 @@ healthSystemComparisonServer <- function(id, cache, i18n) {
             i18n = i18n
           )
         },
-        indicators = mch_comparison_indicators
+        indicators = mch_comparison_indicators,
+        showCustom = FALSE
       )
 
-      countdownHeaderServer(
-        'health_system',
-        cache = cache,
-        path = '11-health-system-performance',
-        i18n = i18n
-      )
     }
   )
 }

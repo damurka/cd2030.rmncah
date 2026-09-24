@@ -1,28 +1,29 @@
 service_utilization_capita_indicators <- c('opd', 'ipd')
 
-utilizationCapitaUI <- function(id, i18n, title_key) {
+utilization_capita_ui <- function(id, i18n, title_key) {
   ns <- NS(id)
   
-  tabPanelsUI(ns("panel"), i18n, "title_subnational_utilization", downloadCoverageUI, 
+  cd_tabbed_charts_ui(ns("panel"), i18n, "title_subnational_utilization", cd_coverage_plot_ui, 
               indicators = service_utilization_capita_indicators, showCustom = FALSE)
 }
 
-utilizationCapitaServer <- function(id, cache, i18n) {
+utilization_capita_server <- function(id, cache, i18n, active = reactive(TRUE)) {
   stopifnot(is.reactive(cache))
-  
+  stopifnot(is.reactive(active))
+
   moduleServer(
     id = id,
     module = function(input, output, session) {
-      tabPanelsServer(
+      cd_tabbed_charts_server(
         "panel",
         serverInput = function(id, current_indicator) {
-          
+          # active(): see coverage_server() in modules/3_national_coverage/coverage.R for why.
           data_rx <- reactive({
-            req(cache())
+            req(cache(), active())
             cache()$generate_admin1_service_utilization(current_indicator)
           })
           
-          downloadCoverageServer(
+          cd_coverage_plot_server(
             id = id, # or just ind if inside the same module id
             filename = reactive(paste0(current_indicator, '_utilization_capita')),
             data_fn = data_rx,
@@ -38,7 +39,8 @@ utilizationCapitaServer <- function(id, cache, i18n) {
             i18n = i18n
           )
         },
-        indicators = service_utilization_capita_indicators
+        indicators = service_utilization_capita_indicators,
+        showCustom = FALSE
       )
     }
   )

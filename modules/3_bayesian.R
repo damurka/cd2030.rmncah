@@ -1,36 +1,39 @@
 bayesian_indicators <- c('anc4', 'anc_1trimester', 'ideliv', 'measles1', 'penta3')
 
-bayesianUI <- function(id, i18n, label) {
+bayesian_ui <- function(id, i18n, label) {
   ns <- NS(id)
 
-  countdownDashboard(
-    dashboardId = ns("bayesian_analysis"),
-    dashboardTitle = i18n$t("title_bayesian_analysis"),
-    i18n = i18n,
-    tabPanelsUI(ns("panel"), i18n, "title_bayesian_analysis", downloadCoverageUI,
+  cd_page_ui(id, i18n,
+    cd_tabbed_charts_ui(ns("panel"), i18n, "title_bayesian_analysis", cd_coverage_plot_ui,
       indicators = bayesian_indicators
     )
   )
 }
 
-bayesianServer <- function(id, cache, i18n, admin_level) {
+bayesian_server <- function(id, cache, i18n, admin_level, active = reactive(TRUE)) {
   stopifnot(is.reactive(cache))
+  stopifnot(is.reactive(active))
 
   moduleServer(
     id = id,
     module = function(input, output, session) {
       ns <- session$ns
 
-      tabPanelsServer(
+      cd_tabbed_charts_server(
         "panel",
         serverInput = function(id, current_indicator) {
 
+          # Shiny computes every bound output once on a session's first flush, before it has heard back from
+          # the client about which ones are actually visible -- so without req(active()), fitting a Bayesian
+          # model (rstan, tens of seconds each) runs for every indicator, at both admin levels, for a page no
+          # one has opened yet, on every session. active() (page_is(), see app.R) keeps it from starting until
+          # this tab is actually open, the same fix mortality_mapping_server() already needed.
           model <- reactive({
-            req(cache())
+            req(cache(), active())
             cache()$get_bayes_model(admin_level, current_indicator)
           })
 
-          downloadCoverageServer(
+          cd_coverage_plot_server(
             id = id, # or just ind if inside the same module id
             filename = reactive(paste0(current_indicator, "_bayesian")),
             data_fn = model,
@@ -53,12 +56,6 @@ bayesianServer <- function(id, cache, i18n, admin_level) {
         indicators = bayesian_indicators
       )
       
-      countdownHeaderServer(
-        "bayesian_analysis",
-        cache = cache,
-        path = "5.1-bayesian-coverage",
-        i18n = i18n
-      )
     }
   )
 }

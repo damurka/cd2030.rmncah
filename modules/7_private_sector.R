@@ -1,38 +1,36 @@
 private_indicators <- c('national', 'area')
 
-privateSectorUI <- function(id, i18n) {
+private_sector_ui <- function(id, i18n) {
   ns <- NS(id)
 
-  countdownDashboard(
-    dashboardId = ns('private_sector'),
-    dashboardTitle = i18n$t('title_private_sector'),
-    i18n = i18n,
-
-    include_report = TRUE,
-
-    box(
+  cd_page_ui(id, i18n,
+    cd_chart_card(
       title = i18n$t('title_private_sector'),
+      chart_toolbar = cd_plot_toolbar_ui(ns("national")),
+      i18n = i18n,
       width = 12,
       status = "success",
       collapsible = TRUE,
 
-      plotDownloadsRowUI(ns("national"))
+      cd_plot_ui(ns("national"), toolbar_inline = TRUE)
     ),
-    tabPanelsUI(ns("panel"), i18n, "title_private_sector", downloadCoverageUI, 
+    cd_tabbed_charts_ui(ns("panel"), i18n, "title_private_sector", cd_coverage_plot_ui, 
                 indicators = private_indicators, showCustom = FALSE)
   )
 }
 
-privateSectorServer <- function(id, cache, i18n) {
+private_sector_server <- function(id, cache, i18n, active = reactive(TRUE)) {
   stopifnot(is.reactive(cache))
+  stopifnot(is.reactive(active))
 
   moduleServer(
     id = id,
     module = function(input, output, session) {
 
+      # active(): see coverage_server() in modules/3_national_coverage/coverage.R for why.
       # 1. Generate data with translated legend labels
       private_data <- reactive({
-        req(cache())
+        req(cache(), active())
         
         # Pass the translated labels for the stacked bars
         cache()$generate_private_sector_data(
@@ -45,7 +43,7 @@ privateSectorServer <- function(id, cache, i18n) {
       })
 
       # 2. Render plot with translated title and axes
-      plotDownloadsRowServer(
+      cd_plot_server(
         'national',
         i18n,
         plot_data = private_data,
@@ -59,13 +57,12 @@ privateSectorServer <- function(id, cache, i18n) {
         }
       )
 
-
-      tabPanelsServer(
+      cd_tabbed_charts_server(
         "panel",
         serverInput = function(id, current_indicator) {
 
           plot_data <- reactive({
-            req(cache())
+            req(cache(), active())
             if (current_indicator == 'national') {
               cache()$national_private_share
             } else {
@@ -73,7 +70,7 @@ privateSectorServer <- function(id, cache, i18n) {
             }
           })
           
-          downloadCoverageServer(
+          cd_coverage_plot_server(
             id = id, # or just ind if inside the same module id
             filename = reactive(current_indicator),
             data_fn = plot_data,
@@ -86,16 +83,11 @@ privateSectorServer <- function(id, cache, i18n) {
             i18n = i18n
           )
         },
-        indicators = private_indicators
+        indicators = private_indicators,
+        showCustom = FALSE
       )
 
       # 3. Report/Header integration
-      countdownHeaderServer(
-        'private_sector',
-        cache = cache,
-        path  = '11-health-system-performance',
-        i18n  = i18n
-      )
     }
   )
 }

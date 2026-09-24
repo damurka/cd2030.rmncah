@@ -1,51 +1,57 @@
 mort_indicators <- c('mmr_inst', 'sbr_inst', 'nn_inst')
 subnational_mort_indicators <- c("fresh_total_sb", "ratio_md_sb", "ratio_md_nd")
 
-mortalityUI <- function(id, i18n) {
+mortality_ui <- function(id, i18n) {
   ns <- NS(id)
 
-  countdownDashboard(
-    dashboardId = ns('mortality'),
-    dashboardTitle = i18n$t('title_mortality_institutional'),
-    i18n = i18n,
-    tabPanelsUI(ns("panel"), i18n, "title_mortality_institutional", downloadCoverageUI, 
+  cd_page_ui(id, i18n,
+    cd_tabbed_charts_ui(ns("panel"), i18n, "title_mortality_institutional", cd_coverage_plot_ui, 
                 indicators = mort_indicators, showCustom = FALSE),
-    tabPanelsUI(ns("panel1"), i18n, "title_subnational_mortality_institutional", downloadCoverageUI, 
+    cd_tabbed_charts_ui(ns("panel1"), i18n, "title_subnational_mortality_institutional", cd_coverage_plot_ui, 
                 indicators = subnational_mort_indicators, showCustom = FALSE)
   )
 }
 
-mortalityServer <- function(id, cache, i18n) {
+mortality_server <- function(id, cache, i18n, active = reactive(TRUE)) {
   stopifnot(is.reactive(cache))
+  stopifnot(is.reactive(active))
 
   moduleServer(
     id = id,
     module = function(input, output, session) {
-      
-      tabPanelsServer(
+      # active(): see coverage_server() in modules/3_national_coverage/coverage.R for why. cache()$mortality_summary
+      # is expensive (~1s, see mortality_mapping_server()'s own active gate) and is read by every one of the 6
+      # indicator tabs below, so gating it once here saves the same recomputation 6 times over at startup.
+      mortality_summary <- reactive({
+        req(cache(), active())
+        cache()$mortality_summary
+      })
+
+      cd_tabbed_charts_server(
         "panel",
         serverInput = function(id, current_indicator) {
-          
-          downloadCoverageServer(
+
+          cd_coverage_plot_server(
             id = id, # or just ind if inside the same module id
             filename = reactive(current_indicator),
-            data_fn = reactive(cache()$mortality_summary),
+            data_fn = mortality_summary,
             sheet_name = reactive(current_indicator),
             plot_fun = function(d) plot(d, indicator = current_indicator),
             i18n = i18n
           )
         },
-        indicators = mort_indicators
+        indicators = mort_indicators,
+        showCustom = FALSE
       )
 
-      tabPanelsServer(
+      cd_tabbed_charts_server(
         "panel1",
         serverInput = function(id, current_indicator) {
-          
-          downloadCoverageServer(
+
+          cd_coverage_plot_server(
             id = id, # or just ind if inside the same module id
             filename = reactive(current_indicator),
-            data_fn = reactive(cache()$mortality_summary),
+            data_fn = mortality_summary,
             sheet_name = reactive(i18n$t(paste0('opt_', current_indicator))),
             plot_fun = function(d) {
               
@@ -74,15 +80,10 @@ mortalityServer <- function(id, cache, i18n) {
             i18n = i18n
           )
         },
-        indicators = subnational_mort_indicators
+        indicators = subnational_mort_indicators,
+        showCustom = FALSE
       )
 
-      countdownHeaderServer(
-        'mortality',
-        cache = cache,
-        path = '9-mortality',
-        i18n = i18n
-      )
     }
   )
 }

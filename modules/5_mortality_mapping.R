@@ -1,24 +1,20 @@
 mort_map_indicators <- c('mmr_inst', 'sbr_inst')
 
-mortalityMappingUI <- function(id, i18n) {
+mortality_mapping_ui <- function(id, i18n) {
   ns <- NS(id)
 
-  countdownDashboard(
-    dashboardId = ns('mortality'),
-    dashboardTitle = i18n$t('title_mortality_mapping'),
-    i18n = i18n,
-
-    countdownOptions = countdownOptions(
-      title = i18n$t('title_global_options'),
-      column(3, cdChipMulti(ns('years'), "title_global_select_years", i18n = i18n))
+  cd_page_ui(id, i18n,
+    cd_map_options(
+      cd_chip_multi(ns('years'), "title_global_select_years", i18n = i18n),
+      cd_palette_chip(ns("palette"), i18n, first = "Reds")
     ),
-    
-    tabPanelsUI(ns("panel"), i18n, "title_mortality_mapping", downloadCoverageUI, 
+
+    cd_tabbed_charts_ui(ns("panel"), i18n, "title_mortality_mapping", cd_coverage_plot_ui, 
                 indicators = mort_map_indicators, showCustom = FALSE)
   )
 }
 
-mortalityMappingServer <- function(id, cache, i18n, active = reactive(TRUE)) {
+mortality_mapping_server <- function(id, cache, i18n, active = reactive(TRUE)) {
   stopifnot(is.reactive(cache))
   stopifnot(is.reactive(active))
 
@@ -26,16 +22,17 @@ mortalityMappingServer <- function(id, cache, i18n, active = reactive(TRUE)) {
     id = id,
     module = function(input, output, session) {
 
-      tabPanelsServer(
+      cd_tabbed_charts_server(
         "panel",
         serverInput = function(id, current_indicator) {
           
           data_rx <- reactive({
             req(cache(), cache()$check_mortality_params)
-            cache()$filter_mortality_summary(str_remove(current_indicator, '_inst'))
+            req(input$palette)
+            cache()$filter_mortality_summary(str_remove(current_indicator, '_inst'), palette = input$palette)
           })
           
-          downloadCoverageServer(
+          cd_coverage_plot_server(
             id = id, # or just ind if inside the same module id
             filename = reactive(current_indicator),
             data_fn = data_rx,
@@ -44,7 +41,8 @@ mortalityMappingServer <- function(id, cache, i18n, active = reactive(TRUE)) {
             i18n = i18n
           )
         },
-        indicators = mort_map_indicators
+        indicators = mort_map_indicators,
+        showCustom = FALSE
       )
 
       # `mortality_summary` is computed on demand and takes about a second, and it is invalidated by every data
@@ -60,22 +58,16 @@ mortalityMappingServer <- function(id, cache, i18n, active = reactive(TRUE)) {
           pull(year)
       })
 
-      yearsSelectSync(input, session, "years",
+      cd_years_sync(input, session, "years",
         years = mortality_years,
         selected = reactive({ req(cache()); cache()$mortality_mapping_years })
       )
 
       observeEvent(input$years, {
         req(cache())
-        cache()$set_mortality_mapping_years(as.integer(input$years))
+        cache()$set_mortality_mapping_years(cd_years_input(input$years, cache()$data_years))
       })
 
-      countdownHeaderServer(
-        'mortality',
-        cache = cache,
-        path = '9-mortality',
-        i18n = i18n
-      )
     }
   )
 }

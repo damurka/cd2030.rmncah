@@ -1,36 +1,33 @@
 continuum_indicators <- c('maternal_continuum', 'child_continuum')
 
-continuumCoverageUI <- function(id, i18n, label) {
+continuum_coverage_ui <- function(id, i18n, label) {
   ns <- NS(id)
 
-  countdownDashboard(
-    dashboardId = ns("national_coverage"),
-    dashboardTitle = i18n$t("title_continuum"),
-    i18n = i18n,
-    include_report = TRUE,
-    tabPanelsUI(ns("panel"), i18n, 'title_national_coverage', downloadCoverageUI, indicators = continuum_indicators, showCustom = FALSE),
-    tabPanelsUI(ns("panel1"), i18n, 'title_national_coverage', downloadCoverageUI, indicators = continuum_indicators, showCustom = FALSE)
+  cd_page_ui(id, i18n,
+    cd_tabbed_charts_ui(ns("panel"), i18n, 'title_national_coverage', cd_coverage_plot_ui, indicators = continuum_indicators, showCustom = FALSE),
+    cd_tabbed_charts_ui(ns("panel1"), i18n, 'title_national_coverage', cd_coverage_plot_ui, indicators = continuum_indicators, showCustom = FALSE)
   )
 }
 
-continuumCoverageServer <- function(id, cache, i18n) {
+continuum_coverage_server <- function(id, cache, i18n, active = reactive(TRUE)) {
   stopifnot(is.reactive(cache))
+  stopifnot(is.reactive(active))
 
   moduleServer(
     id = id,
     module = function(input, output, session) {
       ns <- session$ns
 
-      tabPanelsServer(
+      cd_tabbed_charts_server(
         "panel",
         serverInput = function(id, current_indicator) {
           coverage_data <- reactive({
-            req(cache())
+            req(cache(), active())
             indic <- str_remove(current_indicator, '_continuum')
             cache()$generate_coverage_data('national', indic)
           })
           
-          downloadCoverageServer(
+          cd_coverage_plot_server(
             id = id, # or just ind if inside the same module id
             filename = reactive("continuum_care"),
             data_fn = coverage_data,
@@ -68,19 +65,20 @@ continuumCoverageServer <- function(id, cache, i18n) {
             i18n = i18n
           )
         },
-        indicators = continuum_indicators
+        indicators = continuum_indicators,
+        showCustom = FALSE
       )
 
-      tabPanelsServer(
+      cd_tabbed_charts_server(
         "panel1",
         serverInput = function(id, current_indicator) {
           subnational_coverage_data <- reactive({
-            req(cache())
+            req(cache(), active())
             indic <- str_remove(current_indicator, '_continuum')
             cache()$generate_coverage_data('adminlevel_1', indic)
           })
           
-          downloadCoverageServer(
+          cd_coverage_plot_server(
             id = id, # or just ind if inside the same module id
             filename = reactive("continuum_care"),
             data_fn = subnational_coverage_data,
@@ -118,15 +116,10 @@ continuumCoverageServer <- function(id, cache, i18n) {
             i18n = i18n
           )
         },
-        indicators = continuum_indicators
+        indicators = continuum_indicators,
+        showCustom = FALSE
       )
       
-      countdownHeaderServer(
-        "national_coverage",
-        cache = cache,
-        path = "5-coverage-estimation",
-        i18n = i18n
-      )
     }
   )
 }

@@ -1,41 +1,39 @@
 hs_ratios_indicators <- c('ratio_fac_pop', 'ratio_hos_pop', 'ratio_hstaff_pop', 'ratio_bed_pop')
 
-healthSystemSubnationalUI <- function(id, i18n) {
+health_system_subnational_ui <- function(id, i18n) {
   ns <- NS(id)
 
-  countdownDashboard(
-    dashboardId = ns('health_sys_national'),
-    dashboardTitle = i18n$t('title_subnational_health_system'),
-    i18n = i18n,
-    
-    tabPanelsUI(ns("panel"), i18n, "title_subnational_health_system", downloadCoverageUI, 
+  cd_page_ui(id, i18n,
+    cd_tabbed_charts_ui(ns("panel"), i18n, "title_subnational_health_system", cd_coverage_plot_ui, 
                 indicators = hs_ratios_indicators, showCustom = FALSE)
   )
 }
 
-healthSystemSubnationalServer <- function(id, cache, i18n) {
+health_system_subnational_server <- function(id, cache, i18n, active = reactive(TRUE)) {
   stopifnot(is.reactive(cache))
+  stopifnot(is.reactive(active))
 
   moduleServer(
     id = id,
     module = function(input, output, session) {
 
+      # active(): see coverage_server() in modules/3_national_coverage/coverage.R for why.
       nat_metrics <- reactive({
-        req(cache(), cache()$health_system_metrics_national)
+        req(cache(), active(), cache()$health_system_metrics_national)
         cache()$health_system_metrics_national
       })
 
       admin1_metric <- reactive({
-        req(cache())
+        req(cache(), active())
         cache()$health_system_metrics_admin1 %>%
           select(adminlevel_1, year, total_pop, ratio_fac_pop, ratio_hos_pop, ratio_hstaff_pop, ratio_bed_pop, ratio_opd_pop, ratio_ipd_pop)
       })
       
-      tabPanelsServer(
+      cd_tabbed_charts_server(
         "panel",
         serverInput = function(id, current_indicator) {
           
-          downloadCoverageServer(
+          cd_coverage_plot_server(
             id = id, 
             filename = reactive(paste0(current_indicator)),
             data_fn = admin1_metric,
@@ -58,15 +56,10 @@ healthSystemSubnationalServer <- function(id, cache, i18n) {
             i18n = i18n
           )
         },
-        indicators = hs_ratios_indicators
+        indicators = hs_ratios_indicators,
+        showCustom = FALSE
       )
 
-      countdownHeaderServer(
-        'health_sys_national',
-        cache = cache,
-        path = '11-health-system-performance',
-        i18n = i18n
-      )
     }
   )
 }
