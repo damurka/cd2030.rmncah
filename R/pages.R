@@ -1,10 +1,10 @@
 # The page registry: every analysis page in one place. Each entry says what the page is called, where it sits, what it
-# is about, which help chapter it opens, and which module builds it. app.R builds the page containers and starts
+# is about, which help chapter it opens, and which module builds it. run_app() builds the page containers and starts
 # the servers from this list (cd_pages_ui(), cd_pages_server()), and cd_page_ui() reads the title/section/subtitle
 # from here, so a page module never repeats them. To add a page: write its module, then add one entry here and
-# a nav item in app.R.
+# a nav item in run_app().
 
-cd_page_registry <- list(
+rmncah_pages <- function() list(
   cd_page_def(
     id = "reporting_rate",
     ui = reporting_rate_ui,
@@ -329,4 +329,3 @@ cd_page_registry <- list(
   )
 )
 
-cd_use_pages(cd_page_registry)

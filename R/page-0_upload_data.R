@@ -2,7 +2,8 @@
 # is rmncah's own -- see wizard-config.R for the contract. Survey estimates here are the maternal + immunization set
 # (anc1, anc4, instlivebirths, csection, low_bweight, bcg, penta1, penta3, measles1); every group below is required
 # before the wizard's National Rates step lets you continue.
-options(cd2030.wizard = list(
+# The Load Data wizard's settings for this app (set by run_app())
+rmncah_wizard_options <- function() options(cd2030.wizard = list(
   national_rates_groups = list(
     cd_wizard_field_group("title_upload_group_maternal", "sub_upload_group_maternal",
       cd_wizard_survey_field("anc1_prop", "anc1", "title_upload_anc1_survey"),

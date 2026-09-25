@@ -1,4 +1,3 @@
-source("modules/6_national_service_utilization/service_utilization.R")
 
 utilization_map_indicators <- c('opd_map', 'ipd_map')
 

@@ -1,5 +1,3 @@
-source("modules/6_national_service_utilization/service_utilization.R")
-source("modules/6_national_service_utilization/service_utilization_capita.R")
 
 subnational_service_utilization_ui <- function(id, i18n) {
   ns <- NS(id)

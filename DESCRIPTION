@@ -1,0 +1,31 @@
+Package: cd2030.rmncah
+Title: The Countdown to 2030 RMNCAH App
+Version: 2.0.0
+Authors@R: c(
+      person("David", "Kariuki", , "hello@damurka.com", role = c("aut", "cre"),
+             comment = c(ORCID = "0009-0003-6159-1107")),
+      person("African Population and Health Research Center (APHRC)",
+            role = c("cph", "fnd"))
+    )
+Description: The Countdown to 2030 RMNCAH Shiny app: load and check a country's health facility data,
+    choose denominators, analyse coverage, equity, mortality, service use and the health system, and build
+    reports. Run it with run_app().
+License: AGPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Depends:
+    R (>= 4.1)
+Imports:
+    cd2030.core,
+    datasuite.ui,
+    dplyr,
+    flextable,
+    openxlsx,
+    shiny,
+    shiny.i18n,
+    stringr,
+    utils
+Remotes:
+    damurka/cd2030.core@report-builder,
+    damurka/datasuite.ui
