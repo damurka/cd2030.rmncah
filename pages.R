@@ -317,6 +317,15 @@ cd_page_registry <- list(
     help = c("5.1-bayesian-coverage"),
     denominator = TRUE,
     server_args = list('adminlevel_1')
+  ),
+  cd_page_def(
+    id = "reports",
+    ui = reports_ui,
+    server = reports_server,
+    title = "title_reports",
+    section = "lbl_nav_section_output",
+    subtitle = "sub_reports",
+    help = c("12-dissemination")
   )
 )
 

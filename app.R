@@ -147,6 +147,10 @@ cd_nav_sections <- list(
       cd_nav_item("title_nav_national_analysis", tabName = "bayesian_national", icon = "earth-americas"),
       cd_nav_item("title_nav_subnational_analysis", tabName = "bayesian_subnational", icon = "map-location-dot")
     ))
+  ),
+  # Reports built from blocks of this app's charts and tables (_shared/R/modules/reports.R)
+  cd_nav_section("lbl_nav_section_output",
+    cd_nav_item("title_reports", tabName = "reports", icon = "file-lines", requires_adjustment = TRUE)
   )
 )
 
