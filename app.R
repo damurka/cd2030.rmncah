@@ -18,7 +18,7 @@ library(cd2030.core)
 options(cd2030.app_group = "rmncah")
 set_selected_group("rmncah")
 
-# What is particular to this app for the shared page modules (../_shared/R/core/config.R lists the keys).
+# What is particular to this app for the shared page modules (R/ui-core-config.R in cd2030.core lists the keys).
 options(cd2030.config = list(
   nat_cov_indicators = c("anc4", "instlivebirths", "low_bweight", "penta3", "measles1", "fpet"),
   target_indicators = c("anc4", "instlivebirths", "vaccine"),
@@ -43,7 +43,7 @@ options(cd2030.config = list(
 # this app's own code (confirmed via an exhaustive export-based scan across apps/rmncah) -- removed. officer/
 # RColorBrewer/tidyr are already cd2030.core's own Imports:, so its functions still get them the normal
 # namespace way; officedown/markdown/webshot weren't dependencies of anything in this app at all. shinycssloaders
-# is gone the same way, as of every withSpinner() call site converting to cd_spinner() (_shared/R/core (and components/)) --
+# is gone the same way, as of every withSpinner() call site converting to cd_spinner() (datasuite.ui) --
 # explicit user request, "replace all withSpinner from shinycssloaders with custom code ... react component".
 pacman::p_load(
   shiny,
@@ -67,9 +67,8 @@ pacman::p_load(
   update = FALSE
 )
 
-# The shared Countdown UI (../_shared): every cd_*/cd* builder, the React components' R side, the assets.
-source("../_shared/load.R")
-cd_ui_load()
+# The interface (datasuite.ui) and the Countdown pages (cd2030.core)
+library(datasuite.ui)
 
 source("modules/0_upload_data.R")
 
@@ -104,7 +103,7 @@ i18n <- init_i18n(translation_json_path = cd_translations("translation/translati
 i18n$set_translation_language(language)
 cd_use_i18n(i18n)
 
-# The sidebar/header nav tree: the standard sections (_shared/R/layout/nav-sections.R) plus this app's own groups.
+# The sidebar/header nav tree: the standard sections (cd2030.core, R/ui-layout-nav-sections.R) plus this app's own groups.
 cd_nav_sections <- list(
   cd_nav_start(),
   cd_nav_quality(),
@@ -148,7 +147,7 @@ cd_nav_sections <- list(
       cd_nav_item("title_nav_subnational_analysis", tabName = "bayesian_subnational", icon = "map-location-dot")
     ))
   ),
-  # Reports built from blocks of this app's charts and tables (_shared/R/modules/reports.R)
+  # Reports built from blocks of this app's charts and tables (datasuite.ui, R/kit-reports.R)
   cd_nav_section("lbl_nav_section_output",
     cd_nav_item("title_reports", tabName = "reports", icon = "file-lines", requires_adjustment = TRUE)
   )

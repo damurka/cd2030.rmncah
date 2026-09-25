@@ -1,4 +1,4 @@
-# The Load Data wizard itself is shared (apps/_shared/R/wizard, loaded by cd_ui_load()); this is the part of it that
+# The Load Data wizard itself is shared (cd2030.core, R/ui-wizard-*.R); this is the part of it that
 # is rmncah's own -- see wizard-config.R for the contract. Survey estimates here are the maternal + immunization set
 # (anc1, anc4, instlivebirths, csection, low_bweight, bcg, penta1, penta3, measles1); every group below is required
 # before the wizard's National Rates step lets you continue.
