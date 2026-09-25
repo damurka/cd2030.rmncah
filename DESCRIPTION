@@ -19,8 +19,8 @@ RoxygenNote: 7.3.2
 Depends:
     R (>= 4.1)
 Imports:
-    cd2030.core,
-    datasuite.ui,
+    cd2030.core (>= 1.1.0),
+    datasuite.ui (>= 0.1.0),
     dplyr,
     flextable,
     openxlsx,
