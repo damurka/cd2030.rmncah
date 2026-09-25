@@ -27,5 +27,5 @@ Imports:
     stringr,
     utils
 Remotes:
-    damurka/cd2030.core@report-builder,
+    damurka/cd2030.core,
     damurka/datasuite.ui
