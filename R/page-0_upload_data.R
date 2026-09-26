@@ -55,7 +55,7 @@ upload_data_server <- function(id, i18n, cdsuite_file, active) {
       # until upload_dt$requires_walkthrough() reports otherwise, right when cache() itself first gets a value.
       requires_walkthrough <- reactiveVal(TRUE)
 
-      cd_page_header_server("load_data", cache = cache, path = "loading-data", i18n = i18n)
+      cd_page_header_server("load_data", cache = cache, path = "apps/countdown/getting-started", i18n = i18n)
 
       is_electron <- !is.na(cdsuite_file)
       upload_dt <- upload_box_server("upload_box", i18n, cdsuite_file, is_electron = is_electron)
