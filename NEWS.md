@@ -1,3 +1,10 @@
+# cd2030.rmncah 2.0.1
+
+Documentation only; no change to the app.
+
+* A README: what the app does, installing and running it (`run_app()` arguments and the `CDSUITE_SHINY_*` variables),
+  its files, developing and releasing it.
+
 # cd2030.rmncah 2.0.0
 
 * First release as an installable package: `cd2030.rmncah::run_app()` starts the app.
