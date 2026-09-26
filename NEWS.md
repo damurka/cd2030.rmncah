@@ -1,3 +1,8 @@
+# cd2030.rmncah 2.0.2
+
+* "Get help" opens the app guide's pages and sections after the docs reorganisation (`apps/countdown/...`).
+* Requires cd2030.core 1.3.0 and datasuite.ui 0.3.0 (the working Ask AI buttons, the AI's confirmations).
+
 # cd2030.rmncah 2.0.1
 
 Documentation only; no change to the app.
