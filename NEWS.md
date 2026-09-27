@@ -1,3 +1,8 @@
+# cd2030.rmncah 2.0.3
+
+* The denominator options read "ANC1 population growth" and "Penta1 population growth" (`anc1derived`,
+  `penta1derived`), the labels of cd2030.core's data dictionary. Requires cd2030.core 1.3.1.
+
 # cd2030.rmncah 2.0.2
 
 * "Get help" opens the app guide's pages and sections after the docs reorganisation (`apps/countdown/...`).
