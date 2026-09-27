@@ -22,25 +22,25 @@
       "key": "title_msg_loading",
       "en": "Loading",
       "fr": "Chargement",
-      "pt": "Carregando"
+      "pt": "A carregar"
     },
     {
       "key": "title_msg_loaded",
       "en": "Loaded from cache",
       "fr": "Chargé depuis le cache",
-      "pt": "Carregado do cache"
+      "pt": "Carregado da cache"
     },
     {
       "key": "title_msg_missing_files",
       "en": "Missing files",
       "fr": "Fichiers manquants",
-      "pt": "Arquivos ausentes"
+      "pt": "Ficheiros em falta"
     },
     {
       "key": "btn_upload_replace_file",
       "en": "Replace file",
       "fr": "Remplacer le fichier",
-      "pt": "Substituir arquivo"
+      "pt": "Substituir ficheiro"
     },
     {
       "key": "title_upload_nmr",
@@ -76,13 +76,13 @@
       "key": "title_upload_anc1_survey",
       "en": "ANC1 Coverage",
       "fr": "Couverture ANC1",
-      "pt": "Cobertura ANC1"
+      "pt": "Cobertura CPN1"
     },
     {
       "key": "title_upload_anc4_survey",
       "en": "ANC4 Coverage",
       "fr": "Couverture ANC4",
-      "pt": "Cobertura ANC4"
+      "pt": "Cobertura CPN4"
     },
     {
       "key": "title_upload_csection_survey",
@@ -136,19 +136,19 @@
       "key": "msg_upload_using_default",
       "en": "Using the app's built-in reference data.",
       "fr": "Utilisation des données de référence intégrées de l'application.",
-      "pt": "Usando os dados de referência integrados do aplicativo."
+      "pt": "A usar os dados de referência incorporados na aplicação."
     },
     {
       "key": "title_msg_default",
       "en": "Using default data",
       "fr": "Données par défaut utilisées",
-      "pt": "Usando dados padrão"
+      "pt": "A usar dados predefinidos"
     },
     {
       "key": "btn_upload_restore_default",
       "en": "Restore default",
       "fr": "Rétablir les données par défaut",
-      "pt": "Restaurar padrão"
+      "pt": "Repor predefinição"
     },
     {
       "key": "sub_upload_survey_folder_card",
@@ -172,13 +172,13 @@
       "key": "msg_upload_manual_mapping",
       "en": "Match Survey Region Names to Your Dataset",
       "fr": "Associer les noms de région de l'enquête à votre jeu de données",
-      "pt": "Associar os nomes de região da pesquisa ao seu conjunto de dados"
+      "pt": "Associar os nomes de região do inquérito ao seu conjunto de dados"
     },
     {
       "key": "plt_title_consist_ratios",
       "en": "Ratios of the number of children vaccinated (ANC1/Penta1, Penta1/Penta3) compared with expected ratios",
       "fr": "Rapports du nombre d’enfants vaccinés (CPN1/Penta1, Penta1/Penta3) comparés aux rapports attendus",
-      "pt": "Razões do número de crianças vacinadas (CPN1/Penta1, Penta1/Penta3) comparadas às razões esperadas"
+      "pt": "Razões do número de crianças vacinadas (CPN1/Penta1, Penta1/Penta3) comparadas com as razões esperadas"
     },
     {
       "key": "title_adjust_opd_factor",
@@ -202,7 +202,7 @@
       "key": "btn_download_subnational",
       "en": "Download subnational data",
       "fr": "Télécharger les données subnationales",
-      "pt": "Baixar dados subnacionais"
+      "pt": "Transferir dados subnacionais"
     },
     {
       "key": "opt_penta1derived",
@@ -220,13 +220,13 @@
       "key": "opt_anc_1trimester",
       "en": "ANC 1st Trimester",
       "fr": "CPN 1er trimestre",
-      "pt": "Pré-natal 1º Trimestre"
+      "pt": "Pré-natal no 1.º trimestre"
     },
     {
       "key": "opt_anc4",
       "en": "ANC 4 Visits",
       "fr": "4 CPN",
-      "pt": "4 Consultas de Pré-natal"
+      "pt": "4 consultas pré-natais"
     },
     {
       "key": "opt_csection",
@@ -250,13 +250,13 @@
       "key": "opt_ipd_total",
       "en": "IPD Total (Inpatient)",
       "fr": "Total IPD (Hospitalisations)",
-      "pt": "Total IPD (Internações)"
+      "pt": "Total IPD (internamentos)"
     },
     {
       "key": "opt_ipd_under5",
       "en": "IPD Under 5 Years",
       "fr": "IPD Moins de 5 ans",
-      "pt": "IPD Menores de 5 anos"
+      "pt": "IPD menores de 5 anos"
     },
     {
       "key": "opt_ipt2",
@@ -280,25 +280,25 @@
       "key": "opt_maternal_deaths",
       "en": "Maternal Deaths",
       "fr": "Décès maternels",
-      "pt": "Mortes maternas"
+      "pt": "Óbitos maternos"
     },
     {
       "key": "opt_neonatal_deaths",
       "en": "Neonatal Deaths",
       "fr": "Décès néonatals",
-      "pt": "Mortes neonatais"
+      "pt": "Óbitos neonatais"
     },
     {
       "key": "opt_opd_total",
       "en": "OPD Total (Outpatient)",
       "fr": "Total OPD (Consultations externes)",
-      "pt": "Total OPD (Consultas ambulatoriais)"
+      "pt": "Total OPD (consultas externas)"
     },
     {
       "key": "opt_opd_under5",
       "en": "OPD Under 5 Years",
       "fr": "OPD Moins de 5 ans",
-      "pt": "OPD Menores de 5 anos"
+      "pt": "OPD menores de 5 anos"
     },
     {
       "key": "opt_pnc48h",
@@ -316,13 +316,13 @@
       "key": "opt_stillbirth_f",
       "en": "Fresh Stillbirths",
       "fr": "Morts-nés frais",
-      "pt": "Natimortos recentes"
+      "pt": "Nados-mortos frescos"
     },
     {
       "key": "opt_stillbirth_m",
       "en": "Macerated Stillbirths",
       "fr": "Morts-nés macérés",
-      "pt": "Natimortos macerados"
+      "pt": "Nados-mortos macerados"
     },
     {
       "key": "opt_syphilis_test",
@@ -334,7 +334,7 @@
       "key": "opt_total_stillbirth",
       "en": "Total Stillbirths",
       "fr": "Mortinaissances totales",
-      "pt": "Total de natimortos"
+      "pt": "Total de nados-mortos"
     },
     {
       "key": "title_mortality",
@@ -370,7 +370,7 @@
       "key": "opt_ratio_md_sb",
       "en": "SBR to Maternal Death Ratio",
       "fr": "Ratio mortinatalité/décès maternels",
-      "pt": "Razão entre nascimentos mortos e mortes maternas"
+      "pt": "Razão entre nados-mortos e óbitos maternos"
     },
     {
       "key": "opt_sbr_inst",
@@ -412,31 +412,31 @@
       "key": "lbl_opd_rr",
       "en": "% expected monthly facility reports (National)",
       "fr": "% de rapports mensuels attendus des établissements (National)",
-      "pt": "% de relatórios mensais esperados das instalações (Nacional)"
+      "pt": "% de relatórios mensais esperados das unidades de saúde (nacional)"
     },
     {
       "key": "lbl_mis_opd_under5",
       "en": "% non-missing OPD monthly values",
       "fr": "% de valeurs mensuelles OPD non manquantes",
-      "pt": "% de valores mensais OPD não ausentes"
+      "pt": "% de valores mensais OPD não em falta"
     },
     {
       "key": "lbl_mis_ipd_under5",
       "en": "% non-missing IPD monthly values",
       "fr": "% de valeurs mensuelles IPD non manquantes",
-      "pt": "% de valores mensais IPD não ausentes"
+      "pt": "% de valores mensais IPD não em falta"
     },
     {
       "key": "lbl_districts_no_missing_opd",
       "en": "% districts with no missing OPD values",
       "fr": "% de districts sans valeurs OPD manquantes",
-      "pt": "% de distritos sem valores OPD ausentes"
+      "pt": "% de distritos sem valores OPD em falta"
     },
     {
       "key": "lbl_districts_no_missing_ipd",
       "en": "% districts with no missing IPD values",
       "fr": "% de districts sans valeurs IPD manquantes",
-      "pt": "% de distritos sem valores IPD ausentes"
+      "pt": "% de distritos sem valores IPD em falta"
     },
     {
       "key": "lbl_opd_under5_outlier5std",
@@ -526,13 +526,13 @@
       "key": "opt_opd",
       "en": "OPD Visits",
       "fr": "Consultations externes",
-      "pt": "Consultas ambulatoriais"
+      "pt": "Consultas externas"
     },
     {
       "key": "opt_ipd",
       "en": "IPD Admissions",
       "fr": "Admissions hospitalières",
-      "pt": "Internações IPD"
+      "pt": "Internamentos IPD"
     },
     {
       "key": "opt_under5",
@@ -556,13 +556,13 @@
       "key": "opt_opd_map",
       "en": "OPD Map",
       "fr": "Carte des consultations externes",
-      "pt": "Mapa de consultas ambulatoriais"
+      "pt": "Mapa de consultas externas"
     },
     {
       "key": "opt_ipd_map",
       "en": "IPD Map",
       "fr": "Carte des hospitalisations",
-      "pt": "Mapa de internações hospitalares"
+      "pt": "Mapa de internamentos hospitalares"
     },
     {
       "key": "title_mch_curative",
@@ -574,7 +574,7 @@
       "key": "lbl_mch_curative_title",
       "en": "MCH preventive index compared to curative service index, under 5",
       "fr": "Indice préventif SMI comparé à l'indice de services curatifs, moins de 5 ans",
-      "pt": "Índice preventivo de SMI comparado ao índice de serviços curativos, menores de 5 anos"
+      "pt": "Índice preventivo de SMI comparado com o índice de serviços curativos, menores de 5 anos"
     },
     {
       "key": "lbl_mch_prev_index_x",
@@ -652,13 +652,13 @@
       "key": "opt_ratio_bed_pop",
       "en": "Bed Density",
       "fr": "Densité des lits d’hôpital",
-      "pt": "Densidade de Leitos"
+      "pt": "Densidade de camas"
     },
     {
       "key": "title_health_system_comparison",
       "en": "PHC Performance",
       "fr": "Performance des SSP",
-      "pt": "Desempenho da APS"
+      "pt": "Desempenho dos CSP"
     },
     {
       "key": "opt_health_system_performance",
@@ -670,13 +670,13 @@
       "key": "opt_ratio_ipd_u5_bed",
       "en": "Under 5 IPD/Bed",
       "fr": "Hospitalisations des <5 ans/Lit",
-      "pt": "Internações <5 anos por Leito"
+      "pt": "Internamentos <5 anos por cama"
     },
     {
       "key": "opt_ratio_ipd_u5_hos",
       "en": "IPD Under 5/Hospitals",
       "fr": "Hospitalisations <5 ans/Hôpitaux",
-      "pt": "Internações <5 anos/Hospitais"
+      "pt": "Internamentos <5 anos/hospitais"
     },
     {
       "key": "opt_ratio_opd_u5_hstaff",
@@ -730,7 +730,7 @@
       "key": "title_private_sector_graph",
       "en": "Ownership of health facilities, 2024 (DHIS2)",
       "fr": "Propriété des établissements de santé, 2024 (DHIS2)",
-      "pt": "Propriedade das instalações de saúde, 2024 (DHIS2)"
+      "pt": "Propriedade das unidades de saúde, 2024 (DHIS2)"
     },
     {
       "key": "xlab_private_sector",
@@ -742,25 +742,25 @@
       "key": "ylab_private_sector",
       "en": "Percent of facilities",
       "fr": "Pourcentage d'établissements",
-      "pt": "Porcentagem de instalações"
+      "pt": "Percentagem de unidades de saúde"
     },
     {
       "key": "title_scatter_ratio_fac_pop",
       "en": "Facility density vs PHC Indices",
       "fr": "Densité des installations vs Indices SSP",
-      "pt": "Densidade de instalações vs Índices de APS"
+      "pt": "Densidade de unidades de saúde vs índices de CSP"
     },
     {
       "key": "title_scatter_ratio_hstaff_pop",
       "en": "Health workforce density vs PHC Indices",
       "fr": "Densité du personnel de santé vs Indices SSP",
-      "pt": "Densidade da força de trabalho em saúde vs Índices de APS"
+      "pt": "Densidade da força de trabalho em saúde vs índices de CSP"
     },
     {
       "key": "xlab_ratio_fac_pop",
       "en": "Facility density",
       "fr": "Densité des installations",
-      "pt": "Densidade de instalações"
+      "pt": "Densidade de unidades de saúde"
     },
     {
       "key": "xlab_ratio_hstaff_pop",
@@ -796,19 +796,19 @@
       "key": "title_ratio_opd_u5_hstaff",
       "en": "Under-5 OPD Visits by health workforce density by admin level 1",
       "fr": "Visites OPD des moins de 5 ans par densité du personnel de santé",
-      "pt": "Consultas ambulatoriais em menores de 5 anos por densidade da força de trabalho em saúde por nível administrativo 1"
+      "pt": "Consultas externas de menores de 5 anos por densidade da força de trabalho em saúde por nível administrativo 1"
     },
     {
       "key": "title_ratio_ipd_u5_hos",
       "en": "Under-5 IPD Admission by hospital density by admin level 1",
       "fr": "Admissions IPD des moins de 5 ans par densité hospitalière",
-      "pt": "Internações em menores de 5 anos por densidade hospitalar por nível administrativo 1"
+      "pt": "Internamentos de menores de 5 anos por densidade hospitalar por nível administrativo 1"
     },
     {
       "key": "title_ratio_ipd_u5_bed",
       "en": "Under-5 IPD Admission by hospital beds density by admin level 1",
       "fr": "Admissions IPD des moins de 5 ans par densité de lits d'hôpital",
-      "pt": "Internações em menores de 5 anos por densidade de leitos hospitalares por nível administrativo 1"
+      "pt": "Internamentos de menores de 5 anos por densidade de camas hospitalares por nível administrativo 1"
     },
     {
       "key": "xlab_cov_ideliv_hstaff",
@@ -820,19 +820,19 @@
       "key": "xlab_ratio_opd_u5_hstaff",
       "en": "Number of under-5 OPD visits per child per year",
       "fr": "Nombre de visites OPD des moins de 5 ans par enfant par an",
-      "pt": "Número de consultas ambulatoriais em menores de 5 anos por criança por ano"
+      "pt": "Número de consultas externas de menores de 5 anos por criança por ano"
     },
     {
       "key": "xlab_ratio_ipd_u5_hos",
       "en": "Number of under-5 IPD Admissions per child per year",
       "fr": "Nombre d'admissions IPD des moins de 5 ans par enfant par an",
-      "pt": "Número de internações em menores de 5 anos por criança por ano"
+      "pt": "Número de internamentos de menores de 5 anos por criança por ano"
     },
     {
       "key": "xlab_ratio_ipd_u5_bed",
       "en": "Number of Under-5 IPD Admission per 100 children per year",
       "fr": "Nombre d'admissions IPD des moins de 5 ans pour 100 enfants par an",
-      "pt": "Número de internações em menores de 5 anos por 100 crianças por ano"
+      "pt": "Número de internamentos de menores de 5 anos por 100 crianças por ano"
     },
     {
       "key": "ylab_cov_ideliv_hstaff",
@@ -856,7 +856,7 @@
       "key": "ylab_ratio_ipd_u5_bed",
       "en": "Number of hospital beds per 10,000 population",
       "fr": "Nombre de lits d'hôpital pour 10 000 habitants",
-      "pt": "Número de leitos hospitalares por 10.000 habitantes"
+      "pt": "Número de camas hospitalares por 10.000 habitantes"
     },
     {
       "key": "lbl_admin1_units",
@@ -880,7 +880,7 @@
       "key": "title_metric_ratio_fac_pop",
       "en": "Facility Density per 10,000 population",
       "fr": "Densité des installations pour 10 000 habitants",
-      "pt": "Densidade de instalações por 10.000 habitantes"
+      "pt": "Densidade de unidades de saúde por 10.000 habitantes"
     },
     {
       "key": "title_metric_ratio_hos_pop",
@@ -898,13 +898,13 @@
       "key": "title_metric_ratio_bed_pop",
       "en": "Inpatient Bed Density per 10,000 population",
       "fr": "Densité de lits d'hospitalisation pour 10 000 habitants",
-      "pt": "Densidade de leitos de internação por 10.000 habitantes"
+      "pt": "Densidade de camas de internamento por 10.000 habitantes"
     },
     {
       "key": "xlab_metric_ratio_fac_pop",
       "en": "Facility density",
       "fr": "Densité des installations",
-      "pt": "Densidade de instalações"
+      "pt": "Densidade de unidades de saúde"
     },
     {
       "key": "xlab_metric_ratio_hos_pop",
@@ -922,7 +922,7 @@
       "key": "xlab_metric_ratio_bed_pop",
       "en": "Bed density",
       "fr": "Densité de lits",
-      "pt": "Densidade de leitos"
+      "pt": "Densidade de camas"
     },
     {
       "key": "lbl_below_benchmark",
@@ -988,7 +988,7 @@
       "key": "ind_bed_density",
       "en": "Inpatient bed density",
       "fr": "Densité des lits d'hospitalisation",
-      "pt": "Densidade de leitos de internação"
+      "pt": "Densidade de camas de internamento"
     },
     {
       "key": "ind_hwf_density",
@@ -1006,13 +1006,13 @@
       "key": "ind_private_share",
       "en": "Share of Private facilities",
       "fr": "Part des établissements privés",
-      "pt": "Proporção de instalações privadas"
+      "pt": "Proporção de unidades de saúde privadas"
     },
     {
       "key": "ind_ngo_share",
       "en": "Share of NGO facilities",
       "fr": "Part des établissements des ONG",
-      "pt": "Proporção de instalações de ONGs"
+      "pt": "Proporção de unidades de saúde de ONG"
     },
     {
       "key": "unit_per_10k",
@@ -1036,37 +1036,37 @@
       "key": "title_national_coverage",
       "en": "National Coverage & Continuum",
       "fr": "Couverture nationale et continuum",
-      "pt": "Cobertura Nacional e Contínuo"
+      "pt": "Cobertura nacional e continuidade"
     },
     {
       "key": "opt_profile",
       "en": "Continuum Profile",
       "fr": "Profil du continuum",
-      "pt": "Perfil do Contínuo"
+      "pt": "Perfil da continuidade de cuidados"
     },
     {
       "key": "title_cov_profile",
       "en": "National continuum-of-care profile",
       "fr": "Profil national du continuum de soins",
-      "pt": "Perfil nacional do contínuo de cuidados"
+      "pt": "Perfil nacional da continuidade de cuidados"
     },
     {
       "key": "subtitle_cov_profile",
       "en": "Latest facility, latest survey, and WUENIC where relevant",
       "fr": "Données récentes des établissements, dernières enquêtes, et WUENIC le cas échéant",
-      "pt": "Dados mais recentes de instalações, últimas pesquisas e WUENIC, quando relevante"
+      "pt": "Dados mais recentes das unidades de saúde, últimos inquéritos e WUENIC, quando relevante"
     },
     {
       "key": "lbl_src_facility",
       "en": "Facility",
       "fr": "Établissement",
-      "pt": "Instalação"
+      "pt": "Unidade de saúde"
     },
     {
       "key": "lbl_src_survey",
       "en": "Survey",
       "fr": "Enquête",
-      "pt": "Pesquisa"
+      "pt": "Inquérito"
     },
     {
       "key": "lbl_src_wuenic",
@@ -1078,13 +1078,13 @@
       "key": "opt_heatmap",
       "en": "Continuum Heatmap",
       "fr": "Carte thermique du continuum",
-      "pt": "Mapa de calor do contínuo"
+      "pt": "Mapa de calor da continuidade de cuidados"
     },
     {
       "key": "title_cov_heatmap",
       "en": "Subnational continuum heatmap",
       "fr": "Carte thermique du continuum infranational",
-      "pt": "Mapa de calor do contínuo subnacional"
+      "pt": "Mapa de calor subnacional da continuidade de cuidados"
     },
     {
       "key": "title_subnational_mortality_institutional",
@@ -1096,7 +1096,7 @@
       "key": "opt_fresh_total_sb",
       "en": "Fresh Stillbirths",
       "fr": "Mortinaissances fraîches",
-      "pt": "Mortinatos recentes"
+      "pt": "Nados-mortos frescos"
     },
     {
       "key": "opt_ratio_md_nd",
@@ -1108,13 +1108,13 @@
       "key": "title_fresh_total_sb",
       "en": "Institutional fresh stillbirths as % of total stillbirths",
       "fr": "Mortinaissances fraîches en établissement en % du total des mortinaissances",
-      "pt": "Mortinatos recentes institucionais como % do total de mortinatos"
+      "pt": "Nados-mortos frescos institucionais como % do total de nados-mortos"
     },
     {
       "key": "title_ratio_md_sb",
       "en": "Institutional stillbirth-to-maternal death ratio",
       "fr": "Ratio mortinaissances/décès maternels en établissement",
-      "pt": "Razão de mortinatos por óbitos maternos institucionais"
+      "pt": "Razão de nados-mortos por óbitos maternos institucionais"
     },
     {
       "key": "title_ratio_md_nd",
@@ -1126,13 +1126,13 @@
       "key": "ylab_fresh_total_sb",
       "en": "Fresh stillbirths (%)",
       "fr": "Mortinaissances fraîches (%)",
-      "pt": "Mortinatos recentes (%)"
+      "pt": "Nados-mortos frescos (%)"
     },
     {
       "key": "ylab_ratio_md_sb",
       "en": "Stillbirths per maternal death",
       "fr": "Mortinaissances par décès maternel",
-      "pt": "Mortinatos por óbito materno"
+      "pt": "Nados-mortos por óbito materno"
     },
     {
       "key": "ylab_ratio_md_nd",
@@ -1156,7 +1156,7 @@
       "key": "note_ratio_md_nd",
       "en": "Note: Institutional neonatal deaths are deaths among live-born infants before discharge from the health facility.\nPlausible range (5-10) is the range of values considered realistic and expected.",
       "fr": "Remarque : Les décès néonatals en établissement sont les décès de nourrissons nés vivants avant leur sortie de l'établissement de santé.\nLa plage plausible (5-10) correspond aux valeurs considérées comme réalistes et attendues.",
-      "pt": "Nota: Óbitos neonatais institucionais são óbitos de nascidos vivos antes da alta na unidade de saúde.\nO intervalo plausível (5-10) é o intervalo de valores considerado realista e esperado."
+      "pt": "Nota: Óbitos neonatais institucionais são óbitos de nados vivos antes da alta na unidade de saúde.\nO intervalo plausível (5-10) é o intervalo de valores considerado realista e esperado."
     },
     {
       "key": "lbl_median",
@@ -1174,25 +1174,25 @@
       "key": "lbl_hh_ratio_fac_pop",
       "en": "High facility density\nHigh service index",
       "fr": "Densité élevée des installations\nIndice de service élevé",
-      "pt": "Alta densidade de instalações\nAlto índice de serviço"
+      "pt": "Alta densidade de unidades de saúde\nAlto índice de serviço"
     },
     {
       "key": "lbl_lh_ratio_fac_pop",
       "en": "Low facility density\nHigh service index",
       "fr": "Faible densité des installations\nIndice de service élevé",
-      "pt": "Baixa densidade de instalações\nAlto índice de serviço"
+      "pt": "Baixa densidade de unidades de saúde\nAlto índice de serviço"
     },
     {
       "key": "lbl_hl_ratio_fac_pop",
       "en": "High facility density\nLow service index",
       "fr": "Densité élevée des installations\nIndice de service faible",
-      "pt": "Alta densidade de instalações\nBaixo índice de serviço"
+      "pt": "Alta densidade de unidades de saúde\nBaixo índice de serviço"
     },
     {
       "key": "lbl_ll_ratio_fac_pop",
       "en": "Low facility density\nLow service index",
       "fr": "Faible densité des installations\nIndice de service faible",
-      "pt": "Baixa densidade de instalações\nBaixo índice de serviço"
+      "pt": "Baixa densidade de unidades de saúde\nBaixo índice de serviço"
     },
     {
       "key": "lbl_hh_ratio_hstaff_pop",
@@ -1234,19 +1234,19 @@
       "key": "title_graph_fpet",
       "en": "Family planning among currently married women 15-49 years",
       "fr": "Planification familiale chez les femmes actuellement mariées (15-49 ans)",
-      "pt": "Planejamento familiar entre mulheres atualmente casadas de 15 a 49 anos"
+      "pt": "Planeamento familiar entre mulheres atualmente casadas de 15 a 49 anos"
     },
     {
       "key": "ylab_fpet",
       "en": "Percent of currently married women 15-49",
       "fr": "Pourcentage de femmes actuellement mariées (15-49 ans)",
-      "pt": "Percentual de mulheres atualmente casadas (15-49 anos)"
+      "pt": "Percentagem de mulheres atualmente casadas (15-49 anos)"
     },
     {
       "key": "caption_fpet",
       "en": "Lines show the median estimates. Shaded bands represent the 95% credible interval.\nSource: FPET Track20 modeling",
       "fr": "Les lignes indiquent les estimations médianes. Les bandes ombrées représentent l'intervalle de crédibilité à 95 %.\nSource : Modélisation FPET Track20",
-      "pt": "As linhas mostram as estimativas medianas. As faixas sombreadas representam o intervalo de credibilidade de 95%.\nFonte: Modelagem FPET Track20"
+      "pt": "As linhas mostram as estimativas medianas. As faixas sombreadas representam o intervalo de credibilidade de 95%.\nFonte: Modelação FPET Track20"
     },
     {
       "key": "lbl_fpet_mcpr",
@@ -1258,14 +1258,14 @@
       "key": "lbl_fpet_demand",
       "en": "Demand Satisfied with a Modern Method",
       "fr": "Demande satisfaite par une méthode moderne",
-      "pt": "Demanda satisfeita com método moderno"
+      "pt": "Procura satisfeita com método moderno"
     },
     {
       "key": "title_continuum",
       "en": "Continuum of Care",
       "fr": "Continuum des soins",
       "es": "Continuo de atención",
-      "pt": "Contínuo de cuidados"
+      "pt": "Continuidade de cuidados"
     },
     {
       "key": "title_bayesian_analysis",
@@ -1307,14 +1307,14 @@
       "en": "Maternal Continuum",
       "fr": "Continuum maternel",
       "es": "Continuo materno",
-      "pt": "Contínuo materno"
+      "pt": "Continuidade de cuidados maternos"
     },
     {
       "key": "opt_child_continuum",
       "en": "Child Continuum",
       "fr": "Continuum infantile",
       "es": "Continuo infantil",
-      "pt": "Contínuo infantil"
+      "pt": "Continuidade de cuidados infantis"
     },
     {
       "key": "opt_area",
@@ -1339,7 +1339,7 @@
       "key": "sub_continuum",
       "en": "Follow coverage along the continuum of care.",
       "fr": "Suivez la couverture le long du continuum de soins.",
-      "pt": "Acompanhe a cobertura ao longo do continuum de cuidados."
+      "pt": "Acompanhe a cobertura ao longo da continuidade de cuidados."
     },
     {
       "key": "sub_fpet",
