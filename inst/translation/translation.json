@@ -206,9 +206,9 @@
     },
     {
       "key": "opt_penta1derived",
-      "en": "Penta 1 population Growth",
-      "fr": "Croissance de la population Penta 1",
-      "pt": "Crescimento da população Penta 1"
+      "en": "Penta1 population growth",
+      "fr": "Croissance de la population (Penta1)",
+      "pt": "Crescimento populacional (Penta1)"
     },
     {
       "key": "opt_ideliv",
