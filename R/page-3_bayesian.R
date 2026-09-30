@@ -23,14 +23,44 @@ bayesian_server <- function(id, cache, i18n, admin_level, active = reactive(TRUE
         "panel",
         serverInput = function(id, current_indicator) {
 
+          # A fit (rstan) takes minutes: it runs in another R process (an ExtendedTask with future), so the app stays
+          # usable while it runs and the chart shows its loader meanwhile. Each result comes back with the key it was
+          # fitted for (admin level, indicator, denominator) and is kept in the dataset under it, so a fit that ends
+          # after the denominator changed is kept for the one it was asked for, not shown for the new one.
+          fit <- ExtendedTask$new(function(inputs) {
+            promises::future_promise({
+              list(key = inputs$key, model = cd2030.core::generate_bayes_model(
+                coverage_data = inputs$coverage_data,
+                overall_score = inputs$overall_score,
+                indicator = inputs$indicator,
+                denominator = inputs$denominator
+              ))
+            }, seed = TRUE, packages = "cd2030.core")
+          })
+          asked <- reactiveVal(NULL)
+
           # Shiny computes every bound output once on a session's first flush, before it has heard back from
-          # the client about which ones are actually visible -- so without req(active()), fitting a Bayesian
-          # model (rstan, tens of seconds each) runs for every indicator, at both admin levels, for a page no
-          # one has opened yet, on every session. active() (page_is(), see app.R) keeps it from starting until
-          # this tab is actually open, the same fix mortality_mapping_server() already needed.
+          # the client about which ones are actually visible -- so without req(active()), a fit would start for
+          # every indicator, at both admin levels, for a page no one has opened yet. active() (page_is(), see
+          # app.R) keeps it from starting until this tab is actually open; and it starts only when the chart asks
+          # for the model (the indicator's tab shown), the same fix mortality_mapping_server() already needed.
           model <- reactive({
             req(cache(), active())
-            cache()$get_bayes_model(admin_level, current_indicator)
+            dataset <- cache()
+            done <- dataset$bayes_model_cached(admin_level, current_indicator)
+            if (!is.null(done)) return(done)
+            key <- dataset$bayes_model_key(admin_level, current_indicator)
+            if (!identical(isolate(asked()), key)) {
+              isolate({
+                asked(key)
+                fit$invoke(dataset$bayes_model_inputs(admin_level, current_indicator))
+              })
+            }
+            # running: the output stays busy (the chart's loader); an error is shown as the chart's
+            out <- fit$result()
+            dataset$keep_bayes_model(out$key, out$model)
+            req(identical(out$key, key))
+            out$model
           })
 
           cd_coverage_plot_server(

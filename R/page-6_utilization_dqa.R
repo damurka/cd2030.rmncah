@@ -11,7 +11,7 @@ utilization_dqa_ui <- function(id, i18n) {
       i18n = i18n,
       status = "success",
       width = 12,
-      cd_spinner(uiOutput(ns("utilization_dqa")))
+      cd_table_spinner(uiOutput(ns("utilization_dqa")))
     )
   )
 }

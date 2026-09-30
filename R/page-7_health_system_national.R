@@ -7,7 +7,7 @@ health_system_national_ui <- function(id, i18n) {
       chart_toolbar = tagList(cd_download_button_ui(ns("download_plot")), cd_download_button_ui(ns("download_data"))),
       i18n = i18n,
       width = 12,
-      cd_spinner(uiOutput(ns("overall_score")))
+      cd_table_spinner(uiOutput(ns("overall_score")))
     )
   )
 }

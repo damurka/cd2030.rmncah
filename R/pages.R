@@ -52,16 +52,6 @@ rmncah_pages <- function() list(
     report = "data_quality"
   ),
   cd_page_def(
-    id = "remove_years",
-    ui = remove_years_ui,
-    server = remove_years_server,
-    title = "btn_adjust_remove_years",
-    section = "lbl_nav_section_quality",
-    subtitle = "sub_remove_years",
-    help = c("apps/countdown/data-preparation", "remove-years"),
-    active = FALSE
-  ),
-  cd_page_def(
     id = "data_adjustment",
     ui = data_adjustment_ui,
     server = data_adjustment_server,

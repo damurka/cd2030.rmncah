@@ -18,6 +18,10 @@ run_app <- function(selected_file = Sys.getenv("CDSUITE_SHINY_SELECTED_FILE", un
   # uploads include saved datasets, not just the facility data
   options(shiny.maxRequestSize = 2 * 1024 * 1024^2, future.globals.maxSize = 3 * 1024 * 1024^2, shiny.fullstacktrace = TRUE)
 
+  # the Bayesian page fits its models in other R processes (R/page-3_bayesian.R), so the app is not frozen meanwhile:
+  # two workers, started once, unless the session already has a plan of its own
+  if (inherits(future::plan(), "sequential")) future::plan(future::multisession, workers = 2L)
+
   # cd2030.core keeps ONE indicator group for the whole R session (set_selected_group()); this app's own copy
   # (cd2030.app_group) is one loading a dataset cannot change
   options(cd2030.selected_group = "rmncah", cd2030.app_group = "rmncah")
@@ -100,9 +104,10 @@ run_app <- function(selected_file = Sys.getenv("CDSUITE_SHINY_SELECTED_FILE", un
         cd_nav_item("title_nav_subnational_analysis", tabName = "bayesian_subnational", icon = "map-location-dot")
       ))
     ),
-    # Reports built from blocks of this app's charts and tables (datasuite.ui, R/kit-reports.R)
+    # Reports built from blocks of this app's charts and tables (datasuite.ui, R/kit-reports.R): opened from the header's
+    # Reports button, not drawn in the sidebar (hidden: the breadcrumb and the AI still know the page)
     cd_nav_section("lbl_nav_section_output",
-      cd_nav_item("title_reports", tabName = "reports", icon = "file-lines", requires_adjustment = TRUE)
+      cd_nav_item("title_reports", tabName = "reports", icon = "file-lines", requires_adjustment = TRUE, hidden = TRUE)
     )
   )
 

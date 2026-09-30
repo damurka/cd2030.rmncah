@@ -1,3 +1,13 @@
+# cd2030.rmncah 2.0.5
+
+* The report builder is Quire (datasuite.ui 0.4.0, quire 0.2.17): tables can be aligned (numbers and text apart).
+* Data Adjustment takes in Remove Years: the years and areas removed, and completeness, outliers and missing values
+  set by indicator, region or district (cd2030.core 1.3.5).
+* Reports is on the header's button only, not in the sidebar.
+* Tables show their own loader.
+* The Bayesian analysis runs in the background (an ExtendedTask): the app stays usable while the model fits.
+* Requires cd2030.core 1.3.5, datasuite.ui 0.4.0 and quire 0.2.17.
+
 # cd2030.rmncah 2.0.4
 
 * Portuguese: the app reads as Portuguese is written in Mozambique and Angola (European norm) instead of Brazilian Portuguese.
