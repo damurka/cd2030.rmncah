@@ -4,6 +4,8 @@ bayesian_ui <- function(id, i18n, label) {
   ns <- NS(id)
 
   cd_page_ui(id, i18n,
+    # the model's packages are installed when it is first wanted (see bayesian_server)
+    uiOutput(ns("needs_packages")),
     cd_tabbed_charts_ui(ns("panel"), i18n, "title_bayesian_analysis", cd_coverage_plot_ui,
       indicators = bayesian_indicators
     )
@@ -18,6 +20,28 @@ bayesian_server <- function(id, cache, i18n, admin_level, active = reactive(TRUE
     id = id,
     module = function(input, output, session) {
       ns <- session$ns
+
+      # The model's packages (Stan and its packages: a large download not every analysis needs) are installed on
+      # demand. Inside DataSuite a button asks it to install them (then it offers to restart the app); in plain R
+      # the page shows the command. No fit is started while they are missing.
+      missing_packages <- cd2030.core::cd_bayes_packages_missing()
+      output$needs_packages <- renderUI({
+        if (!length(missing_packages)) return(NULL)
+        in_datasuite <- nzchar(Sys.getenv("CDSUITE_SHINY_ID"))
+        div(
+          class = "alert alert-info",
+          p(i18n$t("msg_bayes_needs_packages")),
+          if (in_datasuite) {
+            actionButton(ns("install_packages"), i18n$t("btn_bayes_install_packages"), icon = icon("download"))
+          } else {
+            tags$pre(cd2030.core::cd_bayes_install_command(missing_packages))
+          }
+        )
+      })
+      observeEvent(input$install_packages, {
+        cd2030.core::cd_request_bayes_packages(missing_packages)
+        showNotification(i18n$t("msg_bayes_installing_packages"), type = "message")
+      })
 
       cd_tabbed_charts_server(
         "panel",
@@ -46,6 +70,7 @@ bayesian_server <- function(id, cache, i18n, admin_level, active = reactive(TRUE
           # for the model (the indicator's tab shown), the same fix mortality_mapping_server() already needed.
           model <- reactive({
             req(cache(), active())
+            validate(need(!length(missing_packages), i18n$t("msg_bayes_needs_packages")))
             dataset <- cache()
             done <- dataset$bayes_model_cached(admin_level, current_indicator)
             if (!is.null(done)) return(done)

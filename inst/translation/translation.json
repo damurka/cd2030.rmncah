@@ -1336,6 +1336,24 @@
       "pt": "Modele as estimativas de cobertura com uma abordagem bayesiana."
     },
     {
+      "key": "msg_bayes_needs_packages",
+      "en": "The Bayesian model needs extra packages (a large download; a few minutes to install). They are installed only when you use the model.",
+      "fr": "Le modèle bayésien nécessite des paquets supplémentaires (un téléchargement important ; quelques minutes d'installation). Ils ne sont installés que lorsque vous utilisez le modèle.",
+      "pt": "O modelo bayesiano precisa de pacotes adicionais (uma transferência grande; alguns minutos para instalar). Só são instalados quando utiliza o modelo."
+    },
+    {
+      "key": "btn_bayes_install_packages",
+      "en": "Install the Bayesian model",
+      "fr": "Installer le modèle bayésien",
+      "pt": "Instalar o modelo bayesiano"
+    },
+    {
+      "key": "msg_bayes_installing_packages",
+      "en": "Installing the Bayesian model. DataSuite shows the progress in its status bar and offers to restart the app when it is done.",
+      "fr": "Installation du modèle bayésien. DataSuite affiche la progression dans sa barre d'état et propose de redémarrer l'application une fois terminé.",
+      "pt": "A instalar o modelo bayesiano. O DataSuite mostra o progresso na barra de estado e propõe reiniciar a aplicação quando terminar."
+    },
+    {
       "key": "sub_continuum",
       "en": "Follow coverage along the continuum of care.",
       "fr": "Suivez la couverture le long du continuum de soins.",

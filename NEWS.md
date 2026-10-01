@@ -1,3 +1,10 @@
+# cd2030.rmncah 2.0.6
+
+* The Bayesian analysis installs its model's packages when it is first opened: inside DataSuite with a button
+  (DataSuite installs them, showing the progress in its status bar, and offers to restart the app); in plain R the
+  page shows the `install.packages()` command. No model is fitted while they are missing.
+* Requires cd2030.core 1.3.6.
+
 # cd2030.rmncah 2.0.5
 
 * The report builder is Quire (datasuite.ui 0.4.0, quire 0.2.17): tables can be aligned (numbers and text apart).
