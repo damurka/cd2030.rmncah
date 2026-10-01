@@ -5,14 +5,7 @@ utilization_dqa_ui <- function(id, i18n) {
     filters = cd_filter_bar(
       cd_admin_level_ui(ns("region"), i18n, show_admin_level = FALSE)
     ),
-    cd_chart_card(
-      title = i18n$t("title_utilization_dqa"),
-      chart_toolbar = tagList(cd_download_button_ui(ns("download_plot")), cd_download_button_ui(ns("download_data"))),
-      i18n = i18n,
-      status = "success",
-      width = 12,
-      cd_table_spinner(uiOutput(ns("utilization_dqa")))
-    )
+    cd_table_card_ui(ns("utilization_dqa"), i18n, i18n$t("title_utilization_dqa"), status = "success")
   )
 }
 
@@ -65,46 +58,13 @@ utilization_dqa_server <- function(id, cache, i18n, active = reactive(TRUE)) {
         }
       })
 
-      output$utilization_dqa <- renderUI({
-        req(utilization_dqa())
-        out <- utilization_dqa() %>%
-          plot(years = cache()$data_years, title = i18n$t("lbl_score_metric_header")) %>%
-          htmltools_value()
-        HTML(as.character(out))
-      })
-
-      cd_download_button_server(
-        id = "download_data",
-        filename = reactive("utilization_dqa"),
-        extension = reactive("xlsx"),
+      cd_table_card_server(
+        "utilization_dqa",
+        i18n,
         data = utilization_dqa,
-        i18n = i18n,
-        label = "btn_global_download_data",
-        icon = "table",
-        button_class = "cd-tool-btn",
-        content = function(file, d) {
-          wb <- createWorkbook()
-          cd_add_sheet(wb, i18n$t("lbl_score_metric_header"), d)
-          saveWorkbook(wb, file, overwrite = TRUE)
-        }
+        table_fun = function(d) plot(d, years = cache()$data_years, title = i18n$t("lbl_score_metric_header")),
+        filename = reactive("utilization_dqa")
       )
-
-      cd_download_button_server(
-        id = "download_plot",
-        filename = reactive("utilization_dqa"),
-        extension = reactive("png"),
-        i18n = i18n,
-        icon = "camera",
-        content = function(file, plot_data) {
-          out <- plot_data %>%
-            plot(years = cache()$data_years, title = i18n$t("lbl_score_metric_header")) %>%
-            save_as_image(path = file, zoom = 3)
-        },
-        data = utilization_dqa,
-        label = "btn_global_download_plot",
-        button_class = "cd-tool-btn"
-      )
-
     }
   )
 }

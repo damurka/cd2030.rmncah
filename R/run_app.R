@@ -18,9 +18,8 @@ run_app <- function(selected_file = Sys.getenv("CDSUITE_SHINY_SELECTED_FILE", un
   # uploads include saved datasets, not just the facility data
   options(shiny.maxRequestSize = 2 * 1024 * 1024^2, future.globals.maxSize = 3 * 1024 * 1024^2, shiny.fullstacktrace = TRUE)
 
-  # the Bayesian page fits its models in other R processes (R/page-3_bayesian.R), so the app is not frozen meanwhile:
-  # two workers, started once, unless the session already has a plan of its own
-  if (inherits(future::plan(), "sequential")) future::plan(future::multisession, workers = 2L)
+  # the Bayesian page fits its models in other R processes; their workers start when it is first opened
+  # (rmncah_start_workers(), R/page-3_bayesian-workers.R), not here
 
   # cd2030.core keeps ONE indicator group for the whole R session (set_selected_group()); this app's own copy
   # (cd2030.app_group) is one loading a dataset cannot change
@@ -115,7 +114,7 @@ run_app <- function(selected_file = Sys.getenv("CDSUITE_SHINY_SELECTED_FILE", un
     app_name = app_name, app_version = app_version, theme = "rmncah",
     nav_sections = nav, registry = pages,
     i18n = i18n, language = language, selected_file = selected_file,
-    upload_ui = upload_data_ui, upload_server = upload_data_server
+    upload_ui = cd_upload_data_ui, upload_server = cd_upload_data_server
   )
   if (length(list(...))) app$options <- utils::modifyList(app$options %||% list(), list(...))
   app

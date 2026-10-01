@@ -2,13 +2,7 @@ health_system_national_ui <- function(id, i18n) {
   ns <- NS(id)
 
   cd_page_ui(id, i18n,
-    cd_chart_card(
-      title = i18n$t('opt_health_system_density'),
-      chart_toolbar = tagList(cd_download_button_ui(ns("download_plot")), cd_download_button_ui(ns("download_data"))),
-      i18n = i18n,
-      width = 12,
-      cd_table_spinner(uiOutput(ns("overall_score")))
-    )
+    cd_table_card_ui(ns("national_metrics"), i18n, i18n$t('opt_health_system_density'))
   )
 }
 
@@ -50,53 +44,22 @@ health_system_national_server <- function(id, cache, i18n, active = reactive(TRU
         )
       })
 
-      output$overall_score <- renderUI({
-        req(national_metrics())
-        latest_year <- max(cache()$data_years)
-        out <- national_metrics() %>%
+      # the table of the latest year, on screen and in its picture
+      cd_table_card_server(
+        "national_metrics",
+        i18n,
+        data = national_metrics,
+        table_fun = function(d) {
           plot(
-            year            = latest_year, 
+            d,
+            year            = max(cache()$data_years),
             indicator_label = i18n$t("title_global_indicator"),
             value_label     = i18n$t("lbl_value"),
             unit_label      = i18n$t("lbl_unit")
-          ) %>% 
-          # plot(years = cache()$data_years, title = i18n$t("lbl_score_metric_header")) %>%
-          htmltools_value()
-        HTML(as.character(out))
-      })
-
-      cd_download_button_server(
-        id = "download_data",
-        filename = reactive("overall_score"),
-        extension = reactive("xlsx"),
-        data = national_metrics,
-        i18n = i18n,
-        label = "btn_global_download_data",
-        icon = "table",
-        button_class = "cd-tool-btn",
-        content = function(file, d) {
-          wb <- createWorkbook()
-          cd_add_sheet(wb, i18n$t("lbl_score_metric_header"), d)
-          saveWorkbook(wb, file, overwrite = TRUE)
-        }
-      )
-
-      cd_download_button_server(
-        id = "download_plot",
-        filename = reactive("overall_score"),
-        extension = reactive("png"),
-        i18n = i18n,
-        icon = "camera",
-        content = function(file, plot_data) {
-          out <- plot_data %>%
-            plot(years = cache()$data_years, title = i18n$t("lbl_score_metric_header")) %>%
-            save_as_image(path = file, zoom = 3)
+          )
         },
-        data = national_metrics,
-        label = "btn_global_download_plot",
-        button_class = "cd-tool-btn"
+        filename = reactive("health_system_national")
       )
-
     }
   )
 }

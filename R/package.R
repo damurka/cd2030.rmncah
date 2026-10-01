@@ -6,7 +6,5 @@
 #' @import shiny
 #' @importFrom quire quire_ui
 #' @importFrom dplyr %>% arrange distinct pull select
-#' @importFrom flextable htmltools_value save_as_image
-#' @importFrom openxlsx createWorkbook saveWorkbook
 #' @importFrom stringr str_remove
 "_PACKAGE"

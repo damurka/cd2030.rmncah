@@ -289,7 +289,7 @@ rmncah_pages <- function() list(
   cd_page_def(
     id = "bayesian_national",
     ui = bayesian_ui,
-    server = bayesian_server,
+    server = bayesian_page_server,
     title = "title_bayesian_analysis",
     section = "title_bayesian_analysis",
     subtitle = "sub_bayesian",
@@ -300,7 +300,7 @@ rmncah_pages <- function() list(
   cd_page_def(
     id = "bayesian_subnational",
     ui = bayesian_ui,
-    server = bayesian_server,
+    server = bayesian_page_server,
     title = "title_bayesian_analysis",
     section = "title_bayesian_analysis",
     subtitle = "sub_bayesian",

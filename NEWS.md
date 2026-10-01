@@ -1,3 +1,17 @@
+# cd2030.rmncah 2.0.7
+
+* The Bayesian analysis's two background R processes start the first time a Bayesian page is opened, not when the app
+  starts.
+* The Load Data screen is cd2030.core's (`cd_upload_data_ui()` / `cd_upload_data_server()`, cd2030.core 1.3.7), the
+  same as the Vaxx app's; this app keeps only its part of the wizard (`rmncah_wizard_options()`).
+* Service Utilization's data quality table and the national Health System table are cd2030.core's table card
+  (`cd_table_card_ui()` / `cd_table_card_server()`). The national Health System table's picture is now the table on
+  screen (the latest year, translated labels; it was the 2024 table in English) and its downloads are named
+  `health_system_national`, not `overall_score`.
+* A failed reference-data upload (UN, WUENIC or UN mortality estimates) says why, not only that the format is
+  unsupported.
+* No longer imports flextable or openxlsx directly (cd2030.core does).
+
 # cd2030.rmncah 2.0.6
 
 * The Bayesian analysis installs its model's packages when it is first opened: inside DataSuite with a button
