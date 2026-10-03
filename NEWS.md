@@ -1,3 +1,10 @@
+# cd2030.rmncah 2.0.8
+
+* Requires cd2030.core 1.3.8 and datasuite.ui 0.4.3: zero-dose, under-vaccinated and measles2 coverage as the
+  Countdown 2030 Stata code computes them; every table of the dataset in its notebooks, with what it holds; charts and
+  tables already drawn follow a change of language; cards built outside a reactive context no longer fail.
+* The same version as cd2030.rmncah, cd2030.vaxx and cd2030.pooled.
+
 # cd2030.rmncah 2.0.7
 
 * The Bayesian analysis's two background R processes start the first time a Bayesian page is opened, not when the app
