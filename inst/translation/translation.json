@@ -1268,27 +1268,6 @@
       "pt": "Continuidade de cuidados"
     },
     {
-      "key": "title_bayesian_analysis",
-      "en": "Bayesian Analysis",
-      "fr": "Analyse bayésienne",
-      "es": "Análisis bayesiano",
-      "pt": "Análise bayesiana"
-    },
-    {
-      "key": "plot_title_bayes_coverage",
-      "en": "Bayesian Coverage Model Estimates",
-      "fr": "Estimations du modèle de couverture bayésien",
-      "es": "Estimaciones del modelo de cobertura bayesiano",
-      "pt": "Estimativas do modelo de cobertura bayesiano"
-    },
-    {
-      "key": "plot_legend_source",
-      "en": "Source: Survey Data & DHIS2 Routine Data",
-      "fr": "Source : Données d'enquête et données de routine DHIS2",
-      "es": "Fuente: Datos de encuestas y datos de rutina DHIS2",
-      "pt": "Fonte: Dados de inquérito e dados de rotina DHIS2"
-    },
-    {
       "key": "lbl_target_benchmark",
       "en": "Target benchmark",
       "fr": "Cible de référence",
@@ -1328,30 +1307,6 @@
       "en": "Selected Denominator",
       "fr": "Dénominateur sélectionné",
       "pt": "Denominador selecionado"
-    },
-    {
-      "key": "sub_bayesian",
-      "en": "Model coverage estimates with a Bayesian approach.",
-      "fr": "Modélisez les estimations de couverture avec une approche bayésienne.",
-      "pt": "Modele as estimativas de cobertura com uma abordagem bayesiana."
-    },
-    {
-      "key": "msg_bayes_needs_packages",
-      "en": "The Bayesian model needs extra packages (a large download; a few minutes to install). They are installed only when you use the model.",
-      "fr": "Le modèle bayésien nécessite des paquets supplémentaires (un téléchargement important ; quelques minutes d'installation). Ils ne sont installés que lorsque vous utilisez le modèle.",
-      "pt": "O modelo bayesiano precisa de pacotes adicionais (uma transferência grande; alguns minutos para instalar). Só são instalados quando utiliza o modelo."
-    },
-    {
-      "key": "btn_bayes_install_packages",
-      "en": "Install the Bayesian model",
-      "fr": "Installer le modèle bayésien",
-      "pt": "Instalar o modelo bayesiano"
-    },
-    {
-      "key": "msg_bayes_installing_packages",
-      "en": "Installing the Bayesian model. DataSuite shows the progress in its status bar and offers to restart the app when it is done.",
-      "fr": "Installation du modèle bayésien. DataSuite affiche la progression dans sa barre d'état et propose de redémarrer l'application une fois terminé.",
-      "pt": "A instalar o modelo bayesiano. O DataSuite mostra o progresso na barra de estado e propõe reiniciar a aplicação quando terminar."
     },
     {
       "key": "sub_continuum",

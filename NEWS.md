@@ -1,3 +1,10 @@
+# cd2030.rmncah 2.0.9
+
+* Bayesian Analysis, sub-national: the model is fitted. It stopped with "Column `source` doesn't exist" for every
+  indicator (cd2030.core 1.3.9: the regional coverage has the survey's `source` again).
+* The Bayesian Analysis pages are cd2030.core's (`bayesian_ui()`, `bayesian_page_server()`), shared with the vaccine
+  app; requires cd2030.core 1.3.9.
+
 # cd2030.rmncah 2.0.8
 
 * Requires cd2030.core 1.3.8 and datasuite.ui 0.4.3: zero-dose, under-vaccinated and measles2 coverage as the

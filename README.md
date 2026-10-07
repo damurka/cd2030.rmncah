@@ -48,7 +48,7 @@ Most pages are shared with the Vaxx app and live in cd2030.core (`R/ui-*.R`). Th
 | --- | --- |
 | `R/run_app.R` | `run_app()`: the indicator group (`rmncah`), the app's config (`options(cd2030.config = ...)`: which indicators each shared page shows, adjustment k-factors, reporting-rate indicators...), translations, the nav tree, then `cd2030.core::cd_app()` |
 | `R/pages.R` | `rmncah_pages()`: every page (id, UI, server, title, section, help topic, report) |
-| `R/page-*.R` | the RMNCAH-only pages: Bayesian, continuum of care, mortality, service utilization, MCH curative index, health system, private sector, and this app's Load Data options |
+| `R/page-*.R` | the RMNCAH-only pages: continuum of care, mortality, service utilization, MCH curative index, health system, private sector, and this app's Load Data options |
 | `inst/translation/translation.json` | the app's own texts (merged over datasuite.ui's and cd2030.core's with `cd_translations()`) |
 | `inst/intro/0_intro_<lang>.md` | the Introduction page |
 | `app.R` | runs the app from this folder (see below); not part of the package |

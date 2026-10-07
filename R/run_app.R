@@ -19,7 +19,7 @@ run_app <- function(selected_file = Sys.getenv("CDSUITE_SHINY_SELECTED_FILE", un
   options(shiny.maxRequestSize = 2 * 1024 * 1024^2, future.globals.maxSize = 3 * 1024 * 1024^2, shiny.fullstacktrace = TRUE)
 
   # the Bayesian page fits its models in other R processes; their workers start when it is first opened
-  # (rmncah_start_workers(), R/page-3_bayesian-workers.R), not here
+  # (cd2030.core's cd_start_bayes_workers()), not here
 
   # cd2030.core keeps ONE indicator group for the whole R session (set_selected_group()); this app's own copy
   # (cd2030.app_group) is one loading a dataset cannot change
