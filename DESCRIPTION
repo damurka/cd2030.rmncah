@@ -1,6 +1,6 @@
 Package: cd2030.rmncah
 Title: The Countdown to 2030 RMNCAH App
-Version: 2.0.9
+Version: 2.0.10
 Authors@R: c(
       person("David", "Kariuki", , "hello@damurka.com", role = c("aut", "cre"),
              comment = c(ORCID = "0009-0003-6159-1107")),
@@ -19,8 +19,8 @@ RoxygenNote: 7.3.2
 Depends:
     R (>= 4.1)
 Imports:
-    cd2030.core (>= 1.3.9),
-    datasuite.ui (>= 0.4.3),
+    cd2030.core (>= 1.3.10),
+    datasuite.ui (>= 0.4.4),
     quire (>= 0.2.17),
     dplyr (>= 1.1.4),
     shiny (>= 1.14.0),

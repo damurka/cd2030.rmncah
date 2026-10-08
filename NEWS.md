@@ -1,3 +1,9 @@
+# cd2030.rmncah 2.0.10
+
+* Bayesian Analysis no longer holds the app up when a fit ends, nor slows every later change to the dataset: a
+  fitted model is kept without the sampler's draws (cd2030.core 1.3.10, which this requires). A dataset that already
+  has models saved in it gets smaller at its next save.
+
 # cd2030.rmncah 2.0.9
 
 * Bayesian Analysis, sub-national: the model is fitted. It stopped with "Column `source` doesn't exist" for every
