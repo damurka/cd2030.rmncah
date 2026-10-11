@@ -1,3 +1,14 @@
+# cd2030.rmncah 2.0.12
+
+* Requires cd2030.core 1.4.1, so DataSuite updates it:
+    * Bayesian Analysis no longer holds the app while a model is fitted (in 2.0.11 every page waited for the fit).
+    * Sub-national Bayesian Analysis has a region and a year to choose: one region followed over the years, as the
+      national page follows the country, or every region compared in the year chosen, with the facility-data
+      values and the national one.
+    * Public/Private Share: the C-section bars are each country's own (they were a fraction of its rate).
+    * Sub-National Inequality with a region chosen shows the region's own coverage beside the national.
+    * The tables have one look, and the data tables write numbers the same way.
+
 # cd2030.rmncah 2.0.11
 
 * Bayesian Analysis no longer stops the other pages while a fit starts: the worker is sent the fit's inputs alone, not
