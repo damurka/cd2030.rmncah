@@ -51,15 +51,7 @@ continuum_coverage_server <- function(id, cache, i18n, active = reactive(TRUE)) 
                   survey   = i18n$t("lbl_src_survey"),
                   wuenic   = i18n$t("lbl_src_wuenic")
                 ),
-                indicator_labels = list(
-                  anc_1trimester = i18n$t("opt_anc_1trimester"),
-                  anc4           = i18n$t("opt_anc4"),
-                  ideliv = i18n$t("opt_ideliv"),
-                  instlivebirths = i18n$t("opt_instlivebirths"),
-                  pnc48h         = i18n$t("opt_pnc48h"),
-                  penta3         = i18n$t("opt_penta3"),
-                  measles1       = i18n$t("opt_measles1")
-                )
+                indicator_labels = cd_indicator_labels(i18n)
               )
             },
             i18n = i18n
@@ -87,14 +79,8 @@ continuum_coverage_server <- function(id, cache, i18n, active = reactive(TRUE)) 
               plot(
                 d, 
                 type = 'heatmap',
-                    
-                    # Dynamic titles based on whether it's 'profile' or 'gap'
-                title    = i18n$t("title_cov_profile"),
-                subtitle = i18n$t("subtitle_cov_profile"),
-                    
-                    # Dynamic axes
-                x_title   = NULL,
-                y_title   = i18n$t("opt_coverage"),
+                # the chart's own title (the latest year by region): it was given the national profile's
+                legend_title = i18n$t("opt_coverage"),
                     
                     # Translation lists
                 source_labels = list(
@@ -102,15 +88,7 @@ continuum_coverage_server <- function(id, cache, i18n, active = reactive(TRUE)) 
                   survey   = i18n$t("lbl_src_survey"),
                   wuenic   = i18n$t("lbl_src_wuenic")
                 ),
-                indicator_labels = list(
-                  anc_1trimester = i18n$t("opt_anc_1trimester"),
-                  anc4           = i18n$t("opt_anc4"),
-                  ideliv = i18n$t("opt_ideliv"),
-                  instlivebirths = i18n$t("opt_instlivebirths"),
-                  pnc48h         = i18n$t("opt_pnc48h"),
-                  penta3         = i18n$t("opt_penta3"),
-                  measles1       = i18n$t("opt_measles1")
-                )
+                indicator_labels = cd_indicator_labels(i18n)
               )
             },
             i18n = i18n

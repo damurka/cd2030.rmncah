@@ -8,6 +8,8 @@
 * With cd2030.core 1.4.0: a Stata master file is saved when the Load Data wizard is finished; the Custom tab of the
   coverage, inequality, map and equity cards follows the indicator chosen; the Bayesian page fits institutional
   deliveries and has no Custom tab; a table downloads the year it shows.
+* Continuum of Care: the regions' heat map names every indicator in the app's language ("anc1" was shown as its
+  code) and has its own title (it carried the national profile's).
 
 # cd2030.rmncah 2.0.10
 
