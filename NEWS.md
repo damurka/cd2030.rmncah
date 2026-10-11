@@ -1,3 +1,21 @@
+# cd2030.rmncah 2.0.13
+
+* Requires cd2030.core 1.4.2 and datasuite.ui 0.5.1, so DataSuite updates them:
+    * National Coverage & Continuum: the heat map of the regions is drawn. In 2.0.11 and 2.0.12 it showed
+      "subscript out of bounds".
+    * The inequality charts are drawn when no region is chosen. In 2.0.12 they showed "The size of `nm` (2) must
+      be compatible with the size of `x` (3)".
+    * A chart that had been tall becomes small again (the Data Missingness heat map, once one indicator is chosen).
+    * The bar charts with a panel a region (reporting rate, outliers, missing indicators by region) are as tall as
+      their rows of panels need.
+    * Reporting Rate: the heat map writes each number in the colour that reads on its tile.
+    * Data Missingness: the charts for one indicator say "Select an indicator to see this chart" when every
+      indicator is chosen. The loader turned for ever.
+    * Denominator Selection: the National Coverage card shows its loader while the coverage is worked out.
+    * k factors set with `set_k_factors()` are used on a dataset adjusted on the Data Adjustment page.
+    * Internal Consistency: no deprecation warnings in the log, and the OPV1/OPV3 labels and "Institutional Live
+      Births per Delivery" are translated.
+
 # cd2030.rmncah 2.0.12
 
 * Requires cd2030.core 1.4.1, so DataSuite updates it:
