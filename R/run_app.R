@@ -26,7 +26,7 @@ run_app <- function(selected_file = Sys.getenv("CDSUITE_SHINY_SELECTED_FILE", un
   options(cd2030.selected_group = "rmncah", cd2030.app_group = "rmncah")
   set_selected_group("rmncah")
 
-  # What is particular to this app for the shared page modules (R/ui-core-config.R in cd2030.core lists the keys).
+  # What is particular to this app for the shared page modules (R/app-config.R in cd2030.core lists the keys).
   options(cd2030.config = list(
     nat_cov_indicators = c("anc4", "instlivebirths", "low_bweight", "penta3", "measles1", "fpet"),
     target_indicators = c("anc4", "instlivebirths", "vaccine"),

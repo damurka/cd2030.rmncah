@@ -68,9 +68,9 @@ mortality_server <- function(id, cache, i18n, active = reactive(TRUE)) {
                 d, 
                 indicator = current_indicator,
                 title = full_title,
-                y_axis = i18n$t(paste0("ylab_", current_indicator)),
-                x_axis = i18n$t("title_global_year"),
-                note = i18n$t(paste0("note_", current_indicator)),
+                y_title = i18n$t(paste0("ylab_", current_indicator)),
+                x_title = i18n$t("title_global_year"),
+                caption = i18n$t(paste0("note_", current_indicator)),
                 legend_labels = list(
                   median = i18n$t("lbl_median"),
                   plausible = i18n$t("lbl_plausible")

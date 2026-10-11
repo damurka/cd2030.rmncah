@@ -51,8 +51,8 @@ private_sector_server <- function(id, cache, i18n, active = reactive(TRUE)) {
           plot(
             d,
             title  = i18n$t("title_private_sector_graph"),
-            x_axis = i18n$t("xlab_private_sector"),
-            y_axis = i18n$t("ylab_private_sector")
+            x_title = i18n$t("xlab_private_sector"),
+            y_title = i18n$t("ylab_private_sector")
           )
         }
       )

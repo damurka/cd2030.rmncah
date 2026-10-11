@@ -32,8 +32,8 @@ utilization_capita_server <- function(id, cache, i18n, active = reactive(TRUE)) 
               plot(
                 d, 
                 title = i18n$t(paste0('opt_', current_indicator, '_capita_title')),
-                x_axis = i18n$t(paste0('opt_', current_indicator, '_capita_x_axis')),
-                legend = i18n$t(paste0('opt_', current_indicator, '_capita_legend')),
+                x_title = i18n$t(paste0('opt_', current_indicator, '_capita_x_axis')),
+                legend_title = i18n$t(paste0('opt_', current_indicator, '_capita_legend')),
               )
             },
             i18n = i18n

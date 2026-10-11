@@ -1,3 +1,14 @@
+# cd2030.rmncah 2.0.11
+
+* Bayesian Analysis no longer stops the other pages while a fit starts: the worker is sent the fit's inputs alone, not
+  the page's whole environment (cd2030.core 1.4.0, which this requires). Starting a sub-national fit held every
+  page for minutes before.
+* The pages give their charts' texts under cd2030.core 1.4.0's names (`x_title`, `y_title`, `legend_title`,
+  `caption`, `quad_labels`): its charts no longer take `x_axis`, `y_axis`, `legend` or a `labels` list of titles.
+* With cd2030.core 1.4.0: a Stata master file is saved when the Load Data wizard is finished; the Custom tab of the
+  coverage, inequality, map and equity cards follows the indicator chosen; the Bayesian page fits institutional
+  deliveries and has no Custom tab; a table downloads the year it shows.
+
 # cd2030.rmncah 2.0.10
 
 * Bayesian Analysis no longer holds the app up when a fit ends, nor slows every later change to the dataset: a

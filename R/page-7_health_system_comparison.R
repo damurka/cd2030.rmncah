@@ -45,8 +45,8 @@ health_system_comparison_server <- function(id, cache, i18n, active = reactive(T
       #           indicator   = current_indicator, 
       #           denominator = denom,
       #           title       = i18n$t(paste0("title_", current_indicator)),
-      #           x_axis      = i18n$t(paste0("xlab_", current_indicator)),
-      #           y_axis      = i18n$t(paste0("ylab_", current_indicator)),
+      #           x_title      = i18n$t(paste0("xlab_", current_indicator)),
+      #           y_title      = i18n$t(paste0("ylab_", current_indicator)),
       #           caption     = if (!is.null(denom)) paste(i18n$t("lbl_denom_derived"), denom) else NULL,
       #           legend_labels = list(
       #             admin  = i18n$t("lbl_admin1_units"),
@@ -78,8 +78,8 @@ health_system_comparison_server <- function(id, cache, i18n, active = reactive(T
               plot(
                 d, 
                 title  = i18n$t(paste0("title_scatter_", current_indicator)),
-                x_axis = i18n$t(paste0("xlab_", current_indicator)),
-                y_axis = i18n$t("ylab_phc_scatter"),
+                x_title = i18n$t(paste0("xlab_", current_indicator)),
+                y_title = i18n$t("ylab_phc_scatter"),
                 quad_labels = list(
                   high_high = i18n$t(paste0("lbl_hh_", current_indicator)),
                   low_high  = i18n$t(paste0("lbl_lh_", current_indicator)),

@@ -42,8 +42,8 @@ continuum_coverage_server <- function(id, cache, i18n, active = reactive(TRUE)) 
                 subtitle = i18n$t("subtitle_cov_profile"),
                     
                     # Dynamic axes
-                x_axis   = NULL,
-                y_axis   = i18n$t("opt_coverage"),
+                x_title   = NULL,
+                y_title   = i18n$t("opt_coverage"),
                     
                     # Translation lists
                 source_labels = list(
@@ -93,8 +93,8 @@ continuum_coverage_server <- function(id, cache, i18n, active = reactive(TRUE)) 
                 subtitle = i18n$t("subtitle_cov_profile"),
                     
                     # Dynamic axes
-                x_axis   = NULL,
-                y_axis   = i18n$t("opt_coverage"),
+                x_title   = NULL,
+                y_title   = i18n$t("opt_coverage"),
                     
                     # Translation lists
                 source_labels = list(

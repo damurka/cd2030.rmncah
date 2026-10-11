@@ -33,16 +33,14 @@ mch_curative_index_server <- function(id, cache, i18n, active = reactive(TRUE)) 
         plot_data = plot_data,
         plot_filename = reactive("mch_curative"),
         plot_fun = function(d) {
-          translated_labels <- list(
-            title          = i18n$t("lbl_mch_curative_title"),
-            x_axis         = i18n$t("lbl_mch_prev_index_x"),
-            y_axis         = i18n$t("lbl_curative_index_y"),
+          quadrants <- list(
             q_top_left     = i18n$t("lbl_quad_low_prev_high_cur"),
             q_top_right    = i18n$t("lbl_quad_high_prev_high_cur"),
             q_bottom_left  = i18n$t("lbl_quad_low_prev_low_cur"),
             q_bottom_right = i18n$t("lbl_quad_high_prev_low_cur")
           )
-          plot(d, labels = translated_labels)
+          plot(d, title = i18n$t("lbl_mch_curative_title"), x_title = i18n$t("lbl_mch_prev_index_x"),
+               y_title = i18n$t("lbl_curative_index_y"), quad_labels = quadrants)
         },
         excel_write_fun = function(wb, d) {
           cd_add_sheet(wb, i18n$t("title_mch_curative"), d)
