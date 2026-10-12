@@ -1,3 +1,10 @@
+# cd2030.rmncah 2.0.14
+
+* Requires cd2030.core 1.4.3 and datasuite.ui 0.5.2, so DataSuite updates them:
+  the Reports page lists the dataset's reports and the standard reports again, and the builder has its kinds of
+  chart, its themes, years and regions. Since datasuite.ui 0.5.0 the page said "No reports yet" over a dataset that
+  has reports, and often showed no standard reports.
+
 # cd2030.rmncah 2.0.13
 
 * Requires cd2030.core 1.4.2 and datasuite.ui 0.5.1, so DataSuite updates them:
