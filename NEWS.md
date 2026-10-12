@@ -1,3 +1,10 @@
+# cd2030.rmncah 2.0.15
+
+* Requires cd2030.core 1.4.4, so DataSuite updates it: the charts are written in one scale of text sizes, on the
+  pages and in reports. Every chart has a bold, centred title, axis titles of one size, axis and legend text of
+  one size, bold panel names, and two sizes for the numbers drawn on it. A chart had set its own. The chart
+  settings (text scale, font, title size) change them as before.
+
 # cd2030.rmncah 2.0.14
 
 * Requires cd2030.core 1.4.3 and datasuite.ui 0.5.2, so DataSuite updates them:
